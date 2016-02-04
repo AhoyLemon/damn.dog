@@ -244,10 +244,107 @@ svg * {
 
 .image-holder .child {
   text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image-holder img {
   max-height: 98vh;
+  max-width: 100%;
+}
+
+.image-holder h1 {
+  font-weight: 300;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.image-holder a {
+  color: #6CB200;
+  text-decoration: none;
+}
+
+.image-holder .input-holder {
+  position: relative;
+}
+
+.image-holder .input-holder input, .image-holder .input-holder label {
+  font-family: "Roboto Slab", serif;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.image-holder .input-holder input {
+  background-color: rgba(51, 51, 51, 0.4);
+  border: none;
+  margin: 0;
+  display: block;
+  width: 100%;
+  padding: 1em 1em 1em 5em;
+  text-transform: capitalize;
+}
+
+.image-holder .input-holder input:focus {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.image-holder .input-holder label {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.image-holder .nope {
+  color: #b22028;
+  font-size: 1.6em;
+  font-weight: 300;
+  margin-top: 0.2em;
+  margin-bottom: 0.4em;
+  display: block;
+}
+
+.image-holder .correctis {
+  color: #fff;
+  font-weight: 300;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.image-holder .correct-title {
+  margin: 0;
+  display: block;
+  font-size: 1.3em;
+}
+
+.image-holder .correct-title:hover {
+  text-decoration: underline;
+}
+
+.image-holder .button-holder {
+  padding-top: 1em;
+}
+
+.image-holder button {
+  background: transparent;
+  border: 2px solid #6CB200;
+  color: #6CB200;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.4em;
+  font-weight: 300;
+  padding: .25em 1em;
+  cursor: pointer;
+}
+
+.image-holder button:hover {
+  background: #6CB200;
+  color: #222730;
+}
+
+[data-display="wrong"], [data-display="play again"] {
+  display: none;
 }
 
 footer {

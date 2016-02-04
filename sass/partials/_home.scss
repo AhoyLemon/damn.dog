@@ -1,4 +1,29 @@
 .image-holder { @extend %center-child; height: 100vh;
-  .child { text-align: center; }
-  img { max-height: 98vh; }
+  .child { text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
+  img { max-height: 98vh; max-width: 100%; }
+  h1 { font-weight: $light; font-size:1.5em; margin-top: 0.5em; margin-bottom: 0.5em; color:rgba($white,0.6); }
+  a { color:$link; text-decoration: none; }
+  .input-holder { position: relative;
+    $pad: 1em;
+    
+    input, label { font-family:$slab; color:black; font-size:1.3rem; }
+    input { background-color:rgba($black,0.4); border:none; margin: 0; display:block; width:100%; padding:$pad $pad $pad (4em + $pad); text-transform: capitalize;
+      &:focus { background: rgba($white,0.6); }
+    }
+    label { position: absolute; top:$pad; left:$pad; }
+  }
+  
+  .nope { color:$red; font-size:1.6em; font-weight: $light; margin-top: 0.2em; margin-bottom: 0.4em; display: block; }
+  .correctis { color:$white; font-weight: $light; font-size:0.8em; text-transform: uppercase; }
+  .correct-title { margin:0; display: block; font-size:1.3em;
+    &:hover { text-decoration: underline; }
+  }
+  
+  .button-holder { padding-top: 1em; }
+  button { background:transparent; border:2px solid $link; color:$link; font-family:$font; font-size:1.4em; font-weight:$light; padding:.25em 1em; cursor:pointer;
+    &:hover { background:$link; color:$dark; }
+  }
+  
 }
+
+[data-display="wrong"], [data-display="play again"] { display: none; }

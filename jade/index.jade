@@ -11,6 +11,16 @@ html(lang="en")
     section.image-holder
       .child
         img#HeroPic()
+        h1(data-display="guess") Which WikiHow article is this picture for?
+        .input-holder(data-display="guess")
+          label(for="GuessTitle") How To
+          input.guess#GuessTitle(type="text" autofocus)
+        .result(data-display="wrong")
+          span.nope Nope!
+          span.correctis Correct answer is 
+          a.correct-title#CorrectTitle(href="http://www.wikihow.com/Feed-a-Hamster-Medicine" target="_blank") How to Feed a Hamster Medicine
+        .button-holder(data-display="play again")
+          button#PlayAgain Play Again
 
     include partials/footer.jade
     include partials/javascripts.jade

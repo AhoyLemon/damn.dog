@@ -37,5 +37,61 @@ var wikiHowPics = [
   "http://i.imgur.com/BgjYs1X.jpg",
   "http://i.imgur.com/ShDiOEI.jpg",
   "http://i.imgur.com/vP3lHBA.jpg",
-  "https://pbs.twimg.com/media/CaYsHr8XEAQsVzO.jpg"
+  "https://pbs.twimg.com/media/CaYsHr8XEAQsVzO.jpg",
+  "http://pad3.whstatic.com/images/thumb/5/5e/Come-Down-from-a-High-Step-15.jpg/728px-Come-Down-from-a-High-Step-15.jpg"
+];
+
+var wikiHow = [
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/2/25/Become-a-Teen-Hacker-Step-18.jpg/aid396202-728px-Become-a-Teen-Hacker-Step-18.jpg",
+    slug: "Become-a-Teen Hacker"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/4/40/Choose-a-Puppy-Step-3-Version-6.jpg/728px-Choose-a-Puppy-Step-3-Version-6.jpg",
+    slug: "Choose-a-Puppy"
+  },
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/8/8c/Do-Laughter-Yoga-Step-11.jpg/728px-Do-Laughter-Yoga-Step-11.jpg",
+    slug: "Do-Laughter-Yoga"
+  },
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/1/15/Be-Happy-Step-13-Version-2.jpg/728px-Be-Happy-Step-13-Version-2.jpg",
+    slug: "Be-Happy"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/0/00/Avoid-Uncomfortable-Conversations-About-Religion-Step-10.jpg/728px-Avoid-Uncomfortable-Conversations-About-Religion-Step-10.jpg",
+    slug: "Avoid-Uncomfortable-Conversations-About-Religion"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/f/f1/Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg/900px-Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg",
+    slug: "Have-a-Happy-Healthy-and-Spiritually-Fulfilled-Old-Age"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/f/f1/Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg/900px-Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg",
+    slug: "Have-a-Happy-Healthy-and-Spiritually-Fulfilled-Old-Age"
+  },
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/1/18/Know-if-You-Are-Drunk-Step-8.jpeg/728px-Know-if-You-Are-Drunk-Step-8.jpeg",
+    slug: "Know-if-You-Are-Drunk"
+  },
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/4/44/Have-Fun-Without-Friends-Step-1-Version-2.jpg/728px-Have-Fun-Without-Friends-Step-1-Version-2.jpg",
+    slug: "Have-Fun-Without-Friends"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/8/80/Cure-a-Headache-Without-Medication-Step-12-Version-2.jpg/728px-Cure-a-Headache-Without-Medication-Step-12-Version-2.jpg",
+    slug: "Cure-a-Headache-Without-Medication"
+  },
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/c/c9/Make-a-Wizard-Hat-Step-21.jpg/728px-Make-a-Wizard-Hat-Step-21.jpg",
+    slug: "Make-a-Wizard-Hat"
+  },
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/c/c9/Make-a-Wizard-Hat-Step-21.jpg/728px-Make-a-Wizard-Hat-Step-21.jpg",
+    slug: "Make-a-Wizard-Hat"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/5/5e/Come-Down-from-a-High-Step-15.jpg/728px-Come-Down-from-a-High-Step-15.jpg",
+    slug: "Come-Down-from-a-High"
+  }
 ];

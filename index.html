@@ -13,10 +13,20 @@
   <body>
     <!-- PAGE CONTENT-->
     <section class="image-holder">
-      <div class="child"><img id="HeroPic"></div>
+      <div class="child"><img id="HeroPic">
+        <h1 data-display="guess">Which WikiHow article is this picture for?</h1>
+        <div data-display="guess" class="input-holder">
+          <label for="GuessTitle">How To</label>
+          <input id="GuessTitle" type="text" autofocus class="guess">
+        </div>
+        <div data-display="wrong" class="result"><span class="nope">Nope!</span><span class="correctis">Correct answer is </span><a id="CorrectTitle" href="http://www.wikihow.com/Feed-a-Hamster-Medicine" target="_blank" class="correct-title">How to Feed a Hamster Medicine</a></div>
+        <div data-display="play again" class="button-holder">
+          <button id="PlayAgain">Play Again</button>
+        </div>
+      </div>
     </section>
     <footer>
-      <p>I'm making a game with WikiHow pictures. If you know javascript and want to help, contact <a href="https://twitter.com/AhoyLemon">@AhoyLemon</a></p>
+      <p>Wanna help make this game? Contact <a href="https://thefpl.us/meet/lemon">Lemon</a></p>
     </footer>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/min/damn.min.js"></script>
