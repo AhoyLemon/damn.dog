@@ -1,0 +1,69 @@
+@mixin flex-container($align:stretch, $direction:row, $wrap:wrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  @if ($align != "stretch") {
+    align-items: $align;
+  }
+}
+
+@mixin linear-gradient($direction, $fromColor, $toColor) {
+  background-color: $toColor; // fallback color
+  //background: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); // Saf4+, Chrome
+  //background: -webkit-linear-gradient($direction, $fromColor, $toColor); // Chrome 10+, Saf5.1+, iOS 5+
+  //background:    -moz-linear-gradient($direction, $fromColor, $toColor); // FF3.6
+  //background:     -ms-linear-gradient($direction, $fromColor, $toColor); // IE10
+  //background:      -o-linear-gradient($direction, $fromColor, $toColor); // Opera 11.10+
+  background-image:         linear-gradient($direction, $fromColor, $toColor);
+}
+
+@mixin flex-item($basis, $align:auto, $grow:1, $shrink:1) {
+  @if $grow == 0 {
+    width:$basis;
+    flex-basis: $basis;
+  } @else {
+    flex-basis: $basis;
+  }
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  align-self: $align;
+}
+
+@mixin flex-split($desktop, $mobile) {
+  @include respond-to(desktop) { @include flex-item($desktop); }
+  @include respond-to(mobile) { @include flex-item($mobile); }
+}
+
+@mixin cover($image:null, $position:center) {
+  @if $image {
+    background-image:url($image);
+  }
+  background-size:cover;
+  background-position: $position;
+  background-repeat: no-repeat;
+}
+
+@mixin position($type, $top:null, $right:null, $bottom:null, $left:null) {
+  position:$type;
+  @if $top {
+    top:$top;
+  }
+  @if $right {
+    right:$right;
+  }
+  @if $bottom {
+    bottom:$bottom;
+  }
+  @if $left {
+    left:$left;
+  }
+}
+
+@mixin respond-to($media) {
+  @if $media == desktop {
+    @media only screen and (min-width: $desktop-min) { @content; }
+  }
+  @else if $media == mobile {
+    @media only screen and (max-width: $desktop-min) { @content; }
+  }
+}

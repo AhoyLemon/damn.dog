@@ -1,0 +1,41 @@
+var heroes = [
+  "http://fc00.deviantart.net/fs71/f/2010/199/f/4/Skankity_Slut_Slut_by_guardianpinkneko.png",
+  "https://41.media.tumblr.com/65d268f68ecd85b7bd611a7a81c83d15/tumblr_nb2u4cAXuy1qf5511o1_1280.jpg",
+  "http://i.imgur.com/yJmBW9Q.jpg",
+  "https://40.media.tumblr.com/de37d9d7e1bb44180aabc1d98e704191/tumblr_o1ksh6uDpR1qfzx6so1_1280.jpg",
+  "http://i.imgur.com/qxwq65L.png",
+  "https://41.media.tumblr.com/d3e835d1f483cea65b9c61c8690f589e/tumblr_inline_noaxauF63v1qib1pp_540.jpg",
+  "https://i.imgur.com/auTFC8F.jpg",
+  "https://pbs.twimg.com/media/CZRaCaIWcAM6am4.jpg",
+  "http://i.imgur.com/fpYSMMe.jpg"
+];
+
+var wikiHowPics = [
+  "http://imgur.com/forU5iO.jpg",
+  "http://imgur.com/37pn9Yt.jpg",
+  "http://imgur.com/asSbLZn.jpg",
+  "http://pad1.whstatic.com/images/thumb/2/25/Become-a-Teen-Hacker-Step-18.jpg/460px-Become-a-Teen-Hacker-Step-18.jpg",
+  "http://56.media.tumblr.com/f4bb359116b8524e47c5729105f4e741/tumblr_o0s3t8YMqQ1tzofdno1_1280.jpg",
+  "http://pad3.whstatic.com/images/thumb/4/40/Choose-a-Puppy-Step-3-Version-6.jpg/670px-Choose-a-Puppy-Step-3-Version-6.jpg",
+  "http://pad3.whstatic.com/images/thumb/8/8c/Do-Laughter-Yoga-Step-11.jpg/900px-Do-Laughter-Yoga-Step-11.jpg",
+  "http://pad2.whstatic.com/images/thumb/1/15/Be-Happy-Step-13-Version-2.jpg/728px-Be-Happy-Step-13-Version-2.jpg",
+  "http://pad2.whstatic.com/images/thumb/0/00/Avoid-Uncomfortable-Conversations-About-Religion-Step-10.jpg/900px-Avoid-Uncomfortable-Conversations-About-Religion-Step-10.jpg",
+  "http://pad3.whstatic.com/images/thumb/f/f1/Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg/900px-Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg",
+  "http://pad2.whstatic.com/images/thumb/1/18/Know-if-You-Are-Drunk-Step-8.jpeg/728px-Know-if-You-Are-Drunk-Step-8.jpeg",
+  "http://redwoodcoastfilm.com/pix/wikinope1.jpg",
+  "http://i.imgur.com/f5diizQ.jpg",
+  "http://i.imgur.com/5IzpcEV.png",
+  "http://i.imgur.com/bAffgZE.jpg",
+  "http://i.imgur.com/NLx931u.jpg",
+  "http://pad2.whstatic.com/images/thumb/4/44/Have-Fun-Without-Friends-Step-1-Version-2.jpg/728px-Have-Fun-Without-Friends-Step-1-Version-2.jpg",
+  "http://pad3.whstatic.com/images/thumb/8/80/Cure-a-Headache-Without-Medication-Step-12-Version-2.jpg/728px-Cure-a-Headache-Without-Medication-Step-12-Version-2.jpg",
+  "http://pad2.whstatic.com/images/thumb/c/c9/Make-a-Wizard-Hat-Step-21.jpg/728px-Make-a-Wizard-Hat-Step-21.jpg",
+  "http://i.imgur.com/dIBRsqs.jpg",
+  "http://pad2.whstatic.com/images/thumb/9/9f/Annoy-Your-Siblings-Step-9.jpg/900px-Annoy-Your-Siblings-Step-9.jpg",
+  "http://i.imgur.com/hqSdzUi.jpg",
+  "http://i.imgur.com/IenboBi.jpg",
+  "http://i.imgur.com/BgjYs1X.jpg",
+  "http://i.imgur.com/ShDiOEI.jpg",
+  "http://i.imgur.com/vP3lHBA.jpg",
+  "https://pbs.twimg.com/media/CaYsHr8XEAQsVzO.jpg"
+];

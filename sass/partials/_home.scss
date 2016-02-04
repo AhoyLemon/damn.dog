@@ -1,0 +1,4 @@
+.image-holder { @extend %center-child; height: 100vh;
+  .child { text-align: center; }
+  img { max-height: 98vh; }
+}

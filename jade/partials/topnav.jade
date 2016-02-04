@@ -1,0 +1,28 @@
+nav.topnav
+  a.home(href="index.html")
+    img.logo(src="svg/logo_topnav.svg")
+  +topnavLink("Case Studies", "casestudies")
+  +topnavLink("Work", "work")
+  +topnavLink("Services", "services")
+  +topnavLink("Software", "software")
+  +topnavLink("About", "about")
+  +topnavLink("News", "news")
+  +topnavLink("Contact")
+//
+  aside#Drawer.drawer
+    a#CloseDrawer.close
+      img(src="svg/close.svg")
+    .pages
+      a CASE STUDIES
+      a WORK
+      a SERVICES
+      a SOFTWARE
+      a ABOUT
+      a NEWS
+      a CONTACT
+      a(href="tel:6123724612") 612-372-4612
+    .social
+      a f
+      a p
+      a in
+      a yt

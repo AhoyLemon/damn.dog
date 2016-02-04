@@ -1,0 +1,16 @@
+- var pageTitle = "Home"
+
+doctype html
+html(lang="en")
+  head
+    include partials/mixins.jade
+    include partials/head.jade
+  body
+    
+    // PAGE CONTENT
+    section.image-holder
+      .child
+        img#HeroPic()
+
+    include partials/footer.jade
+    include partials/javascripts.jade
