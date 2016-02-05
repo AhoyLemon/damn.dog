@@ -115,6 +115,34 @@ var wikiHow = [
     slug: "Be-a-Spy"
   },
   {
+    pic: "http://pad2.whstatic.com/images/thumb/a/a1/Tell-when-a-Girl-Is-Interested-in-You-Step-19.jpg/728px-Tell-when-a-Girl-Is-Interested-in-You-Step-19.jpg",
+    slug: "Tell-when-a-Girl-Is-Interested-in-You"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/3/38/Keep-a-Straight-Face-Step-4-Version-2.jpg/728px-Keep-a-Straight-Face-Step-4-Version-2.jpg",
+    slug: "Keep-a-Straight-Face"
+  },
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/b/bd/Get-Over-an-Anime-Addiction-Step-14.jpg/728px-Get-Over-an-Anime-Addiction-Step-14.jpg",
+    slug: "Get-Over-an-Anime-Addiction"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/0/03/Play-the-Alto-Saxophone-Step-4.jpg/728px-Play-the-Alto-Saxophone-Step-4.jpg",
+    slug: "Play-the-Alto-Saxophone"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/9/9a/Clear-a-Stuffy-Nose-Step-7-Version-2.jpg/728px-Clear-a-Stuffy-Nose-Step-7-Version-2.jpg",
+    slug: "Clear-a-Stuffy-Nose"
+  },
+  {
+    pic: "http://41.media.tumblr.com/f3613495dcf6e76e302b8e1498c56c1f/tumblr_o07gbs3a9p1tzofdno1_1280.jpg",
+    slug: "See-in-the-Dark"
+  },
+  {
+    pic: "http://36.media.tumblr.com/a0f1e2e1e5d8d075399672e7a529e4a1/tumblr_o0bww8Y6P41tzofdno1_1280.jpg",
+    slug: "Write-a-Dystopian-Novel"
+  },
+  {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
     slug: "Be-Unique"
   }
