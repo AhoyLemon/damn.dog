@@ -1,14 +1,3 @@
-.image-holder {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.image-holder > .child {
-  flex-basis: 100%;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -207,19 +196,6 @@ h1, h2, h3, h4, h5 h6 {
   font-family: "Roboto Slab", serif;
 }
 
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 1.3em;
-  margin-bottom: 1em;
-}
-
-h3 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
-}
-
 p {
   padding-bottom: 1em;
 }
@@ -239,18 +215,22 @@ svg * {
 }
 
 .image-holder {
-  height: 100vh;
+  height: calc(100vh - 3rem);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .image-holder .child {
   text-align: center;
-  max-width: 700px;
+  width: 100%;
+  max-width: 666px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .image-holder img {
-  max-height: 98vh;
   max-width: 100%;
 }
 
@@ -278,7 +258,7 @@ svg * {
 }
 
 .image-holder .input-holder input {
-  background-color: rgba(51, 51, 51, 0.4);
+  background-color: rgba(255, 255, 255, 0.35);
   border: none;
   margin: 0;
   display: block;
@@ -288,7 +268,7 @@ svg * {
 }
 
 .image-holder .input-holder input:focus {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .image-holder .input-holder label {
@@ -297,13 +277,20 @@ svg * {
   left: 1em;
 }
 
-.image-holder .nope {
-  color: #b22028;
+.image-holder h2 {
   font-size: 1.6em;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.4em;
   display: block;
+}
+
+.image-holder h2.nope {
+  color: #b22028;
+}
+
+.image-holder h2.yup {
+  color: #6CB200;
 }
 
 .image-holder .correctis {
@@ -343,7 +330,7 @@ svg * {
   color: #222730;
 }
 
-[data-display="wrong"], [data-display="play again"] {
+[data-display="wrong"], [data-display="correct"], [data-display="play again"] {
   display: none;
 }
 
@@ -352,7 +339,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 3em;
+  height: 3rem;
   background: #2A313A;
   color: #fff;
   font-weight: 300;
@@ -364,3 +351,5 @@ footer {
 footer a {
   color: #6CB200;
 }
+
+/*# sourceMappingURL=damn.css.map */

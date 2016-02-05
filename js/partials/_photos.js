@@ -43,10 +43,6 @@ var wikiHowPics = [
 
 var wikiHow = [
   {
-    pic: "http://pad2.whstatic.com/images/thumb/2/25/Become-a-Teen-Hacker-Step-18.jpg/aid396202-728px-Become-a-Teen-Hacker-Step-18.jpg",
-    slug: "Become-a-Teen Hacker"
-  },
-  {
     pic: "http://pad3.whstatic.com/images/thumb/4/40/Choose-a-Puppy-Step-3-Version-6.jpg/728px-Choose-a-Puppy-Step-3-Version-6.jpg",
     slug: "Choose-a-Puppy"
   },
@@ -61,10 +57,6 @@ var wikiHow = [
   {
     pic: "http://pad3.whstatic.com/images/thumb/0/00/Avoid-Uncomfortable-Conversations-About-Religion-Step-10.jpg/728px-Avoid-Uncomfortable-Conversations-About-Religion-Step-10.jpg",
     slug: "Avoid-Uncomfortable-Conversations-About-Religion"
-  },
-  {
-    pic: "http://pad3.whstatic.com/images/thumb/f/f1/Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg/900px-Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg",
-    slug: "Have-a-Happy-Healthy-and-Spiritually-Fulfilled-Old-Age"
   },
   {
     pic: "http://pad3.whstatic.com/images/thumb/f/f1/Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg/900px-Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg",
@@ -87,11 +79,35 @@ var wikiHow = [
     slug: "Make-a-Wizard-Hat"
   },
   {
-    pic: "http://pad2.whstatic.com/images/thumb/c/c9/Make-a-Wizard-Hat-Step-21.jpg/728px-Make-a-Wizard-Hat-Step-21.jpg",
-    slug: "Make-a-Wizard-Hat"
+    pic: "http://pad2.whstatic.com/images/thumb/f/fd/Be-an-Airhead-Step-3-Version-2.jpg/728px-Be-an-Airhead-Step-3-Version-2.jpg",
+    slug: "Be-an-Airhead"
   },
   {
-    pic: "http://pad3.whstatic.com/images/thumb/5/5e/Come-Down-from-a-High-Step-15.jpg/728px-Come-Down-from-a-High-Step-15.jpg",
-    slug: "Come-Down-from-a-High"
+    pic: "http://pad2.whstatic.com/images/thumb/1/1a/Know-if-Your-Girlfriend-Wants-to-Have-Sex-With-You-Step-10-Version-2.jpg/728px-Know-if-Your-Girlfriend-Wants-to-Have-Sex-With-You-Step-10-Version-2.jpg",
+    slug: "Know-if-Your-Girlfriend-Wants-to-Have-Sex-With-You"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/4/48/Make-Someone-Feel-Better-Via-Text-Message-Step-5-Version-2.jpg/728px-Make-Someone-Feel-Better-Via-Text-Message-Step-5-Version-2.jpg",
+    slug: "Make-Someone-Feel-Better-Via-Text-Message"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/3/3e/Know-when-Not-to-Volunteer-Step-4.jpg/728px-Know-when-Not-to-Volunteer-Step-4.jpg",
+    slug: "Know-when-Not-to-Volunteer"
+  },
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/b/b1/Get-a-Huge-Butt-Step-16-Version-2.jpg/728px-Get-a-Huge-Butt-Step-16-Version-2.jpg",
+    slug: "Turn-a-Girl-On"
+  },
+  {
+    pic: "https://pbs.twimg.com/media/CEh7AIhWEAEAKnD.jpg",
+    slug: "Get-a-Huge-Butt"
+  },
+  {
+    pic: "http://pad3.whstatic.com/images/thumb/1/1b/Send-Dirty-Texts-Step-3-Version-2.jpg/728px-Send-Dirty-Texts-Step-3-Version-2.jpg",
+    slug: "Send-Dirty-Texts"
+  },
+  {
+    pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
+    slug: "Be-Unique"
   }
 ];

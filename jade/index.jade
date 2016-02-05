@@ -10,15 +10,18 @@ html(lang="en")
     // PAGE CONTENT
     section.image-holder
       .child
+        h1(data-display="guess") What is the title of this WikiHow article?
         img#HeroPic()
-        h1(data-display="guess") Which WikiHow article is this picture for?
         .input-holder(data-display="guess")
           label(for="GuessTitle") How To
           input.guess#GuessTitle(type="text" autofocus)
         .result(data-display="wrong")
-          span.nope Nope!
+          h2.nope Nope!
           span.correctis Correct answer is 
           a.correct-title#CorrectTitle(href="http://www.wikihow.com/Feed-a-Hamster-Medicine" target="_blank") How to Feed a Hamster Medicine
+        .result(data-display="correct")
+          h2.yup Damn, Dog!
+          a.correct-title#ActualTitle(href="http://www.wikihow.com/Feed-a-Hamster-Medicine" target="_blank") How to Feed a Hamster Medicine
         .button-holder(data-display="play again")
           button#PlayAgain Play Again
 

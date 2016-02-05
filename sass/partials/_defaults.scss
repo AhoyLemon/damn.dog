@@ -1,7 +1,5 @@
 body { font-family: $font; font-size:$font-size; background:$dark; }
 h1, h2, h3, h4, h5 h6 { font-family: $headline; }
-h2 { font-family:$sans; font-weight: $light; text-transform: uppercase; font-size:1.3em; margin-bottom:1em; }
-h3 { font-size:2em; margin-bottom: 0.5em; }
 p { padding-bottom: 1em; }
 .button { @extend %button; }
 svg * { fill:currentColor; }

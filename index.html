@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic">
     <link rel="stylesheet" href="css/damn.css?v=02.04.2016">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--script(src="https://cdn.firebase.com/js/client/2.2.1/firebase.js")-->
     <!-- favicons-->
     <!--include favicons.jade-->
   </head>
   <body>
     <!-- PAGE CONTENT-->
     <section class="image-holder">
-      <div class="child"><img id="HeroPic">
-        <h1 data-display="guess">Which WikiHow article is this picture for?</h1>
+      <div class="child">
+        <h1 data-display="guess">What is the title of this WikiHow article?</h1><img id="HeroPic">
         <div data-display="guess" class="input-holder">
           <label for="GuessTitle">How To</label>
           <input id="GuessTitle" type="text" autofocus class="guess">
         </div>
-        <div data-display="wrong" class="result"><span class="nope">Nope!</span><span class="correctis">Correct answer is </span><a id="CorrectTitle" href="http://www.wikihow.com/Feed-a-Hamster-Medicine" target="_blank" class="correct-title">How to Feed a Hamster Medicine</a></div>
+        <div data-display="wrong" class="result">
+          <h2 class="nope">Nope!</h2><span class="correctis">Correct answer is </span><a id="CorrectTitle" href="http://www.wikihow.com/Feed-a-Hamster-Medicine" target="_blank" class="correct-title">How to Feed a Hamster Medicine</a>
+        </div>
+        <div data-display="correct" class="result">
+          <h2 class="yup">Damn, Dog!</h2><a id="ActualTitle" href="http://www.wikihow.com/Feed-a-Hamster-Medicine" target="_blank" class="correct-title">How to Feed a Hamster Medicine</a>
+        </div>
         <div data-display="play again" class="button-holder">
           <button id="PlayAgain">Play Again</button>
         </div>

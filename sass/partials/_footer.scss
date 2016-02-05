@@ -1,4 +1,4 @@
-footer { @include position(fixed, null,0,0,0) height:3em; background: $lessdark; color:$white; font-weight:$light; text-align:center; padding:1em; font-size:0.85em;
+footer { @include position(fixed, null,0,0,0) height:$footer-height; background: $lessdark; color:$white; font-weight:$light; text-align:center; padding:1em; font-size:0.85em;
   a { color:$green; }
   // > .inner { @extend %inner; padding: 1em; }
 }
