@@ -48,15 +48,6 @@ var wikiHow = [
     slug: "Make-Someone-Feel-Better-Via-Text-Message"
   },
   {
-    pic: "http://pad3.whstatic.com/images/thumb/3/3e/Know-when-Not-to-Volunteer-Step-4.jpg/728px-Know-when-Not-to-Volunteer-Step-4.jpg",
-    slug: "Know-when-Not-to-Volunteer"
-  },
-  {
-    pic: "http://pad2.whstatic.com/images/thumb/b/b1/Get-a-Huge-Butt-Step-16-Version-2.jpg/728px-Get-a-Huge-Butt-Step-16-Version-2.jpg",
-    slug: "Get-a-Huge-Butt"
-    
-  },
-  {
     pic: "https://pbs.twimg.com/media/CEh7AIhWEAEAKnD.jpg",
     slug: "Turn-a-Girl-On"
   },

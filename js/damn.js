@@ -12,11 +12,18 @@ var wiki = {
   url:'',
   gid: ''
 };
+
+var player = {
+  rounds:0,
+  score:0,
+  correct:0,
+  incorrect:0,
+  percent:0
+};
 var roundsPlayed = [];
 var reroll = 0;
 var choices = [];
 var choiceids = [];
-var i;
 
 function shuffle(o){
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -87,21 +94,60 @@ function getChoices() {
   });
 }
 
+function goodGuess() {
+  player.rounds++;
+  player.score++;
+  player.correct++;
+}
+
+function badGuess() {
+  player.rounds++;
+  player.incorrect++;
+}
+
+function calculatePercent() {
+  if (player.correct > 0 && player.incorrect > 0) {
+    player.percent = Math.floor((player.correct / player.rounds ) * 100);
+  }
+}
+
+function showScore() {
+  calculatePercent();
+  $('#ScoreNumber').text(player.score);
+  $('#ScorePercent').text(player.percent);
+  
+  if (player.rounds == 1) {
+    $('#ScoreHeader').fadeIn(600);
+  }
+  if (player.percent > 0) {
+    $('header .percent').fadeIn(600);
+    $('#ScorePercent').text(player.percent+'%');
+    
+    if (player.percent < 50) {
+      $('#ScorePercent').addClass('bad');
+    } else {
+      $('#ScorePercent').removeClass('bad');
+    }
+  }
+}
+
 function verifyTitle() {
   var tl = wiki.title.toLowerCase();
   var g = $('#GuessTitle').val().toLocaleLowerCase();
-
   if (g == tl) {
     $('#ActualTitle').text(wiki.title);
     $('#ActualTitle').attr('href',wiki.url);
     $('[data-display="guess"]').hide();
     $('[data-display="correct"], [data-display="play again"]').fadeIn(600);
+    goodGuess();
   } else {
     $('#CorrectTitle').text(wiki.title);
     $('#CorrectTitle').attr('href',wiki.url);
     $('[data-display="guess"]').hide();
     $('[data-display="wrong"], [data-display="play again"]').fadeIn(600);
+    badGuess();
   }
+  showScore();
 }
 
 /**

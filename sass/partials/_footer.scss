@@ -1,4 +1,4 @@
-footer { @include position(fixed, null,0,0,0) height:$footer-height; background: $lessdark; color:$white; font-weight:$light; text-align:center; padding:1em; font-size:0.85em;
+footer { @include position(fixed, null,0,0,0) height:$footer-height; background: $lessdark; color:$white; font-weight:$light; text-align:center; padding:1em; font-size:0.85em; z-index:$z-footer;
   a { color:$link; text-decoration: none;
     &:hover { text-decoration: underline; }
   }

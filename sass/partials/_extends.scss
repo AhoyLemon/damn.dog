@@ -1,4 +1,4 @@
-%inner { width: 100%; max-width:$small-inner; margin-left:auto; margin-right: auto; }
+%inner { width: 100%; max-width:$max-width; margin-left:auto; margin-right: auto; }
 
 %wide-inner { width: 100%; max-width:calc(#{$big-inner} - 4em); padding-left:2em; padding-right:2em; display: block; margin-left:auto; margin-right: auto; }
 %clearfix {

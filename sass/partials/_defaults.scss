@@ -3,6 +3,3 @@ h1, h2, h3, h4, h5 h6 { font-family: $headline; }
 p { padding-bottom: 1em; }
 .button { @extend %button; }
 svg * { fill:currentColor; }
-
-
-.blacksheet { @include position(absolute,0,0,0,0); background-color:rgba(0,0,0,0.6); z-index:$z-blacksheet; }

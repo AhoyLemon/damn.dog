@@ -1,3 +1,10 @@
+header > .inner {
+  width: 100%;
+  max-width: 666px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -204,22 +211,67 @@ svg * {
   fill: currentColor;
 }
 
-.blacksheet {
-  position: absolute;
+header {
+  background-color: #2A313A;
+  text-align: right;
+  position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 4;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  display: none;
+  height: 2rem;
+  z-index: 3;
+}
+
+header > .inner {
+  color: #fff;
+}
+
+header span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header .percent {
+  display: none;
+}
+
+header .label {
+  font-size: 0.7em;
+  font-family: "Roboto", sans-serif;
+  padding-right: 0.25em;
+  line-height: 200%;
+}
+
+header .label.percent {
+  padding-left: 1.5em;
+}
+
+header .number {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 50%;
+  color: #6CB200;
+}
+
+header .number.bad {
+  color: #b22028;
 }
 
 .image-holder {
-  height: calc(100vh - 3rem);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 2.4rem;
+  padding-bottom: 3.6rem;
 }
 
 .image-holder .child {
@@ -350,6 +402,12 @@ svg * {
   display: none;
 }
 
+@media (max-width: 666px) {
+  .image-holder h1 {
+    font-size: 5vw;
+  }
+}
+
 footer {
   position: fixed;
   right: 0;
@@ -362,6 +420,7 @@ footer {
   text-align: center;
   padding: 1em;
   font-size: 0.85em;
+  z-index: 2;
 }
 
 footer a {

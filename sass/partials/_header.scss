@@ -1,0 +1,11 @@
+header { background-color:$lessdark; text-align: right; @include position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom:0.25em; display:none; height:$header-height; z-index:$z-header;
+  > .inner { color:$white; @extend %inner; }
+  span { display:inline-block; vertical-align: middle; }
+  .percent { display: none; }
+  .label { font-size:0.7em; font-family: $sans; padding-right: 0.25em; line-height: 200%;
+    &.percent { padding-left: 1.5em;}
+  }
+  .number { font-size:2em; font-weight: $light; line-height: 50%; color:$green;
+    &.bad { color:$red; }
+  }
+}

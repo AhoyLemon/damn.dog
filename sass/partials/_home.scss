@@ -1,4 +1,4 @@
-.image-holder { height:calc(100vh - #{$footer-height}; @include flex-container(center);
+.image-holder { @include flex-container(center); @include position(fixed,0,0,0,0); padding-top:($header-height * 1.2); padding-bottom:($footer-height * 1.2);
   .child { text-align: center; width:100%; max-width:$max-width; margin-left: auto; margin-right: auto; }
   img { max-width: 100%; }
   h1 { font-weight: $light; font-size:1.5em; margin-top: 0.5em; margin-bottom: 0.5em; color:rgba($white,0.6); }
@@ -35,3 +35,10 @@
 }
 
 [data-display="wrong"], [data-display="correct"], [data-display="play again"] { display: none; }
+
+
+@media (max-width:$max-width) {
+  .image-holder {
+    h1 { font-size:5vw; }
+  }
+}
