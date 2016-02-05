@@ -1,19 +1,39 @@
 // jshint -W117
 //@prepros-prepend partials/_photos.js
 
-console.log(wikiHow);
-
 $(document).ready(function() {
-  getPhoto();
+  newRound();
 });
+
 
 var wiki = {
   pic:'',
   title:'',
-  url:''
+  url:'',
+  gid: ''
 };
 var roundsPlayed = [];
 var reroll = 0;
+var choices = [];
+var choiceids = [];
+var i;
+
+function shuffle(o){
+  for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
+}
+
+function newRound() {
+  $('[data-display="wrong"], [data-display="correct"], [data-display="play again"]').hide();
+  $('[data-display="guess"]').fadeIn(600);
+  $('#GuessTitle').focus();
+  choices = [];
+  choiceids = [];
+  getPhoto();
+  getChoices();
+  console.log(choices);
+  console.log(choiceids);
+}
 
 function getPhoto() {
   var r = Math.floor((Math.random() * wikiHow.length));
@@ -28,6 +48,7 @@ function getPhoto() {
   } else {
     reroll = 0;
     roundsPlayed.push(r);
+    wiki.gid = r;
     wiki.pic = wikiHow[r].pic;
     $('#HeroPic').attr('src', wiki.pic);
     wiki.title = 'How To '+wikiHow[r].slug.replace(/-/g, " ");
@@ -35,9 +56,40 @@ function getPhoto() {
   }
 }
 
+function getChoices() {
+  var i = 0;
+  while (i < 3) {
+    var r = Math.floor((Math.random() * wikiHow.length));
+    var a = choiceids.indexOf(r);
+    if (r == wiki.gid) {
+      // do nothing
+    } else if (a > -1) {
+      // do nothing
+    } else {
+      i++;
+      var choice = {
+        title: 'How To '+wikiHow[r].slug.replace(/-/g, " "),
+        guid: r
+      };
+      choiceids.push(r);
+      choices.push(choice);
+    }
+  }
+  choices.push({
+    title:wiki.title,
+    gid:wiki.gid
+  });
+  shuffle(choices);
+  $('#GuessTitle').empty();
+  $('#GuessTitle').append('<option value="default" selected disabled hidden>How To</option>');
+  $.each(choices, function(idx, obj){ 
+    $('#GuessTitle').append('<option>'+obj.title+'</option>');
+  });
+}
+
 function verifyTitle() {
   var tl = wiki.title.toLowerCase();
-  var g = "how to " + $('#GuessTitle').val().toLocaleLowerCase();
+  var g = $('#GuessTitle').val().toLocaleLowerCase();
 
   if (g == tl) {
     $('#ActualTitle').text(wiki.title);
@@ -50,19 +102,19 @@ function verifyTitle() {
     $('[data-display="guess"]').hide();
     $('[data-display="wrong"], [data-display="play again"]').fadeIn(600);
   }
-
 }
 
+/**
 $('#GuessTitle').keyup(function(e) {
   if(e.keyCode == 13){
     verifyTitle();
   }
 });
+**/
+$('#GuessTitle').change(function() {
+  verifyTitle();
+});
 
 $('#PlayAgain').click(function() {
-  getPhoto();
-  $('#GuessTitle').val('');
-  $('[data-display="wrong"], [data-display="correct"], [data-display="play again"]').hide();
-  $('[data-display="guess"]').fadeIn(600);
-  $('#GuessTitle').focus();
+  newRound();
 });

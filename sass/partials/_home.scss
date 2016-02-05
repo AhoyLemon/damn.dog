@@ -6,9 +6,13 @@
   .input-holder { position: relative;
     $pad: 1em;
     
-    input, label { font-family:$slab; color:black; font-size:1.3rem; }
+    input, label, select, option { font-family:$slab; color:black; font-size:1.3rem; }
     input { background-color:rgba($white,0.35); border:none; margin: 0; display:block; width:100%; padding:$pad $pad $pad (4em + $pad); text-transform: capitalize;
       &:focus { background: rgba($white,0.7); }
+    }
+    select { background-color:rgba($white,0.65); border:none; margin: 0; display:block; width:100%; padding:$pad; text-transform: capitalize;
+      &:focus { background: rgba($white,0.9); }
+      //option { padding:$pad; }
     }
     label { position: absolute; top:$pad; left:$pad; }
   }

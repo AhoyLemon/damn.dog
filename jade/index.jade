@@ -13,8 +13,10 @@ html(lang="en")
         h1(data-display="guess") What is the title of this WikiHow article?
         img#HeroPic()
         .input-holder(data-display="guess")
-          label(for="GuessTitle") How To
-          input.guess#GuessTitle(type="text" autofocus)
+          //label(for="GuessTitle") How To
+          //input.guess#GuessTitle(type="text" autofocus)
+          select#GuessTitle
+            option
         .result(data-display="wrong")
           h2.nope Nope!
           span.correctis Correct answer is 
