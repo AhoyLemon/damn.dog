@@ -120,7 +120,7 @@ var wikiHow = [
     slug: "Get-Rid-of-an-Unwanted-Erection"
   },
   {
-     pic: "http://56.media.tumblr.com/8ff7337f2edd41dad3596f5363845f3f/tumblr_nykg6oGKyZ1tzofdno2_500.jpg",
+     pic: "img/pics/Resist-Sexual-Temptation.jpg",
     slug: "Resist-Sexual-Temptation"
   },
   {
