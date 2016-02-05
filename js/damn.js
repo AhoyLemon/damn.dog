@@ -1,5 +1,6 @@
 // jshint -W117
 //@prepros-prepend partials/_photos.js
+//@prepros-prepend partials/_analytics.js
 
 $(document).ready(function() {
   newRound();
@@ -98,11 +99,13 @@ function goodGuess() {
   player.rounds++;
   player.score++;
   player.correct++;
+  sendGA("guess", "correct");
 }
 
 function badGuess() {
   player.rounds++;
   player.incorrect++;
+  sendGA("guess", "incorrect");
 }
 
 function calculatePercent() {

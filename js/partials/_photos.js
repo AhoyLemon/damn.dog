@@ -60,7 +60,7 @@ var wikiHow = [
     slug: "Fix-Bad-Breath-on-the-Spot"
   },
   {
-    pic: "https://pbs.twimg.com/media/CYrnEmyUQAQfI4x.jpg",
+    pic: "img/pics/be-a-spy.jpg",
     slug: "Be-a-Spy"
   },
   {
