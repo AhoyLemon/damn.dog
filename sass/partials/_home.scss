@@ -4,15 +4,17 @@
   h1 { font-weight: $light; font-size:1.5em; margin-top: 0.5em; margin-bottom: 0.5em; color:rgba($white,0.6); }
   a { color:$link; text-decoration: none; }
   .input-holder { position: relative;
-    $pad: 1em;
+    $pad: 2rem;
     
     input, label, select, option { font-family:$slab; color:black; font-size:1.3rem; }
+    /**
     input { background-color:rgba($white,0.35); border:none; margin: 0; display:block; width:100%; padding:$pad $pad $pad (4em + $pad); text-transform: capitalize;
       &:focus { background: rgba($white,0.7); }
     }
-    select { background-color:rgba($white,0.65); border:none; margin: 0; display:block; width:100%; padding:$pad; text-transform: capitalize;
+    **/
+    select { background-color:rgba($white,0.65); border:none; margin: 0; display:block; width:100%; padding-left:$pad; height: 3em; text-transform: capitalize;
       &:focus { background: rgba($white,0.9); }
-      //option { padding:$pad; }
+      option { padding-left:$pad; }
     }
     label { position: absolute; top:$pad; left:$pad; }
   }
