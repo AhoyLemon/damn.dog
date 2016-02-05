@@ -1,11 +1,17 @@
 - var siteTitle = "damn.dog"
-- var lastUpdated = "02.04.2016"
+- var siteURL = "http://damn.dog"
+- var lastUpdated = "02.05.2016"
+- var description = "A guessing game for WikiHow illustrations."
 meta(charset="utf-8")
 title #{siteTitle}
 meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
 link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic")
 link(rel="stylesheet" href="css/damn.css?v=#{lastUpdated}")
 meta(name="viewport" content="width=device-width, initial-scale=1")
-//script(src="https://cdn.firebase.com/js/client/2.2.1/firebase.js")
+meta(name="description" content="#{description}")
+
 // favicons
-//include favicons.jade
+include favicons.jade
+
+//social
+include social.jade

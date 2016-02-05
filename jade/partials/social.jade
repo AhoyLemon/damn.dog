@@ -1,0 +1,6 @@
+// Twitter
+each val, index in {'card':'summary', 'creator':'@AhoyLemon', 'title':siteTitle, 'description':description, 'image':siteURL+'/img/twitter-card.png', 'url':siteURL}
+  meta(name="twitter:#{index}" content="#{val}")
+// Facebook
+each val, index in {'title':siteTitle, 'type':'website', 'url':siteURL, 'image':siteURL+'/img/og-image.png', 'description':description, 'email':'lemon@thefpl.us'}
+  meta(property="og:#{index}" content="#{val}")

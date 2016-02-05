@@ -243,7 +243,7 @@ svg * {
 }
 
 .image-holder a {
-  color: #6CB200;
+  color: #3e98f2;
   text-decoration: none;
 }
 
@@ -292,7 +292,7 @@ svg * {
 }
 
 .image-holder h2 {
-  font-size: 1.6em;
+  font-size: 2em;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.4em;
@@ -317,7 +317,9 @@ svg * {
 .image-holder .correct-title {
   margin: 0;
   display: block;
-  font-size: 1.3em;
+  font-size: 1.5em;
+  color: #9ecbf8;
+  font-weight: 300;
 }
 
 .image-holder .correct-title:hover {
@@ -330,8 +332,8 @@ svg * {
 
 .image-holder button {
   background: transparent;
-  border: 2px solid #6CB200;
-  color: #6CB200;
+  border: 2px solid #3e98f2;
+  color: #3e98f2;
   font-family: "Roboto Slab", serif;
   font-size: 1.4em;
   font-weight: 300;
@@ -340,7 +342,7 @@ svg * {
 }
 
 .image-holder button:hover {
-  background: #6CB200;
+  background: #3e98f2;
   color: #222730;
 }
 
@@ -363,7 +365,12 @@ footer {
 }
 
 footer a {
-  color: #6CB200;
+  color: #3e98f2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=damn.css.map */

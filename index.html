@@ -5,11 +5,43 @@
     <title>damn.dog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic">
-    <link rel="stylesheet" href="css/damn.css?v=02.04.2016">
+    <link rel="stylesheet" href="css/damn.css?v=02.05.2016">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--script(src="https://cdn.firebase.com/js/client/2.2.1/firebase.js")-->
+    <meta name="description" content="A guessing game for WikiHow illustrations.">
     <!-- favicons-->
-    <!--include favicons.jade-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#b21f28">
+    <!--social-->
+    <!-- Twitter-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@AhoyLemon">
+    <meta name="twitter:title" content="damn.dog">
+    <meta name="twitter:description" content="A guessing game for WikiHow illustrations.">
+    <meta name="twitter:image" content="http://damn.dog/img/twitter-card.png">
+    <meta name="twitter:url" content="http://damn.dog">
+    <!-- Facebook-->
+    <meta property="og:title" content="damn.dog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://damn.dog">
+    <meta property="og:image" content="http://damn.dog/img/og-image.png">
+    <meta property="og:description" content="A guessing game for WikiHow illustrations.">
+    <meta property="og:email" content="lemon@thefpl.us">
   </head>
   <body>
     <!-- PAGE CONTENT-->
@@ -24,10 +56,10 @@
           </select>
         </div>
         <div data-display="wrong" class="result">
-          <h2 class="nope">Nope!</h2><span class="correctis">Correct answer is </span><a id="CorrectTitle" href="http://www.wikihow.com/Feed-a-Hamster-Medicine" target="_blank" class="correct-title">How to Feed a Hamster Medicine</a>
+          <h2 class="nope">Nope!</h2><span class="correctis">Correct answer is </span><a id="CorrectTitle" target="_blank" class="correct-title"></a>
         </div>
         <div data-display="correct" class="result">
-          <h2 class="yup">Damn, Dog!</h2><a id="ActualTitle" href="http://www.wikihow.com/Feed-a-Hamster-Medicine" target="_blank" class="correct-title">How to Feed a Hamster Medicine</a>
+          <h2 class="yup">Damn, Dog!</h2><a id="ActualTitle" target="_blank" class="correct-title"></a>
         </div>
         <div data-display="play again" class="button-holder">
           <button id="PlayAgain">Play Again</button>
@@ -35,7 +67,7 @@
       </div>
     </section>
     <footer>
-      <p>Wanna help make this game? Contact <a href="https://thefpl.us/meet/lemon">Lemon</a></p>
+      <p>This game is by  <a href="https://thefpl.us/meet/lemon">Lemon</a>. Wanna help? <a href="https://github.com/AhoyLemon/Damn-Dog">Here's the GitHub repo</a>.</p>
     </footer>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/min/damn.min.js"></script>

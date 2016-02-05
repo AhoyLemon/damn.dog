@@ -1,46 +1,3 @@
-var heroes = [
-  "http://fc00.deviantart.net/fs71/f/2010/199/f/4/Skankity_Slut_Slut_by_guardianpinkneko.png",
-  "https://41.media.tumblr.com/65d268f68ecd85b7bd611a7a81c83d15/tumblr_nb2u4cAXuy1qf5511o1_1280.jpg",
-  "http://i.imgur.com/yJmBW9Q.jpg",
-  "https://40.media.tumblr.com/de37d9d7e1bb44180aabc1d98e704191/tumblr_o1ksh6uDpR1qfzx6so1_1280.jpg",
-  "http://i.imgur.com/qxwq65L.png",
-  "https://41.media.tumblr.com/d3e835d1f483cea65b9c61c8690f589e/tumblr_inline_noaxauF63v1qib1pp_540.jpg",
-  "https://i.imgur.com/auTFC8F.jpg",
-  "https://pbs.twimg.com/media/CZRaCaIWcAM6am4.jpg",
-  "http://i.imgur.com/fpYSMMe.jpg"
-];
-
-var wikiHowPics = [
-  "http://imgur.com/forU5iO.jpg",
-  "http://imgur.com/37pn9Yt.jpg",
-  "http://imgur.com/asSbLZn.jpg",
-  "http://pad1.whstatic.com/images/thumb/2/25/Become-a-Teen-Hacker-Step-18.jpg/460px-Become-a-Teen-Hacker-Step-18.jpg",
-  "http://56.media.tumblr.com/f4bb359116b8524e47c5729105f4e741/tumblr_o0s3t8YMqQ1tzofdno1_1280.jpg",
-  "http://pad3.whstatic.com/images/thumb/4/40/Choose-a-Puppy-Step-3-Version-6.jpg/670px-Choose-a-Puppy-Step-3-Version-6.jpg",
-  "http://pad3.whstatic.com/images/thumb/8/8c/Do-Laughter-Yoga-Step-11.jpg/900px-Do-Laughter-Yoga-Step-11.jpg",
-  "http://pad2.whstatic.com/images/thumb/1/15/Be-Happy-Step-13-Version-2.jpg/728px-Be-Happy-Step-13-Version-2.jpg",
-  "http://pad2.whstatic.com/images/thumb/0/00/Avoid-Uncomfortable-Conversations-About-Religion-Step-10.jpg/900px-Avoid-Uncomfortable-Conversations-About-Religion-Step-10.jpg",
-  "http://pad3.whstatic.com/images/thumb/f/f1/Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg/900px-Have-a-Happy%2C-Healthy-and-Spiritually-Fulfilled-Old-Age-Step-9.jpg",
-  "http://pad2.whstatic.com/images/thumb/1/18/Know-if-You-Are-Drunk-Step-8.jpeg/728px-Know-if-You-Are-Drunk-Step-8.jpeg",
-  "http://redwoodcoastfilm.com/pix/wikinope1.jpg",
-  "http://i.imgur.com/f5diizQ.jpg",
-  "http://i.imgur.com/5IzpcEV.png",
-  "http://i.imgur.com/bAffgZE.jpg",
-  "http://i.imgur.com/NLx931u.jpg",
-  "http://pad2.whstatic.com/images/thumb/4/44/Have-Fun-Without-Friends-Step-1-Version-2.jpg/728px-Have-Fun-Without-Friends-Step-1-Version-2.jpg",
-  "http://pad3.whstatic.com/images/thumb/8/80/Cure-a-Headache-Without-Medication-Step-12-Version-2.jpg/728px-Cure-a-Headache-Without-Medication-Step-12-Version-2.jpg",
-  "http://pad2.whstatic.com/images/thumb/c/c9/Make-a-Wizard-Hat-Step-21.jpg/728px-Make-a-Wizard-Hat-Step-21.jpg",
-  "http://i.imgur.com/dIBRsqs.jpg",
-  "http://pad2.whstatic.com/images/thumb/9/9f/Annoy-Your-Siblings-Step-9.jpg/900px-Annoy-Your-Siblings-Step-9.jpg",
-  "http://i.imgur.com/hqSdzUi.jpg",
-  "http://i.imgur.com/IenboBi.jpg",
-  "http://i.imgur.com/BgjYs1X.jpg",
-  "http://i.imgur.com/ShDiOEI.jpg",
-  "http://i.imgur.com/vP3lHBA.jpg",
-  "https://pbs.twimg.com/media/CaYsHr8XEAQsVzO.jpg",
-  "http://pad3.whstatic.com/images/thumb/5/5e/Come-Down-from-a-High-Step-15.jpg/728px-Come-Down-from-a-High-Step-15.jpg"
-];
-
 var wikiHow = [
   {
     pic: "http://pad3.whstatic.com/images/thumb/4/40/Choose-a-Puppy-Step-3-Version-6.jpg/728px-Choose-a-Puppy-Step-3-Version-6.jpg",
@@ -96,11 +53,12 @@ var wikiHow = [
   },
   {
     pic: "http://pad2.whstatic.com/images/thumb/b/b1/Get-a-Huge-Butt-Step-16-Version-2.jpg/728px-Get-a-Huge-Butt-Step-16-Version-2.jpg",
-    slug: "Turn-a-Girl-On"
+    slug: "Get-a-Huge-Butt"
+    
   },
   {
     pic: "https://pbs.twimg.com/media/CEh7AIhWEAEAKnD.jpg",
-    slug: "Get-a-Huge-Butt"
+    slug: "Turn-a-Girl-On"
   },
   {
     pic: "http://pad3.whstatic.com/images/thumb/1/1b/Send-Dirty-Texts-Step-3-Version-2.jpg/728px-Send-Dirty-Texts-Step-3-Version-2.jpg",
@@ -141,6 +99,110 @@ var wikiHow = [
   {
     pic: "http://36.media.tumblr.com/a0f1e2e1e5d8d075399672e7a529e4a1/tumblr_o0bww8Y6P41tzofdno1_1280.jpg",
     slug: "Write-a-Dystopian-Novel"
+  },
+  {
+    pic: "http://41.media.tumblr.com/7233be246019decfd35f4a55adbd56a5/tumblr_nzbwhuA9Pq1tzofdno1_1280.jpg",
+    slug: "Get-Anime-Eyes"
+  },
+  {
+    pic: "img/pics/be-emotionless.jpg",
+    slug: "Be-Emotionless"
+  },
+  {
+    pic: "http://40.media.tumblr.com/723d73b71c830e40e6636375989c4da5/tumblr_nzbw2vc2q11tzofdno1_1280.jpg",
+    slug: "Understand-Heterosexual-People"
+  },
+  {
+    pic: "http://pad1.whstatic.com/images/thumb/6/6e/Cheat-On-a-Test-Step-7-Version-3.jpg/728px-Cheat-On-a-Test-Step-7-Version-3.jpg",
+    slug: "Cheat-On-a-Test"
+  },
+  {
+    pic: "http://pad1.whstatic.com/images/thumb/7/75/483861-1.jpg/760px-483861-1.jpg",
+    slug: "Live-in-Peace"
+  },
+  {
+    pic: "http://41.media.tumblr.com/cd17db2ca7c4ee33b75b66890e919257/tumblr_nylrxppy4o1tzofdno1_1280.jpg",
+    slug: "Lose-Your-Virginity-Without-Pain-(Girls)"
+  },
+  {
+     pic: "http://pad2.whstatic.com/images/thumb/d/df/Get-Rid-of-an-Unwanted-Erection-Step-10-Version-2.jpg/760px-Get-Rid-of-an-Unwanted-Erection-Step-10-Version-2.jpg",
+    slug: "Get-Rid-of-an-Unwanted-Erection"
+  },
+  {
+     pic: "http://56.media.tumblr.com/8ff7337f2edd41dad3596f5363845f3f/tumblr_nykg6oGKyZ1tzofdno2_500.jpg",
+    slug: "Resist-Sexual-Temptation"
+  },
+  {
+     pic: "http://pad3.whstatic.com/images/thumb/6/69/Tell-a-Girl-You-Like-Her-Step-2.jpg/728px-Tell-a-Girl-You-Like-Her-Step-2.jpg",
+    slug: "Tell-a-Girl-You-Like-Her"
+  },
+  {
+     pic: "http://pad1.whstatic.com/images/thumb/0/00/Own-and-Love-a-Pit-Bull-Dog-Step-6.jpg/728px-Own-and-Love-a-Pit-Bull-Dog-Step-6.jpg",
+    slug: "Own-and-Love-a-Pit-Bull-Dog"
+  },
+  {
+     pic: "http://pad3.whstatic.com/images/thumb/8/87/Make-Someone-You-Met-on-MSN-Love-You-Step-10.jpg/728px-Make-Someone-You-Met-on-MSN-Love-You-Step-10.jpg",
+    slug: "Make-Someone-You-Met-on-MSN-Love-You"
+  },
+  {
+     pic: "http://pad3.whstatic.com/images/thumb/9/9e/Enjoy-Phone-Sex-Step-4-Version-2.jpg/728px-Enjoy-Phone-Sex-Step-4-Version-2.jpg",
+    slug: "Enjoy-Phone-Sex"
+  },
+  {
+     pic: "http://36.media.tumblr.com/075e136ef1885402ad9ac6480ff78224/tumblr_nvf4w8uqTm1tzofdno1_1280.jpg",
+    slug: "Raise-a-Child"
+  },
+  {
+     pic: "http://pad1.whstatic.com/images/thumb/f/fd/Build-a-Bloodstone-Circle-Step-7.jpg/728px-Build-a-Bloodstone-Circle-Step-7.jpg",
+    slug: "Build-a-Bloodstone-Circle"
+  },
+  {
+     pic: "http://pad3.whstatic.com/images/thumb/5/5d/Love-Your-Girlfriend-Step-11-Version-3.jpg/728px-Love-Your-Girlfriend-Step-11-Version-3.jpg",
+    slug: "Love-Your-Girlfriend"
+  },
+  {
+     pic: "http://pad1.whstatic.com/images/thumb/e/ee/Win-a-Tickle-War-Step-6.jpg/670px-Win-a-Tickle-War-Step-6.jpg",
+    slug: "Win-a-Tickle-War"
+  },
+  {
+     pic: "http://pad3.whstatic.com/images/thumb/4/46/Talk-to-Girls-as-a-Teen-Boy-Step-5.jpg/760px-Talk-to-Girls-as-a-Teen-Boy-Step-5.jpg",
+    slug: "Talk-to-Girls-as-a-Teen-Boy"
+  },
+  {
+     pic: "http://40.media.tumblr.com/66a72e89acfa128b9fb0625d9d726ab9/tumblr_nrclpqShjE1tzofdno1_1280.jpg",
+    slug: "Survive-a-Charging-Elephant"
+  },
+  {
+     pic: "http://41.media.tumblr.com/5fbaa5c0793456a33ccd8ee1f4f9dd3d/tumblr_nqxb6jUow51tzofdno1_1280.jpg",
+    slug: "Get-the-Hiccups"
+  },
+  {
+     pic: "http://pad3.whstatic.com/images/thumb/a/a6/Stop-Staring-at-a-Girl%27s-Boobs-Step-8.jpg/728px-Stop-Staring-at-a-Girl%27s-Boobs-Step-8.jpg",
+    slug: "Stop-Staring-at-a-Girl's-Boobs"
+  },
+  {
+     pic: "http://pad2.whstatic.com/images/thumb/4/41/Look-Like-a-Computer-Cracker-Step-5-Version-2.jpg/728px-Look-Like-a-Computer-Cracker-Step-5-Version-2.jpg",
+    slug: "Look-Like-a-Computer-Cracker"
+  },
+  {
+     pic: "http://pad3.whstatic.com/images/thumb/2/24/Make-Friends-Online-Step-03.jpg/670px-Make-Friends-Online-Step-03.jpg",
+    slug: "Make-Friends-Online"
+  },
+  {
+     pic: "http://pad1.whstatic.com/images/thumb/6/68/Stop-a-Masturbation-Addiction-Step-2.jpg/728px-Stop-a-Masturbation-Addiction-Step-2.jpg",
+    slug: "Stop-a-Masturbation-Addiction"
+  },
+  {
+     pic: "http://41.media.tumblr.com/e7d48088109f7f33fecc0301de78495a/tumblr_nfx9cakWVQ1tzofdno1_1280.jpg",
+    slug: "Get-a-Gay-Male-Friend-(for-Girls)"
+  },
+  {
+     pic: "http://40.media.tumblr.com/7a989ea34507e3a833c8a161d77b8686/tumblr_n49shafaCz1tzofdno1_1280.jpg",
+    slug: "Reason"
+  },
+  {
+     pic: "img/pics/not-do-drugs.jpg",
+    slug: "Not-Do-Drugs"
   },
   {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",

@@ -17,13 +17,13 @@
     label { position: absolute; top:$pad; left:$pad; }
   }
   
-  h2 { font-size:1.6em; font-weight: $light; margin-top: 0.2em; margin-bottom: 0.4em; display: block;
+  h2 { font-size:2em; font-weight: $light; margin-top: 0.2em; margin-bottom: 0.4em; display: block;
     &.nope { color:$red; }
     &.yup { color:$green; }
   }
   
   .correctis { color:$white; font-weight: $light; font-size:0.8em; text-transform: uppercase; }
-  .correct-title { margin:0; display: block; font-size:1.3em;
+  .correct-title { margin:0; display: block; font-size:1.5em; color:lighten($blue,20%); font-weight:$light;
     &:hover { text-decoration: underline; }
   }
   
