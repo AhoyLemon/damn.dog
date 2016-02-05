@@ -107,6 +107,14 @@ var wikiHow = [
     slug: "Send-Dirty-Texts"
   },
   {
+    pic: "http://pad1.whstatic.com/images/thumb/5/52/Fix-Bad-Breath-on-the-Spot-Step-11.jpg/728px-Fix-Bad-Breath-on-the-Spot-Step-11.jpg",
+    slug: "Fix-Bad-Breath-on-the-Spot"
+  },
+  {
+    pic: "https://pbs.twimg.com/media/CYrnEmyUQAQfI4x.jpg",
+    slug: "Be-a-Spy"
+  },
+  {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
     slug: "Be-Unique"
   }
