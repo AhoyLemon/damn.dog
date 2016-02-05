@@ -1,6 +1,8 @@
 // jshint -W117
 //@prepros-prepend partials/_photos.js
 
+console.log(wikiHow);
+
 $(document).ready(function() {
   getPhoto();
 });
