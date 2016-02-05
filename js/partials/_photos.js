@@ -196,6 +196,18 @@ var wikiHow = [
     slug: "Not-Do-Drugs"
   },
   {
+     pic: "img/pics/Make-Your-Boyfriend-Break-up-With-You.jpg",
+    slug: "Make-Your-Boyfriend-Break-up-With-You"
+  },
+  {
+     pic: "img/pics/Give-Someone-a-Hickey.jpg",
+    slug: "Give-Someone-a-Hickey"
+  },
+  {
+     pic: "http://pad2.whstatic.com/images/thumb/8/8f/Live-in-a-Dungeon-Step-9.jpg/728px-Live-in-a-Dungeon-Step-9.jpg",
+    slug: "Live-in-a-Dungeon"
+  },
+  {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
     slug: "Be-Unique"
   }

@@ -10,3 +10,7 @@ The name actually came first. I was surprised to find out that the domain `damn.
 ## Who worked on this?
 * [Lemon](https://thefpl.us/meet/lemon)
 * Chai Tea Latte
+
+## Any more places for illustratons?
+* [WikiHow Illustrations Tumblr](http://wikihow-illustrations.tumblr.com/)
+* [@WikiHowArt](https://twitter.com/WikiHowArt)
