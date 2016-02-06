@@ -7,10 +7,6 @@ Damn.dog is a game where you are shown an actual WikiHow illustration, and have 
 ## What's with the name?
 The name actually came first. I was surprised to find out that the domain `damn.dog` was not already taken, so I had to get it for myself. After that point I had to try to figure out what to do with it. This is what came to mind.
 
-## Who worked on this?
-* [Lemon](https://thefpl.us/meet/lemon)
-* Chai Tea Latte
-
 ## Any more places for illustratons?
 * [WikiHow Illustrations Tumblr](http://wikihow-illustrations.tumblr.com/)
 * [@WikiHowArt](https://twitter.com/WikiHowArt)
