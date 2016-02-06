@@ -272,6 +272,7 @@ header .number.bad {
   left: 0;
   padding-top: 2.4rem;
   padding-bottom: 3.6rem;
+  overflow-y: auto;
 }
 
 .image-holder .child {
@@ -426,6 +427,12 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-height: 620px) {
+  footer {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=damn.css.map */
