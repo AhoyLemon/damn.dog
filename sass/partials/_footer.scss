@@ -5,6 +5,6 @@ footer { @include position(fixed, null,0,0,0) height:$footer-height; background:
   // > .inner { @extend %inner; padding: 1em; }
 }
 
-@media screen and (min-height: 620px) {
+@media screen and (max-height: 620px) {
   footer { display: none; }
 }

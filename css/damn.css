@@ -429,7 +429,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-@media screen and (min-height: 620px) {
+@media screen and (max-height: 620px) {
   footer {
     display: none;
   }
