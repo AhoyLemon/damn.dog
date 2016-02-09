@@ -34,7 +34,6 @@ function shuffle(o){
 function newRound() {
   $('[data-display="wrong"], [data-display="correct"], [data-display="play again"]').hide();
   $('[data-display="guess"]').fadeIn(600);
-  //$('#GuessTitle').focus();
   choices = [];
   choiceids = [];
   getPhoto();

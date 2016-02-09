@@ -240,6 +240,18 @@ var wikiHow = [
     slug: "Make-People-Think-You're-a-Witch"
   },
   {
+     pic: "img/pics/believe-in-god.jpg",
+    slug: "Believe-in-God"
+  },
+  {
+     pic: "img/pics/read-people.jpg",
+    slug: "Read-People"
+  },
+  {
+     pic: "img/pics/get-on-a-reality-tv-show.jpg",
+    slug: "Get-on-a-Reality-TV-Show"
+  },
+  {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
     slug: "Be-Unique"
   }
