@@ -39,8 +39,8 @@ function newRound() {
   choiceids = [];
   getPhoto();
   getChoices();
-  console.log(choices);
-  console.log(choiceids);
+  //console.log(choices);
+  //console.log(choiceids);
 }
 
 function getPhoto() {
@@ -99,13 +99,13 @@ function goodGuess() {
   player.rounds++;
   player.score++;
   player.correct++;
-  sendGA("guess", "correct");
+  sendGA("guess", "correct", wiki.title);
 }
 
 function badGuess() {
   player.rounds++;
   player.incorrect++;
-  sendGA("guess", "incorrect");
+  sendGA("guess", "incorrect", wiki.title);
 }
 
 function calculatePercent() {
