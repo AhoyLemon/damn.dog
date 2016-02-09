@@ -92,7 +92,7 @@ var wikiHow = [
     slug: "Write-a-Dystopian-Novel"
   },
   {
-    pic: "http://41.media.tumblr.com/7233be246019decfd35f4a55adbd56a5/tumblr_nzbwhuA9Pq1tzofdno1_1280.jpg",
+    pic: "img/pics/get-anime-eyes.jpg",
     slug: "Get-Anime-Eyes"
   },
   {
@@ -206,6 +206,38 @@ var wikiHow = [
   {
      pic: "http://pad2.whstatic.com/images/thumb/8/8f/Live-in-a-Dungeon-Step-9.jpg/728px-Live-in-a-Dungeon-Step-9.jpg",
     slug: "Live-in-a-Dungeon"
+  },
+  {
+     pic: "img/pics/buy-firearms-in-california.jpg",
+    slug: "Buy-Firearms-in-California"
+  },
+  {
+     pic: "img/pics/start-a-womens-bible-study-group.jpg",
+    slug: "Start-a-Women's-Bible-Study"
+  },
+  {
+     pic: "img/pics/joie-de-vivre.jpg",
+    slug: "Capture-Joie-De-Vivre"
+  },
+  {
+     pic: "img/pics/be-naturally-funny.jpg",
+    slug: "Be-Naturally-Funny"
+  },
+  {
+     pic: "img/pics/playful.jpg",
+    slug: "Be-Playful"
+  },
+  {
+     pic: "img/pics/be-a-lesbian.jpg",
+    slug: "Be-a-Lesbian"
+  },
+  {
+     pic: "img/pics/convince-people-at-school-that-youre-a-vampire.jpg",
+    slug: "Convince-People-at-School-That-You're-a-Vampire"
+  },
+  {
+     pic: "img/pics/make-people-think-youre-a-witch.jpg",
+    slug: "Make-People-Think-You're-a-Witch"
   },
   {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
