@@ -1,0 +1,12 @@
+
+.game-over { @include position(fixed,0,0,0,0); z-index: 100; background-color:rgba($dark,0.8); color:rgba($white,0.6); display: none;
+  .stripes { @extend %center-child; @include position(absolute,0,0,0,0); }
+  h2 { font-size:14vw; text-align: center; }
+  
+  table { margin-left: auto; margin-right: auto; font-size:5vw;
+    th, td { padding-left: 0.5em; padding-right: 0.5em; text-align: center; line-height: 100%; }
+    th { text-transform: uppercase; font-size:0.6em; }
+    td { font-weight: $light; font-size:2em; }
+  }
+  
+}

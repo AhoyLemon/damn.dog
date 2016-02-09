@@ -5,6 +5,17 @@ header > .inner {
   margin-right: auto;
 }
 
+.game-over .stripes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.game-over .stripes > .child {
+  flex-basis: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -272,6 +283,7 @@ header .number.bad {
   left: 0;
   padding-top: 2.4rem;
   padding-bottom: 3.6rem;
+  overflow-y: auto;
 }
 
 .image-holder .child {
@@ -426,6 +438,60 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-height: 620px) {
+  footer {
+    display: none;
+  }
+}
+
+.game-over {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(34, 39, 48, 0.8);
+  color: rgba(255, 255, 255, 0.6);
+  display: none;
+}
+
+.game-over .stripes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.game-over h2 {
+  font-size: 14vw;
+  text-align: center;
+}
+
+.game-over table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 5vw;
+}
+
+.game-over table th, .game-over table td {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center;
+  line-height: 100%;
+}
+
+.game-over table th {
+  text-transform: uppercase;
+  font-size: 0.6em;
+}
+
+.game-over table td {
+  font-weight: 300;
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=damn.css.map */

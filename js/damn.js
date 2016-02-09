@@ -48,10 +48,10 @@ function getPhoto() {
   var a = roundsPlayed.indexOf(r);
   if (a > -1) {
     reroll++;
-    if (reroll < 10) {
+    if (reroll < 6) {
       getPhoto();
     } else {
-      alert("game over");
+      gameOver();
     }
   } else {
     reroll = 0;
@@ -153,13 +153,13 @@ function verifyTitle() {
   showScore();
 }
 
-/**
-$('#GuessTitle').keyup(function(e) {
-  if(e.keyCode == 13){
-    verifyTitle();
-  }
-});
-**/
+function gameOver() {
+  $('#FinalRounds').text(player.rounds);
+  $('#FinalCorrect').text(player.correct);
+  $('#FinalInorrect').text(player.incorrect);
+  $('#FinalPercent').text(player.percent+'%');
+  $('#GameOver').fadeIn(600);
+}
 $('#GuessTitle').change(function() {
   verifyTitle();
 });
