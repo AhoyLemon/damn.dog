@@ -27,13 +27,11 @@ var player = {
   incorrect:0,
   percent:0
 };
+
 var roundsPlayed = [];
 var reroll = 0;
 var choices = [];
 var choiceids = [];
-
-
-
 
 if(typeof(Storage) !== "undefined") {
   
@@ -62,6 +60,8 @@ if(typeof(Storage) !== "undefined") {
 } else {
   // Sorry! No Web Storage support..
 }
+
+
 
 
 
@@ -203,6 +203,13 @@ function gameOver() {
   $('#FinalInorrect').text(player.incorrect);
   $('#FinalPercent').text(player.percent+'%');
   $('#GameOver').fadeIn(600);
+  
+  localStorage.removeItem("roundsPlayed");
+  localStorage.removeItem("playerRounds");
+  localStorage.removeItem("playerScore");
+  localStorage.removeItem("playerCorrect");
+  localStorage.removeItem("playerIncorrect");
+  
 }
 $('#GuessTitle').change(function() {
   verifyTitle();
