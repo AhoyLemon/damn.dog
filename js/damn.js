@@ -7,6 +7,12 @@ $(document).ready(function() {
 });
 
 
+
+
+
+
+
+
 var wiki = {
   pic:'',
   title:'',
@@ -25,6 +31,39 @@ var roundsPlayed = [];
 var reroll = 0;
 var choices = [];
 var choiceids = [];
+
+
+
+
+if(typeof(Storage) !== "undefined") {
+  
+  if (localStorage.roundsPlayed === undefined || localStorage.roundsPlayed === null) {
+    localStorage.setItem('roundsPlayed', '');
+  } else {
+    roundsPlayed = localStorage.roundsPlayed.split(',');
+    for(var i=0; i<roundsPlayed.length; i++) { roundsPlayed[i] = parseInt(roundsPlayed[i], 10); }
+    
+    if (localStorage.playerRounds > 0) {
+      player.rounds = localStorage.playerRounds;
+    }
+    if (localStorage.playerScore > 0) {
+      player.score = localStorage.playerScore;
+    }
+    if (localStorage.playerCorrect > 0) {
+      player.correct = localStorage.playerCorrect;
+    }
+    if (localStorage.playerIncorrect > 0) {
+      player.incorrect = localStorage.playerIncorrect;
+    }
+    console.log(roundsPlayed);
+    showScore();
+  }
+  
+} else {
+  // Sorry! No Web Storage support..
+}
+
+
 
 function shuffle(o){
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -55,6 +94,7 @@ function getPhoto() {
   } else {
     reroll = 0;
     roundsPlayed.push(r);
+    localStorage.setItem('roundsPlayed', roundsPlayed.toString());
     wiki.gid = r;
     wiki.pic = wikiHow[r].pic;
     $('#HeroPic').attr('src', wiki.pic);
@@ -98,12 +138,17 @@ function goodGuess() {
   player.rounds++;
   player.score++;
   player.correct++;
+  localStorage.playerRounds = player.rounds;
+  localStorage.playerScore = player.score;
+  localStorage.playerCorrect = player.correct;
   sendGA("guess", "correct", wiki.title);
 }
 
 function badGuess() {
   player.rounds++;
   player.incorrect++;
+  localStorage.playerRounds = player.rounds;
+  localStorage.playerIncorrect = player.incorrect;
   sendGA("guess", "incorrect", wiki.title);
 }
 
@@ -118,7 +163,7 @@ function showScore() {
   $('#ScoreNumber').text(player.score);
   $('#ScorePercent').text(player.percent);
   
-  if (player.rounds == 1) {
+  if (player.rounds >= 1) {
     $('#ScoreHeader').fadeIn(600);
   }
   if (player.percent > 0) {
