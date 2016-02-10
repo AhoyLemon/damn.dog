@@ -252,6 +252,42 @@ var wikiHow = [
     slug: "Get-on-a-Reality-TV-Show"
   },
   {
+     pic: "img/pics/overcome-an-addiction.jpg",
+    slug: "Overcome-an-Addiction"
+  },
+  {
+     pic: "img/pics/start-a-cult.jpg",
+    slug: "Start-a-Cult"
+  },
+  {
+     pic: "img/pics/tell-a-lie-without-being-caught.jpg",
+    slug: "Tell-a-Lie-Without-Being-Caught"
+  },
+  {
+     pic: "img/pics/increase-your-ejaculate.jpg",
+    slug: "Increase-Your-Ejaculate"
+  },
+  {
+     pic: "img/pics/resist-sexual-desires-by-following-islamic-traditions.jpg",
+    slug: "Resist-Sexual-Desires-by-Following-Islamic-Traditions"
+  },
+  {
+     pic: "img/pics/prevent-depression.jpg",
+    slug: "Prevent-Depression"
+  },
+  {
+     pic: "img/pics/make-your-boyfriend-kiss-you.jpg",
+    slug: "Make-Your-Boyfriend-Kiss-You"
+  },
+  {
+     pic: "img/pics/make-yourself-pee.jpg",
+    slug: "Make-Yourself-Pee"
+  },
+  {
+     pic: "img/pics/fart-quietly.jpg",
+    slug: "Fart-Quietly"
+  },
+  {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
     slug: "Be-Unique"
   }
