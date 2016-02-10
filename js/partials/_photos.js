@@ -288,6 +288,18 @@ var wikiHow = [
     slug: "Fart-Quietly"
   },
   {
+     pic: "img/pics/treat-nasal-infection-naturally.jpg",
+    slug: "Treat-Nasal-Infection-Naturally"
+  },
+  {
+     pic: "img/pics/become-an-alpha-male.jpg",
+    slug: "Become-an-Alpha-Male"
+  },
+  {
+     pic: "img/pics/act-like-one-of-the-guys.jpg",
+    slug: "Act-Like-One-of-the-Guys"
+  },
+  {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
     slug: "Be-Unique"
   }
