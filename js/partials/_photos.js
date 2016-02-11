@@ -300,6 +300,26 @@ var wikiHow = [
     slug: "Act-Like-One-of-the-Guys"
   },
   {
+     pic: "img/pics/be-a-good-husband.jpg",
+    slug: "Be-a-Good-Husband"
+  },
+  {
+     pic: "img/pics/get-a-lesbian-girlfriend.jpg",
+    slug: "Get-a-Lesbian-Girlfriend"
+  },
+  {
+     pic: "img/pics/stand-up-for-yourself.jpg",
+    slug: "Stand-up-for-Yourself"
+  },
+  {
+     pic: "img/pics/act-silly-with-your-boyfriend.jpg",
+    slug: "Act-Silly-with-Your-Boyfriend"
+  },
+  {
+     pic: "img/pics/understand-gay-and-lesbian-people.jpg",
+    slug: "Understand-Gay-and-Lesbian-People"
+  },
+  {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
     slug: "Be-Unique"
   }
