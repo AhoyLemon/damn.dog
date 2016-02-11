@@ -320,6 +320,30 @@ var wikiHow = [
     slug: "Understand-Gay-and-Lesbian-People"
   },
   {
+     pic: "img/pics/touch-a-girl.jpg",
+    slug: "Touch-a-Girl"
+  },
+  {
+     pic: "img/pics/turn-a-girl-on-when-youre-only-friends.jpg",
+    slug: "Turn-a-Girl-on-when-You're-Only-Friends"
+  },
+  {
+     pic: "img/pics/act-like-bella-from-twilight.jpg",
+    slug: "Act-Like-Bella-from-Twilight"
+  },
+  {
+     pic: "img/pics/become-a-teen-hacker.jpg",
+    slug: "Become-a-Teen-Hacker"
+  },
+  {
+     pic: "img/pics/dress-up-like-a-hillbilly.jpg",
+    slug: "Dress-Up-Like-a-Hillbilly"
+  },
+  {
+     pic: "img/pics/impress-a-classmate.jpg",
+    slug: "Impress-a-Classmate"
+  },
+  {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
     slug: "Be-Unique"
   }
