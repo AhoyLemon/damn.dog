@@ -344,6 +344,18 @@ var wikiHow = [
     slug: "Impress-a-Classmate"
   },
   {
+     pic: "img/pics/show-your-husband-that-you-love-him.jpg",
+    slug: "Show-Your-Husband-That-You-Love-Him"
+  },
+  {
+     pic: "img/pics/be-a-good-wife.jpg",
+    slug: "Be-a-Good-Wife"
+  },
+  {
+     pic: "img/pics/love.jpg",
+    slug: "Love"
+  },
+  {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
     slug: "Be-Unique"
   }
