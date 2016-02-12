@@ -6,13 +6,6 @@ $(document).ready(function() {
   newRound();
 });
 
-
-
-
-
-
-
-
 var wiki = {
   pic:'',
   title:'',
@@ -96,7 +89,12 @@ function getPhoto() {
     roundsPlayed.push(r);
     localStorage.setItem('roundsPlayed', roundsPlayed.toString());
     wiki.gid = r;
-    wiki.pic = wikiHow[r].pic;
+    if (!wikiHow[r].pic) {
+      wiki.pic = 'img/pics/'+wikiHow[r].slug.toLowerCase()+'.jpg';
+    } else {
+      wiki.pic = wikiHow[r].pic;
+    }
+    
     $('#HeroPic').attr('src', wiki.pic);
     wiki.title = 'How To '+wikiHow[r].slug.replace(/-/g, " ");
     wiki.url = "http://www.wikihow.com/"+wikiHow[r].slug;
