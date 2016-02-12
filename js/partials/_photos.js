@@ -180,10 +180,6 @@ var wikiHow = [
     slug: "Make-Friends-Online"
   },
   {
-     pic: "http://pad1.whstatic.com/images/thumb/6/68/Stop-a-Masturbation-Addiction-Step-2.jpg/728px-Stop-a-Masturbation-Addiction-Step-2.jpg",
-    slug: "Stop-a-Masturbation-Addiction"
-  },
-  {
      pic: "http://41.media.tumblr.com/e7d48088109f7f33fecc0301de78495a/tumblr_nfx9cakWVQ1tzofdno1_1280.jpg",
     slug: "Get-a-Gay-Male-Friend-(for-Girls)"
   },
