@@ -4,7 +4,6 @@
 
 $(document).ready(function() {
   newRound();
-  console.log(wikiHow.length);
 });
 
 var wiki = {
