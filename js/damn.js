@@ -4,6 +4,7 @@
 
 $(document).ready(function() {
   newRound();
+  console.log(wikiHow.length);
 });
 
 var wiki = {
@@ -94,7 +95,6 @@ function getPhoto() {
     } else {
       wiki.pic = wikiHow[r].pic;
     }
-    
     $('#HeroPic').attr('src', wiki.pic);
     wiki.title = 'How To '+wikiHow[r].slug.replace(/-/g, " ");
     wiki.url = "http://www.wikihow.com/"+wikiHow[r].slug;

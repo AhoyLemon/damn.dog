@@ -21,75 +21,54 @@ var wikiHow = [
     slug: "Have-Fun-Without-Friends"
   },
   {
-    pic: "http://pad3.whstatic.com/images/thumb/8/80/Cure-a-Headache-Without-Medication-Step-12-Version-2.jpg/728px-Cure-a-Headache-Without-Medication-Step-12-Version-2.jpg",
     slug: "Cure-a-Headache-Without-Medication"
   },
   {
-    pic: "http://pad2.whstatic.com/images/thumb/c/c9/Make-a-Wizard-Hat-Step-21.jpg/728px-Make-a-Wizard-Hat-Step-21.jpg",
-    slug: "Make-a-Wizard-Hat"
-  },
-  {
-    pic: "http://pad2.whstatic.com/images/thumb/f/fd/Be-an-Airhead-Step-3-Version-2.jpg/728px-Be-an-Airhead-Step-3-Version-2.jpg",
     slug: "Be-an-Airhead"
   },
   {
-    pic: "http://pad2.whstatic.com/images/thumb/1/1a/Know-if-Your-Girlfriend-Wants-to-Have-Sex-With-You-Step-10-Version-2.jpg/728px-Know-if-Your-Girlfriend-Wants-to-Have-Sex-With-You-Step-10-Version-2.jpg",
     slug: "Know-if-Your-Girlfriend-Wants-to-Have-Sex-With-You"
   },
   {
-    pic: "http://pad3.whstatic.com/images/thumb/4/48/Make-Someone-Feel-Better-Via-Text-Message-Step-5-Version-2.jpg/728px-Make-Someone-Feel-Better-Via-Text-Message-Step-5-Version-2.jpg",
     slug: "Make-Someone-Feel-Better-Via-Text-Message"
   },
   {
-    pic: "https://pbs.twimg.com/media/CEh7AIhWEAEAKnD.jpg",
     slug: "Turn-a-Girl-On"
   },
   {
-    pic: "http://pad3.whstatic.com/images/thumb/1/1b/Send-Dirty-Texts-Step-3-Version-2.jpg/728px-Send-Dirty-Texts-Step-3-Version-2.jpg",
     slug: "Send-Dirty-Texts"
   },
   {
-    pic: "http://pad1.whstatic.com/images/thumb/5/52/Fix-Bad-Breath-on-the-Spot-Step-11.jpg/728px-Fix-Bad-Breath-on-the-Spot-Step-11.jpg",
     slug: "Fix-Bad-Breath-on-the-Spot"
   },
   {
-    pic: "img/pics/be-a-spy.jpg",
     slug: "Be-a-Spy"
   },
   {
-    pic: "http://pad2.whstatic.com/images/thumb/a/a1/Tell-when-a-Girl-Is-Interested-in-You-Step-19.jpg/728px-Tell-when-a-Girl-Is-Interested-in-You-Step-19.jpg",
     slug: "Tell-when-a-Girl-Is-Interested-in-You"
   },
   {
-    pic: "http://pad3.whstatic.com/images/thumb/3/38/Keep-a-Straight-Face-Step-4-Version-2.jpg/728px-Keep-a-Straight-Face-Step-4-Version-2.jpg",
     slug: "Keep-a-Straight-Face"
   },
   {
-    pic: "http://pad2.whstatic.com/images/thumb/b/bd/Get-Over-an-Anime-Addiction-Step-14.jpg/728px-Get-Over-an-Anime-Addiction-Step-14.jpg",
     slug: "Get-Over-an-Anime-Addiction"
   },
   {
-    pic: "http://pad3.whstatic.com/images/thumb/0/03/Play-the-Alto-Saxophone-Step-4.jpg/728px-Play-the-Alto-Saxophone-Step-4.jpg",
     slug: "Play-the-Alto-Saxophone"
   },
   {
-    pic: "http://pad3.whstatic.com/images/thumb/9/9a/Clear-a-Stuffy-Nose-Step-7-Version-2.jpg/728px-Clear-a-Stuffy-Nose-Step-7-Version-2.jpg",
     slug: "Clear-a-Stuffy-Nose"
   },
   {
-    pic: "http://41.media.tumblr.com/f3613495dcf6e76e302b8e1498c56c1f/tumblr_o07gbs3a9p1tzofdno1_1280.jpg",
     slug: "See-in-the-Dark"
   },
   {
-    pic: "http://36.media.tumblr.com/a0f1e2e1e5d8d075399672e7a529e4a1/tumblr_o0bww8Y6P41tzofdno1_1280.jpg",
     slug: "Write-a-Dystopian-Novel"
   },
   {
-    pic: "img/pics/get-anime-eyes.jpg",
     slug: "Get-Anime-Eyes"
   },
   {
-    pic: "img/pics/be-emotionless.jpg",
     slug: "Be-Emotionless"
   },
   {
@@ -343,6 +322,24 @@ var wikiHow = [
   {
      pic: "img/pics/love.jpg",
     slug: "Love"
+  },
+  {
+    slug: "Be-Quirky"
+  },
+  {
+    slug: "Make-Your-Girlfriend-Want-to-Have-Sex-With-You"
+  },
+  {
+    slug: "Sue-for-Emotional-Distress"
+  },
+  {
+    slug: "Get-Over-an-Affair-and-Move-On-with-Your-Relationship"
+  },
+  {
+    slug: "Survive-in-a-Hotel"
+  },
+  {
+    slug: "Know-if-Your-Ex-Misses-You"
   },
   {
     pic: "http://pad2.whstatic.com/images/thumb/5/50/Be-Unique-Step-5.jpeg/728px-Be-Unique-Step-5.jpeg",
