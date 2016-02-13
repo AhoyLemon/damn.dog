@@ -3,6 +3,7 @@
 //@prepros-prepend partials/_analytics.js
 
 $(document).ready(function() {
+  console.log('total rounds: '+wikiHow.length);
   newRound();
 });
 
@@ -70,8 +71,6 @@ function newRound() {
   choiceids = [];
   getPhoto();
   getChoices();
-  //console.log(choices);
-  //console.log(choiceids);
 }
 
 function getPhoto() {
