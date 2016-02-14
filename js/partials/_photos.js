@@ -303,6 +303,15 @@ var wikiHow = [
     slug: "Be-a-Male-Housewife"
   },
   {
+    slug: "Be-Polite-in-Norway"
+  },
+  {
+    slug: "Be-Sassy"
+  },
+  {
+    slug: "Deal-With-a-Sarcastic-Person"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
