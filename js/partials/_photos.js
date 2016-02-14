@@ -144,9 +144,6 @@ var wikiHow = [
     slug: "Buy-Firearms-in-California"
   },
   {
-    slug: "Start-a-Women's-Bible-Study"
-  },
-  {
     slug: "Capture-Joie-De-Vivre"
   },
   {
