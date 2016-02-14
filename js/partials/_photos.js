@@ -342,6 +342,30 @@ var wikiHow = [
     slug: "Tell-if-Someone-Is-High"
   },
   {
+    slug: "Win-a-Fist-Fight"
+  },
+  {
+    slug: "Talk-Dirty-in-Bed"
+  },
+  {
+    slug: "Persuade-a-Christian-to-Become-Atheist"
+  },
+  {
+    slug: "Make-a-Guy-That-Is-Mad-at-You-Like-You-Again-Through-Text"
+  },
+  {
+    slug: "Act-Like-a-Villain"
+  },
+  {
+    slug: "Act-Like-the-Doctor-of-Doctor-Who"
+  },
+  {
+    slug: "Act-Like-Royalty"
+  },
+  {
+    slug: "Be-Cunning"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
