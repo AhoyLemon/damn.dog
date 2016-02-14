@@ -312,6 +312,36 @@ var wikiHow = [
     slug: "Deal-With-a-Sarcastic-Person"
   },
   {
+    slug: "Become-Famous-on-the-Internet"
+  },
+  {
+    slug: "Make-Yourself-Famous-on-YouTube"
+  },
+  {
+    slug: "Get-Famous-While-Young"
+  },
+  {
+    slug: "Survive-a-Cold-Winter"
+  },
+  {
+    slug: "Discuss-Barack-Obama-Intelligently"
+  },
+  {
+    slug: "Know-if-Your-Boyfriend-Is-Being-Disrespectful-to-You"
+  },
+  {
+    slug: "Talk-to-Authority"
+  },
+  {
+    slug: "Be-a-Hipster-Girl"
+  },
+  {
+    slug: "Act-Drunk"
+  },
+  {
+    slug: "Tell-if-Someone-Is-High"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
