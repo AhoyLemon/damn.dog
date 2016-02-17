@@ -381,6 +381,12 @@ var wikiHow = [
     slug: "Gargle"
   },
   {
+    slug: "Not-Get-Arrested-While-Skateboarding"
+  },
+  {
+    slug: "Know-It's-the-Right-Time-to-Have-Sex"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
