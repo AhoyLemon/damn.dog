@@ -369,6 +369,18 @@ var wikiHow = [
     slug: "Be-a-Modern-Hippie"
   },
   {
+    slug: "Impress-People"
+  },
+  {
+    slug: "Be-Stealthy-Like-a-Ninja"
+  },
+  {
+    slug: "Create-a-Realistic-Fiction-Character"
+  },
+  {
+    slug: "Gargle"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
