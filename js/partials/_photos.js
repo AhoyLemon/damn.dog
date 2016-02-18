@@ -387,6 +387,9 @@ var wikiHow = [
     slug: "Know-It's-the-Right-Time-to-Have-Sex"
   },
   {
+    slug: "Calm-Down-Quickly"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
