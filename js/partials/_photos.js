@@ -366,6 +366,9 @@ var wikiHow = [
     slug: "Be-Cunning"
   },
   {
+    slug: "Be-Edgy"
+  },
+  {
     slug: "Be-Unique"
   }
 ];

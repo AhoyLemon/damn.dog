@@ -78,7 +78,7 @@ function getPhoto() {
   var a = roundsPlayed.indexOf(r);
   if (a > -1) {
     reroll++;
-    if (reroll < 6) {
+    if (reroll < 9) {
       getPhoto();
     } else {
       gameOver();
