@@ -369,6 +369,18 @@ var wikiHow = [
     slug: "Be-Edgy"
   },
   {
+    slug: "Be-Brave"
+  },
+  {
+    slug: "Motivate-Yourself"
+  },
+  {
+    slug: "Deal-With-a-Friend's-Death"
+  },
+  {
+    slug: "Survive-in-the-Woods"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
