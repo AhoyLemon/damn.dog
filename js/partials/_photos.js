@@ -384,6 +384,24 @@ var wikiHow = [
     slug: "Control-Rosacea"
   },
   {
+    slug: "Create-Urban-Rainforests"
+  },
+  {
+    slug: "Refuse-a-Kiss"
+  },
+  {
+    slug: "Be-Sexually-Empowered"
+  },
+  {
+    slug: "Respectfully-Decline-Sex"
+  },
+  {
+    slug: "Make-Out"
+  },
+  {
+    slug: "Avoid-Creating-a-Weak-Villain"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
