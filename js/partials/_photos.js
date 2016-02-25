@@ -381,6 +381,9 @@ var wikiHow = [
     slug: "Survive-in-the-Woods"
   },
   {
+    slug: "Control-Rosacea"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
