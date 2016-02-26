@@ -1,6 +1,6 @@
 header > .inner {
   width: 100%;
-  max-width: 666px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -271,25 +271,30 @@ header .number.bad {
   color: #b22028;
 }
 
-.image-holder {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+main {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  padding-top: 2.4rem;
-  padding-bottom: 3.6rem;
   overflow-y: auto;
+}
+
+.image-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  min-height: 100%;
+  padding-top: 2.4rem;
+  padding-bottom: 6rem;
 }
 
 .image-holder .child {
   text-align: center;
   width: 100%;
-  max-width: 666px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -410,7 +415,7 @@ header .number.bad {
   display: none;
 }
 
-@media (max-width: 666px) {
+@media (max-width: 700px) {
   .image-holder h1 {
     font-size: 5vw;
   }

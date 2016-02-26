@@ -96,6 +96,8 @@ function getPhoto() {
     $('#HeroPic').attr('src', wiki.pic);
     wiki.title = 'How To '+wikiHow[r].slug.replace(/-/g, " ");
     wiki.url = "http://www.wikihow.com/"+wikiHow[r].slug;
+    
+    history.pushState(null, null, '#'+r);
   }
 }
 
