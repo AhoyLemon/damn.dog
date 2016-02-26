@@ -4,7 +4,14 @@
 
 $(document).ready(function() {
   console.log('total rounds: '+wikiHow.length);
-  newRound();
+  if(window.location.hash) {
+    var hash = window.location.hash.substring(1); 
+    getPhoto(hash);
+    getChoices();
+  } else {
+    getPhoto();
+    getChoices();
+  }
 });
 
 var wiki = {
@@ -55,10 +62,6 @@ if(typeof(Storage) !== "undefined") {
   // Sorry! No Web Storage support..
 }
 
-
-
-
-
 function shuffle(o){
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
   return o;
@@ -73,17 +76,10 @@ function newRound() {
   getChoices();
 }
 
-function getPhoto() {
-  var r = Math.floor((Math.random() * wikiHow.length));
-  var a = roundsPlayed.indexOf(r);
-  if (a > -1) {
-    reroll++;
-    if (reroll < 9) {
-      getPhoto();
-    } else {
-      gameOver();
-    }
-  } else {
+function getPhoto(p) {
+  var r;
+  if (p) {
+    r = p;
     reroll = 0;
     roundsPlayed.push(r);
     localStorage.setItem('roundsPlayed', roundsPlayed.toString());
@@ -96,8 +92,32 @@ function getPhoto() {
     $('#HeroPic').attr('src', wiki.pic);
     wiki.title = 'How To '+wikiHow[r].slug.replace(/-/g, " ");
     wiki.url = "http://www.wikihow.com/"+wikiHow[r].slug;
-    
-    history.pushState(null, null, '#'+r);
+  } else {
+    r = Math.floor((Math.random() * wikiHow.length));
+    var a = roundsPlayed.indexOf(r);
+    if (a > -1) {
+      reroll++;
+      if (reroll < 9) {
+        getPhoto();
+      } else {
+        gameOver();
+      }
+    } else {
+      reroll = 0;
+      roundsPlayed.push(r);
+      localStorage.setItem('roundsPlayed', roundsPlayed.toString());
+      wiki.gid = r;
+      if (!wikiHow[r].pic) {
+        wiki.pic = 'img/pics/'+wikiHow[r].slug.toLowerCase()+'.jpg';
+      } else {
+        wiki.pic = wikiHow[r].pic;
+      }
+      $('#HeroPic').attr('src', wiki.pic);
+      wiki.title = 'How To '+wikiHow[r].slug.replace(/-/g, " ");
+      wiki.url = "http://www.wikihow.com/"+wikiHow[r].slug;
+
+      history.pushState(null, null, '#'+r);
+    }
   }
 }
 
