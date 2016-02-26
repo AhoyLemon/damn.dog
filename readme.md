@@ -10,3 +10,6 @@ The name actually came first. I was surprised to find out that the domain `damn.
 ## Any more places for illustratons?
 * [WikiHow Illustrations Tumblr](http://wikihow-illustrations.tumblr.com/)
 * [@WikiHowArt](https://twitter.com/WikiHowArt)
+
+## Hey, how do I add images?
+I wrote [a wiki](https://github.com/AhoyLemon/Damn-Dog/wiki)
