@@ -93,9 +93,6 @@ var wikiHow = [
     slug: "Tell-a-Girl-You-Like-Her"
   },
   {
-    slug: "Own-and-Love-a-Pit-Bull-Dog"
-  },
-  {
     slug: "Make-Someone-You-Met-on-MSN-Love-You"
   },
   {
@@ -400,6 +397,42 @@ var wikiHow = [
   },
   {
     slug: "Avoid-Creating-a-Weak-Villain"
+  },
+  {
+    slug: "Help-a-Choking-Victim"
+  },
+  {
+    slug: "Learn-Smoking-Tricks"
+  },
+  {
+    slug: "Avoid-Getting-Caught-Smoking-by-Your-Parents"
+  },
+  {
+    slug: "Identify-Trauma-in-Autistic-People"
+  },
+  {
+    slug: "Stop-Binge-Drinking"
+  },
+  {
+    slug: "Flatulate-Secretively-(Teenagers)"
+  },
+  {
+    slug: "Be-Stealthy-Like-a-Ninja"
+  },
+  {
+    slug: "Calm-Down-Quickly"
+  },
+  {
+    slug: "Gargle"
+  },
+  {
+    slug: "Impress-People"
+  },
+  {
+    slug: "Not-Get-Arrested-While-Skateboarding"
+  },
+  {
+    slug: "Recognize-the-Signs-of-Intoxication"
   },
   {
     slug: "Be-Unique"
