@@ -435,6 +435,24 @@ var wikiHow = [
     slug: "Recognize-the-Signs-of-Intoxication"
   },
   {
+    slug: "Develop-Self‐Esteem"
+  },
+  {
+    slug: "Dissolve-the-Ego"
+  },
+  {
+    slug: "Be-Laid-Back"
+  },
+  {
+    slug: "Get-over-Eavesdropped-Phone-Sex-That-You-Had-Without-Knowing-It-Was-Eavesdropped"
+  },
+  {
+    slug: "Be-Strong"
+  },
+  {
+    slug: "Stay-Calm-Around-an-Ex"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
