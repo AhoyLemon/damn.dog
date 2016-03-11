@@ -446,6 +446,23 @@ footer a:hover {
   text-decoration: underline;
 }
 
+footer a.close {
+  position: absolute;
+  top: 0.6em;
+  right: 0.6em;
+  font-size: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+footer a.close:hover {
+  transform: scale(1.2);
+}
+
+footer a.close:active {
+  transform: scale(0.8);
+}
+
 @media screen and (max-height: 620px) {
   footer {
     display: none;

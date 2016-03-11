@@ -1,6 +1,7 @@
 // jshint -W117
 //@prepros-prepend partials/_photos.js
 //@prepros-prepend partials/_analytics.js
+//@prepros-prepend partials/_footer.js
 
 $(document).ready(function() {
   console.log('total rounds: '+wikiHow.length);
