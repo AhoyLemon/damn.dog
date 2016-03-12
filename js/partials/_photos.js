@@ -435,9 +435,6 @@ var wikiHow = [
     slug: "Recognize-the-Signs-of-Intoxication"
   },
   {
-    slug: "Develop-Self‐Esteem"
-  },
-  {
     slug: "Dissolve-the-Ego"
   },
   {
