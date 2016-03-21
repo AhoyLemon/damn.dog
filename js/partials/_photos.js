@@ -450,6 +450,9 @@ var wikiHow = [
     slug: "Stay-Calm-Around-an-Ex"
   },
   {
+    slug: "Plan-a-Disney-Vacation"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
