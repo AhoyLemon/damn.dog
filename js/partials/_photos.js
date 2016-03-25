@@ -453,6 +453,12 @@ var wikiHow = [
     slug: "Plan-a-Disney-Vacation"
   },
   {
+    slug: "Act-Like-Sonic-the-Hedgehog"
+  },
+  {
+    slug: "Become-a-Pastafarian"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
