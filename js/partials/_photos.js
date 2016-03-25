@@ -460,5 +460,17 @@ var wikiHow = [
   },
   {
     slug: "Be-Unique"
+  },
+  {
+    slug: "Be-a-Socialist"
+  },
+  {
+    slug: "Taper-Trouser-Legs"
+  },
+  {
+    slug: "Become-a-Pastafarian"
+  },
+  {
+    slug: "Act-Like-Sonic-the-Hedgehog"
   }
 ];
