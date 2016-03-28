@@ -459,6 +459,21 @@ var wikiHow = [
     slug: "Become-a-Pastafarian"
   },
   {
+    slug: "Meet-a-Porn-Star-in-Your-Area"
+  },
+  {
+    slug: "Be-a-Punk"
+  },
+  {
+    slug: "Make-a-Friend-Fall-in-Love-with-You"
+  },
+  {
+    slug: "Be-a-World-Citizen"
+  },
+  {
+    slug: "Be-a-Fascist"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
