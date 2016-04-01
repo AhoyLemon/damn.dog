@@ -474,6 +474,15 @@ var wikiHow = [
     slug: "Be-a-Fascist"
   },
   {
+    slug: "Flirt-With-a-Hot-Girl"
+  },
+  {
+    slug: "Write-a-Comedy-Sketch"
+  },
+  {
+    slug: "Release-Endorphins"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
