@@ -483,6 +483,18 @@ var wikiHow = [
     slug: "Release-Endorphins"
   },
   {
+    slug: "Feed-a-Snake"
+  },
+  {
+    slug: "Kick-Out-a-Dangerous-Roommate"
+  },
+  {
+    slug: "Identify-a-Psychopath"
+  },
+  {
+    slug: "Know-when-You'll-Get-Your-First-Period"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
