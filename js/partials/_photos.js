@@ -495,6 +495,9 @@ var wikiHow = [
     slug: "Know-when-You'll-Get-Your-First-Period"
   },
   {
+    slug: "Stop-a-Masturbation-Addiction"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
