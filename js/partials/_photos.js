@@ -498,6 +498,27 @@ var wikiHow = [
     slug: "Stop-a-Masturbation-Addiction"
   },
   {
+    slug: "Fix-Your-Digestion"
+  },
+  {
+    slug: "Identify-Cervicitis"
+  },
+  {
+    slug: "Be-a-Christian-Leader"
+  },
+  {
+    slug: "Deal-With-Your-Parents'-Divorce"
+  },
+  {
+    slug: "Make-an-Upside-Down-Man-Costume"
+  },
+  {
+    slug: "Trick-People-into-Thinking-You're-Possessed"
+  },
+  {
+    slug: "Relax-when-You-Are-Sick"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
