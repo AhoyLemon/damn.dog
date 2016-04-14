@@ -12,7 +12,7 @@ The name actually came first. I was surprised to find out that the domain `damn.
 
 * [Portaxx](https://thefpl.us/meet/portaxx)
 * [Montrith](https://thefpl.us/meet/montrith)
-* Eldrich Hat
+* [Eldritchhat](https://github.com/Eldritchhat)
 * [Chai Tea Latte](https://thefpl.us/meet/chai-tea-latte)
 
 ## Any more places for illustratons?
