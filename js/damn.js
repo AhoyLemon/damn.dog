@@ -246,8 +246,8 @@ $('button.hamburger').click(function() {
 
 $('#OpenSharebox').click(function() {
   $('.share-round-holder').show();
-})
+});
 
 $('#CloseSharebox').click(function() {
   $('.share-round-holder').hide();
-})
+});
