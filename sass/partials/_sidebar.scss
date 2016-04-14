@@ -1,0 +1,20 @@
+.sidebar { @include position(fixed,$header-height,0); background: $offwhite; width: 12rem; padding: 1rem; z-index: $z-sidebar;
+  li { margin-bottom: 0.65em; }
+  .label { display: block; }
+  .indent { display: block; padding-left: 0.75em; font-weight: $bold; }
+  a { color:$blue; text-decoration: none; cursor: pointer; 
+    &:hover { text-decoration: underline; }
+  }
+  .smaller { font-size:0.8em; }
+  transform: translateX(101%); transition: all 0.3s ease;
+  &.visible { transform:translateX(0); }
+}
+
+.share-round-holder { @include position(fixed,0,0,0,0); z-index: $z-sharebox; background:rgba($black,0.73); display: none;
+  .share-round { @extend %center-child; position: relative; height: 100%; }
+  .child { text-align: center; color:$white; font-size:2rem; }
+  span { display: block; margin-bottom: 0.5em; }
+  .button { background:transparent; font-size:0.7em; border:2px solid $link; color:$link; font-family:$font; padding:.25em 1em; cursor:pointer;
+    &:hover { background:$link; color:$dark; }
+  }
+}

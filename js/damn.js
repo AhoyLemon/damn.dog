@@ -5,6 +5,7 @@
 
 $(document).ready(function() {
   console.log('total rounds: '+wikiHow.length);
+  $('.number-of-rounds').text(wikiHow.length);
   if(window.location.hash) {
     var hash = window.location.hash.substring(1); 
     getPhoto(hash);
@@ -237,3 +238,16 @@ $('#GuessTitle').change(function() {
 $('#PlayAgain').click(function() {
   newRound();
 });
+
+$('button.hamburger').click(function() {
+  $(this).toggleClass('is-active');
+  $('.sidebar').toggleClass('visible');
+});
+
+$('#OpenSharebox').click(function() {
+  $('.share-round-holder').show();
+})
+
+$('#CloseSharebox').click(function() {
+  $('.share-round-holder').hide();
+})

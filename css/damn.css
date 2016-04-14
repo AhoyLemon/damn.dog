@@ -5,14 +5,14 @@ header > .inner {
   margin-right: auto;
 }
 
-.game-over .stripes {
+.share-round-holder .share-round, .game-over .stripes {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.game-over .stripes > .child {
+.share-round-holder .share-round > .child, .game-over .stripes > .child {
   flex-basis: 100%;
 }
 
@@ -224,20 +224,14 @@ svg * {
 
 header {
   background-color: #2A313A;
-  text-align: right;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-  display: none;
-  height: 2rem;
-  z-index: 3;
-}
-
-header > .inner {
-  color: #fff;
+  height: 2.5rem;
+  z-index: 4;
 }
 
 header span {
@@ -252,16 +246,12 @@ header .percent {
 header .label {
   font-size: 0.7em;
   font-family: "Roboto", sans-serif;
-  padding-right: 0.25em;
   line-height: 200%;
-}
-
-header .label.percent {
-  padding-left: 1.5em;
+  padding-right: 0.5em;
 }
 
 header .number {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 300;
   line-height: 50%;
   color: #6CB200;
@@ -269,6 +259,82 @@ header .number {
 
 header .number.bad {
   color: #b22028;
+}
+
+header > .inner {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 0.2rem;
+}
+
+header > .inner .box {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-self: auto;
+  text-align: center;
+}
+
+header .hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #3e98f2;
+  outline: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+}
+
+header .hamburger g {
+  transform-origin: center;
+  transition: all 0.3s linear;
+}
+
+header .hamburger .close {
+  opacity: 0.2;
+  transform: scale(0.2);
+}
+
+header .hamburger.is-active .close {
+  opacity: 1;
+  transform: scale(1);
+}
+
+header .hamburger.is-active .open {
+  opacity: 0.2;
+  transform: scale(0.2);
+}
+
+@media (max-width: 700px) {
+  header > .inner .box {
+    flex-basis: 33.3333%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+  }
+  header > .inner .box.hamburger-holder {
+    flex-basis: 3rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+  }
+  header .hamburger-holder {
+    text-align: right !important;
+  }
+  header .hamburger-holder .hamburger {
+    position: relative;
+    top: auto;
+    right: auto;
+    height: 100%;
+  }
+  header .hamburger-holder .hamburger svg {
+    height: 1.6rem;
+  }
 }
 
 main {
@@ -284,10 +350,9 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   position: relative;
   min-height: 100%;
-  padding-top: 2.4rem;
+  padding-top: 3rem;
   padding-bottom: 6rem;
 }
 
@@ -311,6 +376,14 @@ main {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.image-holder h1.nope {
+  color: #b22028;
+}
+
+.image-holder h1.yup {
+  color: #6CB200;
+}
+
 .image-holder a {
   color: #3e98f2;
   text-decoration: none;
@@ -325,7 +398,7 @@ main {
     **/
 }
 
-.image-holder .input-holder input, .image-holder .input-holder label, .image-holder .input-holder select, .image-holder .input-holder option {
+.image-holder .input-holder select {
   font-family: "Roboto Slab", serif;
   color: black;
   font-size: 1.3rem;
@@ -349,6 +422,7 @@ main {
 
 .image-holder .input-holder select option {
   padding-left: 2rem;
+  font-size: 1rem;
 }
 
 .image-holder .input-holder label {
@@ -422,51 +496,90 @@ main {
   }
 }
 
-footer {
+.sidebar {
   position: fixed;
+  top: 2.5rem;
   right: 0;
-  bottom: 0;
-  left: 0;
-  height: 3rem;
-  background: #2A313A;
-  color: #fff;
-  font-weight: 300;
-  text-align: center;
-  padding: 1em;
-  font-size: 0.85em;
-  z-index: 2;
+  background: #f0f1f2;
+  width: 12rem;
+  padding: 1rem;
+  z-index: 3;
+  transform: translateX(101%);
+  transition: all 0.3s ease;
 }
 
-footer a {
+.sidebar li {
+  margin-bottom: 0.65em;
+}
+
+.sidebar .label {
+  display: block;
+}
+
+.sidebar .indent {
+  display: block;
+  padding-left: 0.75em;
+  font-weight: 700;
+}
+
+.sidebar a {
   color: #3e98f2;
   text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer a.close {
-  position: absolute;
-  top: 0.6em;
-  right: 0.6em;
-  font-size: 1.5em;
-  font-weight: 700;
   cursor: pointer;
 }
 
-footer a.close:hover {
-  transform: scale(1.2);
+.sidebar a:hover {
+  text-decoration: underline;
 }
 
-footer a.close:active {
-  transform: scale(0.8);
+.sidebar .smaller {
+  font-size: 0.8em;
 }
 
-@media screen and (max-height: 620px) {
-  footer {
-    display: none;
-  }
+.sidebar.visible {
+  transform: translateX(0);
+}
+
+.share-round-holder {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(51, 51, 51, 0.73);
+  display: none;
+}
+
+.share-round-holder .share-round {
+  position: relative;
+  height: 100%;
+}
+
+.share-round-holder .child {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.share-round-holder span {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.share-round-holder .button {
+  background: transparent;
+  font-size: 0.7em;
+  border: 2px solid #3e98f2;
+  color: #3e98f2;
+  font-family: "Roboto Slab", serif;
+  padding: .25em 1em;
+  cursor: pointer;
+}
+
+.share-round-holder .button:hover {
+  background: #3e98f2;
+  color: #222730;
 }
 
 .game-over {

@@ -1,5 +1,5 @@
 - var pageTitle = "Home"
-- var lastUpdated = "03.09.2016"
+- var lastUpdated = "04.13.2016"
 
 doctype html
 html(lang="en")
@@ -9,27 +9,30 @@ html(lang="en")
   body
     
     include partials/header.jade
+    include partials/sidebar.jade
     
     main
       // PAGE CONTENT
       section.image-holder
         .child
           h1(data-display="guess") What is the title of this WikiHow article?
+          h1.nope(data-display="wrong") Nope.
+          h1.yup(data-display="correct") That's right.
           img#HeroPic()
           .input-holder(data-display="guess")
             select#GuessTitle
               option
           .result(data-display="wrong")
-            h2.nope Nope!
+            //h2.nope Nope!
             span.correctis Correct answer is 
             a.correct-title#CorrectTitle(target="_blank")
           .result(data-display="correct")
-            h2.yup That's right.
+            //h2.yup That's right.
             a.correct-title#ActualTitle(target="_blank")
           .button-holder(data-display="play again")
             button#PlayAgain Play Again
     
     include partials/gameover.jade
 
-    include partials/footer.jade
+    //include partials/footer.jade
     include partials/javascripts.jade

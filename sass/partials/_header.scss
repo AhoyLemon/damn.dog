@@ -1,11 +1,39 @@
-header { background-color:$lessdark; text-align: right; @include position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom:0.25em; display:none; height:$header-height; z-index:$z-header;
-  > .inner { color:$white; @extend %inner; }
+header { background-color:$lessdark; @include position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom:0.25em; height:$header-height; z-index:$z-header;
+  //> .inner { color:$white; @extend %inner; }
   span { display:inline-block; vertical-align: middle; }
   .percent { display: none; }
-  .label { font-size:0.7em; font-family: $sans; padding-right: 0.25em; line-height: 200%;
-    &.percent { padding-left: 1.5em;}
-  }
-  .number { font-size:2em; font-weight: $light; line-height: 50%; color:$green;
+  .label { font-size:0.7em; font-family: $sans; line-height: 200%; padding-right: 0.5em; }
+  .number { font-size:1.8em; font-weight: $light; line-height: 50%; color:$green;
     &.bad { color:$red; }
+  }
+  
+  > .inner { color:$white; @extend %inner;  @include flex-container(); padding-top:0.2rem;
+    .box { @include flex-item(50%); text-align: center; }
+  }
+  
+  .hamburger { background:transparent; border:none; cursor: pointer; color:$blue; outline:none; height: $header-height; width: $header-height; @include position(absolute,0,2rem);
+    svg {  }
+    g { transform-origin: center; transition:all 0.3s linear; }
+    .close { opacity: 0.2; transform: scale(0.2); }
+    &.is-active {
+      .close { opacity: 1; transform: scale(1);}
+      .open { opacity: 0.2; transform: scale(0.2);}
+    }
+  }
+}
+
+@media (max-width:$max-width) {
+  header { 
+    //.number { font-size:1.5em;}
+    > .inner {
+      .box { @include flex-item(33.3333%);
+        &.hamburger-holder { @include flex-item(3rem); }
+      }
+    } 
+    .hamburger-holder { text-align: right !important;
+      .hamburger { position:relative; top: auto; right:auto; height: 100%;
+        svg { height: 1.6rem; }
+      }
+    }
   }
 }
