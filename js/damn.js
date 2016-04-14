@@ -83,8 +83,8 @@ function getPhoto(p) {
   if (p) {
     r = p;
     reroll = 0;
-    roundsPlayed.push(r);
-    localStorage.setItem('roundsPlayed', roundsPlayed.toString());
+    //roundsPlayed.push(r);
+    //localStorage.setItem('roundsPlayed', roundsPlayed.toString());
     wiki.gid = r;
     if (!wikiHow[r].pic) {
       wiki.pic = 'img/pics/'+wikiHow[r].slug.toLowerCase()+'.jpg';
@@ -106,8 +106,8 @@ function getPhoto(p) {
       }
     } else {
       reroll = 0;
-      roundsPlayed.push(r);
-      localStorage.setItem('roundsPlayed', roundsPlayed.toString());
+      //roundsPlayed.push(r);
+      //localStorage.setItem('roundsPlayed', roundsPlayed.toString());
       wiki.gid = r;
       if (!wikiHow[r].pic) {
         wiki.pic = 'img/pics/'+wikiHow[r].slug.toLowerCase()+'.jpg';
@@ -201,6 +201,8 @@ function showScore() {
 function verifyTitle() {
   var tl = wiki.title.toLowerCase();
   var g = $('#GuessTitle').val().toLocaleLowerCase();
+  roundsPlayed.push(wiki.gid);
+  localStorage.setItem('roundsPlayed', roundsPlayed.toString());
   if (g == tl) {
     $('#ActualTitle').text(wiki.title);
     $('#ActualTitle').attr('href',wiki.url);
@@ -233,6 +235,11 @@ function gameOver() {
 }
 $('#GuessTitle').change(function() {
   verifyTitle();
+});
+
+$('#ActualTitle').click(function() {
+  var whURL = $(this).attr('href');
+  sendGA('Wikihow Link', whURL);
 });
 
 $('#PlayAgain').click(function() {

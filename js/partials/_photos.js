@@ -399,9 +399,6 @@ var wikiHow = [
     slug: "Avoid-Creating-a-Weak-Villain"
   },
   {
-    slug: "Help-a-Choking-Victim"
-  },
-  {
     slug: "Learn-Smoking-Tricks"
   },
   {
@@ -517,6 +514,15 @@ var wikiHow = [
   },
   {
     slug: "Relax-when-You-Are-Sick"
+  },
+  {
+    slug: "Use-French-in-Conversations-About-Mammals"
+  },
+  {
+    slug: "Become-an-Olympian"
+  },
+  {
+    slug: "Look-and-Act-Like-a-Magic-Mermaid"
   },
   {
     slug: "Be-Unique"
