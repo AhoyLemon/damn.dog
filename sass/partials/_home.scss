@@ -1,5 +1,5 @@
 main { @include position(fixed,0,0,0,0); overflow-y: auto; }
-.image-holder { @include flex-container(stretch);  position: relative; min-height: 100%; padding-top:($header-height * 1.2); padding-bottom:($footer-height * 2);
+.image-holder { @include flex-container(stretch);  position: relative; min-height: 100%; padding-top:($header-height);
   .child { text-align: center; width:100%; max-width:$max-width; margin-left: auto; margin-right: auto; }
   img { max-width: 100%; }
   h1 { font-weight: $light; font-size:1.5em; margin-top: 0.5em; margin-bottom: 0.5em; color:rgba($white,0.6);
@@ -8,7 +8,6 @@ main { @include position(fixed,0,0,0,0); overflow-y: auto; }
   }
   a { color:$link; text-decoration: none; }
   .input-holder { position: relative;
-    $pad: 2rem;
     
     select { font-family:$slab; color:black; font-size:1.3rem; }
     /**

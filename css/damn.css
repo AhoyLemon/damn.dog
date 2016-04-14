@@ -352,8 +352,7 @@ main {
   flex-wrap: wrap;
   position: relative;
   min-height: 100%;
-  padding-top: 3rem;
-  padding-bottom: 6rem;
+  padding-top: 2.5rem;
 }
 
 .image-holder .child {

@@ -525,6 +525,21 @@ var wikiHow = [
     slug: "Look-and-Act-Like-a-Magic-Mermaid"
   },
   {
+    slug: "Smell-Seductive-on-Dates"
+  },
+  {
+    slug: "Dance-at-a-Rave"
+  },
+  {
+    slug: "Prevent-Identity-Theft"
+  },
+  {
+    slug: "Pick-Up-Girls-in-High-School"
+  },
+  {
+    slug: "Track-Money"
+  },
+  {
     slug: "Be-Unique"
   }
 ];

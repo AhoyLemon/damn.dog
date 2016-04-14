@@ -14,6 +14,7 @@ The name actually came first. I was surprised to find out that the domain `damn.
 * [Montrith](https://thefpl.us/meet/montrith)
 * [Eldritchhat](https://github.com/Eldritchhat)
 * [Chai Tea Latte](https://thefpl.us/meet/chai-tea-latte)
+* [Boots Raingear](https://thefpl.us/meet/boots-raingear)
 
 ## Any more places for illustratons?
 * [WikiHow Illustrations Tumblr](http://wikihow-illustrations.tumblr.com/)
