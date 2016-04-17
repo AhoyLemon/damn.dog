@@ -1,15 +1,19 @@
 // jshint -W117
 //@prepros-prepend partials/_photos.js
 //@prepros-prepend partials/_analytics.js
-//@prepros-prepend partials/_footer.js
 
 $(document).ready(function() {
-  console.log('total rounds: '+wikiHow.length);
   $('.number-of-rounds').text(wikiHow.length);
   if(window.location.hash) {
     var hash = window.location.hash.substring(1); 
-    getPhoto(hash);
-    getChoices();
+    
+    if (hash < wikiHow.length) {
+      getPhoto(hash);
+      getChoices();
+    } else {
+      getPhoto();
+      getChoices();
+    }
   } else {
     getPhoto();
     getChoices();
@@ -83,8 +87,6 @@ function getPhoto(p) {
   if (p) {
     r = p;
     reroll = 0;
-    //roundsPlayed.push(r);
-    //localStorage.setItem('roundsPlayed', roundsPlayed.toString());
     wiki.gid = r;
     if (!wikiHow[r].pic) {
       wiki.pic = 'img/pics/'+wikiHow[r].slug.toLowerCase()+'.jpg';
@@ -106,8 +108,6 @@ function getPhoto(p) {
       }
     } else {
       reroll = 0;
-      //roundsPlayed.push(r);
-      //localStorage.setItem('roundsPlayed', roundsPlayed.toString());
       wiki.gid = r;
       if (!wikiHow[r].pic) {
         wiki.pic = 'img/pics/'+wikiHow[r].slug.toLowerCase()+'.jpg';
@@ -190,7 +190,7 @@ function showScore() {
     $('header .percent').fadeIn(600);
     $('#ScorePercent').text(player.percent+'%');
     
-    if (player.percent < 50) {
+    if (player.percent < 60) {
       $('#ScorePercent').addClass('bad');
     } else {
       $('#ScorePercent').removeClass('bad');

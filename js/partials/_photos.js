@@ -540,6 +540,21 @@ var wikiHow = [
     slug: "Track-Money"
   },
   {
+    slug: "Be-a-Stripper-Who-Knows-What-She-is-Doing"
+  },
+  {
+    slug: "Be-a-True-Hip-Hop-Artist"
+  },
+  {
+    slug: "Exercise-Mindfulness-to-Be-Happier"
+  },
+  {
+    slug: "Say-Some-Common-Phrases-in-Esperanto"
+  },
+  {
+    slug: "Spot-a-Catfish"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
