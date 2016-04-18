@@ -585,6 +585,9 @@ var wikiHow = [
     slug: "Channel"
   },
   {
+    slug: "Have-Jehovah's-Witnesses-Go-Away"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
