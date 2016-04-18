@@ -555,6 +555,36 @@ var wikiHow = [
     slug: "Spot-a-Catfish"
   },
   {
+    slug: "Help-Save-Whales"
+  },
+  {
+    slug: "Win-at-Arm-Wrestling"
+  },
+  {
+    slug: "Pull-an-All-Nighter"
+  },
+  {
+    slug: "Deal-With-People-Who-Ignore-You"
+  },
+  {
+    slug: "Be-Confident-As-a-Overweight-Adult"
+  },
+  {
+    slug: "Be-Comfortable-in-Your-Own-Skin"
+  },
+  {
+    slug: "Visit-Laguna-Beach,-California"
+  },
+  {
+    slug: "Get-Over-Writer's-Block"
+  },
+  {
+    slug: "Put-Your-Arm-Around-a-Girl"
+  },
+  {
+    slug: "Channel"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
