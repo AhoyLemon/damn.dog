@@ -40,5 +40,5 @@
   ],
   "start_url": "http://damn.dog",
   "display": "standalone",
-  "orientation": "landscape"
+  "orientation": "portrait"
 }
