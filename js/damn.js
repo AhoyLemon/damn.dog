@@ -51,7 +51,7 @@ $(document).ready(function() {
     device = "unknown";
     browser = "chrome";
   }
-  alert('device: '+device+'. browser:'+browser);
+  console.log('device: '+device+'. browser:'+browser);
   addToHomeScreen(device,browser);
 });
 
