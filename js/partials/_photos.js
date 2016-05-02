@@ -588,6 +588,39 @@ var wikiHow = [
     slug: "Have-Jehovah's-Witnesses-Go-Away"
   },
   {
+    slug: "Laugh-Naturally-on-Cue"
+  },
+  {
+    slug: "Stop-a-Sneeze"
+  },
+  {
+    slug: "Respond-to-Fundamentalists"
+  },
+  {
+    slug: "Be-the-Type-of-Nerd-That-Girls-Love"
+  },
+  {
+    slug: "Induce-Nightmares"
+  },
+  {
+    slug: "Cosplay-As-Spongebob"
+  },
+  {
+    slug: "Take-Action-if-a-Guy-Calls-You-Ugly"
+  },
+  {
+    slug: "Simplify-Your-Life"
+  },
+  {
+    slug: "Know-Your-Warning-Signs-Before-Becoming-Abusive"
+  },
+  {
+    slug: "Be-Interesting"
+  },
+  {
+    slug: "Survive-Domestic-Violence"
+  },
+  {
     slug: "Be-Unique"
   }
 ];

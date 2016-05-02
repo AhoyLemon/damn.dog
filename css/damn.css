@@ -581,6 +581,106 @@ main {
   color: #222730;
 }
 
+.homescreen-help-holder {
+  background: #3e98f2;
+  color: #333;
+  z-index: 6;
+  display: none;
+}
+
+.homescreen-help-holder.android {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 16em;
+}
+
+.homescreen-help-holder.android .ios, .homescreen-help-holder.android .edge {
+  display: none;
+}
+
+.homescreen-help-holder.android b {
+  display: block;
+}
+
+.homescreen-help-holder.android .tap-that-icon {
+  margin-top: -1.2em;
+}
+
+.homescreen-help-holder.android .bottom-center-icon {
+  display: none;
+}
+
+.homescreen-help-holder.ios {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.homescreen-help-holder.ios .homescreen-help {
+  text-align: center;
+}
+
+.homescreen-help-holder.ios .android, .homescreen-help-holder.ios .edge {
+  display: none;
+}
+
+.homescreen-help-holder.ios span.arrow {
+  display: block;
+  text-align: center;
+}
+
+.homescreen-help-holder.ios .top-right-icon {
+  display: none;
+}
+
+.homescreen-help-holder.edge {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 16em;
+}
+
+.homescreen-help-holder.edge .ios, .homescreen-help-holder.edge .android {
+  display: none;
+}
+
+.homescreen-help-holder.desktop-chrome {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 16em;
+}
+
+.homescreen-help-holder.desktop-chrome .ios, .homescreen-help-holder.desktop-chrome .android, .homescreen-help-holder.desktop-chrome .edge {
+  display: none;
+}
+
+.homescreen-help-holder .homescreen-help {
+  text-align: right;
+  padding-right: 0.5em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+}
+
+.homescreen-help-holder span.arrow {
+  font-size: 3.2em;
+}
+
+.homescreen-help-holder .button {
+  color: #333;
+  border: 2px solid #333;
+  padding: .25em 1em;
+  cursor: pointer;
+}
+
+.homescreen-help-holder .button:hover {
+  color: #3e98f2;
+  background: #333;
+  border-color: #3e98f2;
+}
+
 .game-over {
   position: fixed;
   top: 0;

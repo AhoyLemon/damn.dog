@@ -18,7 +18,61 @@ $(document).ready(function() {
     getPhoto();
     getChoices();
   }
+  
+  var ua = navigator.userAgent.toLowerCase();
+  //alert(ua);
+  device = "";
+  browser = "";
+  
+  if (ua.indexOf("android") > -1) {
+    device = "android"
+    if (ua.indexOf("firefox") > -1) {
+      // Android Firefox
+      browser="firefox";
+    } else if (ua.indexOf("opr") > -1) {
+      // Android Opera
+      browser="opera";
+    } else if (ua.indexOf("chrome") > -1) {
+      // Android Chrome
+      browser="chrome";
+    }
+  } else if (ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('ipod') > -1) {
+    device = "ios"
+  } else if (ua.indexOf('windows') > -1) {
+    device = "windows"
+    if (ua.indexOf("edge") > -1) {
+      browser = "edge";
+    } else if (ua.indexOf("trident") > -1) {
+      browser = "ie";
+    } else if (ua.indexOf('chrome') > -1) {
+      browser = "chrome";
+    }
+  } else if (ua.indexOf('chrome') > -1) {
+    device = "unknown";
+    browser = "chrome";
+  }
+  alert('device: '+device+'. browser:'+browser);
+  addToHomeScreen(device,browser);
 });
+
+
+function addToHomeScreen(device,browser) {
+  if (device == "android") {
+    $('#HomescreenLink').text('Add To Home Screen');
+    $('#HomescreenLink, #HomescreenHolder').addClass('android').addClass(browser);
+  } else if (device == "ios") {
+    $('#HomescreenLink').text('Add To Home Screen');
+    $('#HomescreenLink, #HomescreenHolder').addClass('ios safari');
+  } else if (browser == "edge" || browser == "ie") {  
+    $('#HomescreenLink').text('Pin To Start');
+    $('#HomescreenLink, #HomescreenHolder').addClass('windows edge');
+  } else if (browser == "chrome") {
+    $('#HomescreenLink').text('Add To Desktop');
+    $('#HomescreenLink, #HomescreenHolder').addClass('desktop-chrome');
+  } else {
+    $('#HomescreenLink').remove();
+  }
+}
 
 var wiki = {
   pic:'',
@@ -254,6 +308,14 @@ $('button.hamburger').click(function() {
 $('#OpenSharebox').click(function() {
   $('.share-round-holder').show();
 });
+
+$('#HomescreenLink').click(function() {
+  $('#HomescreenHolder').show();
+});
+
+$('#CloseHomeScreenHelp').click(function() {
+  $('#HomescreenHolder').hide();
+})
 
 $('#CloseSharebox').click(function() {
   $('.share-round-holder').hide();

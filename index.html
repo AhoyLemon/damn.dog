@@ -5,7 +5,7 @@
     <title>damn.dog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic">
-    <link rel="stylesheet" href="css/damn.css?v=04.13.2016">
+    <link rel="stylesheet" href="css/damn.css?v=05.02.2016">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A guessing game for WikiHow illustrations.">
     <!-- favicons-->
@@ -66,15 +66,26 @@
       <ul>
         <li><span class="label">Game by</span><span class="indent"><a href="https://thefpl.us/meet/lemon" target="blank" onclick="sendGA('outside link', 'https://thefpl.us/meet/lemon')">Lemon</a></span></li>
         <li> <span class="label">Current round count</span><span class="indent"><span class="number-of-rounds"></span></span></li>
+        <li id="AddToHomeScreen"><a style="font-weight:bold;" id="HomescreenLink"></a></li>
         <li><span class="label">Global average</span><span class="indent">63% correct</span></li>
         <li> <span class="label">There's a</span><span class="indent"><a href="https://github.com/AhoyLemon/Damn-Dog" target="blank" onclick="sendGA('outside link', 'https://github.com/AhoyLemon/Damn-Dog')">GitHub repo</a></span></li>
         <li><span class="label">You can</span><span class="indent"><a id="OpenSharebox">share this round.</a></span></li>
         <li class="smaller">Your progress will be saved if you close this browser.</li>
       </ul>
     </div>
-    <div class="share-round-holder">
+    <div class="share-round-holder helper-holder">
       <div class="share-round">
         <div class="child"><span>Just copy the URL. The other person will see this round.</span><a id="CloseSharebox" class="button close-sharebox">Alright.</a></div>
+      </div>
+    </div>
+    <div id="HomescreenHolder" class="homescreen-help-holder helper-holder">
+      <div class="homescreen-help">
+        <div class="tap-that-icon top-right-icon">Tap that icon <span class="arrow">↑</span></div>
+        <p class="ios">Tap the icon below, then choose <b>Add To Home Screen </b>from the menu that appears.</p>
+        <p class="android">Then choose<b>Add to Home screen</b> from the menu that appears.</p>
+        <p class="edge">Then choose <b>Pin this page to start</b> from the menu that appears.</p>
+        <p class="desktop-chrome">Then choose <b>More Tools</b> and then <b>Add To Desktop</b></p><a id="CloseHomeScreenHelp" class="button close-homescreen-help">Okay, did it.</a>
+        <div class="tap-that-icon ios bottom-center-icon"><span class="arrow">↓</span></div>
       </div>
     </div>
     <main>
@@ -130,7 +141,7 @@
     </section>
     <!--include partials/footer.jade-->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/min/damn.min.js?v=04.13.2016"></script>
+    <script src="js/min/damn.min.js?v=05.02.2016"></script>
     <script type="text/javascript">
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

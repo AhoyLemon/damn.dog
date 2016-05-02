@@ -8,6 +8,8 @@
       span.label Current round count
       span.indent
         span.number-of-rounds
+    li#AddToHomeScreen
+      a(style="font-weight:bold;")#HomescreenLink
     li
       span.label Global average
       span.indent
@@ -22,11 +24,33 @@
         a#OpenSharebox share this round.
     li.smaller Your progress will be saved if you close this browser.
     
-.share-round-holder
+.share-round-holder.helper-holder
   .share-round
     .child
       span Just copy the URL. The other person will see this round.
       a.button.close-sharebox#CloseSharebox Alright.
+      
+.homescreen-help-holder.helper-holder#HomescreenHolder
+  .homescreen-help
+    .tap-that-icon.top-right-icon Tap that icon 
+      span.arrow ↑
+    p.ios Tap the icon below, then choose 
+      b Add To Home Screen 
+      | from the menu that appears.
+    p.android Then choose
+      b Add to Home screen
+      |  from the menu that appears.
+    p.edge Then choose 
+      b Pin this page to start
+      |  from the menu that appears.
+    p.desktop-chrome Then choose 
+      b More Tools
+      |  and then 
+      b Add To Desktop
+    a.button.close-homescreen-help#CloseHomeScreenHelp Okay, did it.
+    .tap-that-icon.ios.bottom-center-icon
+      span.arrow ↓
+    
 //-
   .reviews-holder
     .reviews
