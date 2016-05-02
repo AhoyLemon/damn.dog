@@ -20,7 +20,7 @@ $(document).ready(function() {
   }
   
   var ua = navigator.userAgent.toLowerCase();
-  //alert(ua);
+  console.log(ua);
   device = "";
   browser = "";
   
@@ -44,9 +44,15 @@ $(document).ready(function() {
       browser = "edge";
     } else if (ua.indexOf("trident") > -1) {
       browser = "ie";
+    } else if (ua.indexOf('firefox') > -1) {
+      browser = "firefox";
+    } else if (ua.indexOf('opr') > -1) {
+      browser = "opera";
     } else if (ua.indexOf('chrome') > -1) {
       browser = "chrome";
     }
+  } else if (ua.indexOf('firefox') > -1) {
+    browser = "firefox";
   } else if (ua.indexOf('chrome') > -1) {
     device = "unknown";
     browser = "chrome";
@@ -66,11 +72,16 @@ function addToHomeScreen(device,browser) {
   } else if (browser == "edge" || browser == "ie") {  
     $('#HomescreenLink').text('Pin To Start');
     $('#HomescreenLink, #HomescreenHolder').addClass('windows edge');
+  } else if (browser == "opera") {
+    $('#HomescreenLink').text('Add To Favorites');
+    $('#HomescreenLink, #HomescreenHolder').addClass('windows opera');
   } else if (browser == "chrome") {
     $('#HomescreenLink').text('Add To Desktop');
     $('#HomescreenLink, #HomescreenHolder').addClass('desktop-chrome');
+  } else if (browser == "firefox") {
+    $('#AddToHomeScreen').html('Bookmark damn.dog<span class="indent">Control+D</span>');
   } else {
-    $('#HomescreenLink').remove();
+    $('#AddToHomeScreen').remove();
   }
 }
 

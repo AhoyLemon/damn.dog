@@ -595,7 +595,7 @@ main {
   max-width: 16em;
 }
 
-.homescreen-help-holder.android .ios, .homescreen-help-holder.android .edge {
+.homescreen-help-holder.android .ios, .homescreen-help-holder.android .edge, .homescreen-help-holder.android .opera, .homescreen-help-holder.android .desktop-chrome {
   display: none;
 }
 
@@ -622,7 +622,7 @@ main {
   text-align: center;
 }
 
-.homescreen-help-holder.ios .android, .homescreen-help-holder.ios .edge {
+.homescreen-help-holder.ios .android, .homescreen-help-holder.ios .edge, .homescreen-help-holder.ios .opera, .homescreen-help-holder.ios .desktop-chrome {
   display: none;
 }
 
@@ -642,7 +642,22 @@ main {
   max-width: 16em;
 }
 
-.homescreen-help-holder.edge .ios, .homescreen-help-holder.edge .android {
+.homescreen-help-holder.edge .ios, .homescreen-help-holder.edge .android, .homescreen-help-holder.edge .opera, .homescreen-help-holder.edge .desktop-chrome {
+  display: none;
+}
+
+.homescreen-help-holder.opera {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 16em;
+}
+
+.homescreen-help-holder.opera .top-right-icon {
+  padding-right: 2.1em;
+}
+
+.homescreen-help-holder.opera .ios, .homescreen-help-holder.opera .android, .homescreen-help-holder.opera .edge, .homescreen-help-holder.opera .desktop-chrome {
   display: none;
 }
 
@@ -653,7 +668,7 @@ main {
   max-width: 16em;
 }
 
-.homescreen-help-holder.desktop-chrome .ios, .homescreen-help-holder.desktop-chrome .android, .homescreen-help-holder.desktop-chrome .edge {
+.homescreen-help-holder.desktop-chrome .ios, .homescreen-help-holder.desktop-chrome .android, .homescreen-help-holder.desktop-chrome .edge, .homescreen-help-holder.desktop-chrome .opera {
   display: none;
 }
 

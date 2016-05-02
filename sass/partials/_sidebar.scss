@@ -21,22 +21,26 @@
 
 .homescreen-help-holder {  background:$blue; color:$black; z-index:$z-homescreenbox; display: none;  
   &.android { @include position(fixed,0,0); max-width: 16em;
-    .ios, .edge { display: none; }
+    .ios, .edge, .opera, .desktop-chrome { display: none; }
     b { display: block; }
     .tap-that-icon { margin-top: -1.2em; }
     .bottom-center-icon { display:none; }
   }
   &.ios { @include position(fixed,null,0,0,0);
     .homescreen-help { text-align: center; }
-    .android, .edge { display: none; }
+    .android, .edge, .opera, .desktop-chrome { display: none; }
     span.arrow { display:block; text-align: center;  }
     .top-right-icon { display:none; }
   }
   &.edge { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android { display: none; }
+    .ios, .android, .opera, .desktop-chrome { display: none; }
+  }
+  &.opera { @include position(fixed,0,0); max-width: 16em;
+    .top-right-icon { padding-right: 2.1em; }
+    .ios, .android, .edge, .desktop-chrome { display: none; }
   }
   &.desktop-chrome { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android, .edge { display: none; }
+    .ios, .android, .edge, .opera { display: none; }
   }
   .homescreen-help { text-align: right; padding-right: 0.5em; padding-bottom: 1em; padding-left: 1em; }  
   span.arrow { font-size:3.2em; }
