@@ -624,6 +624,9 @@ var wikiHow = [
     slug: "Dance-Emo"
   },
   {
+    slug: "Develop-Common-Sense"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
