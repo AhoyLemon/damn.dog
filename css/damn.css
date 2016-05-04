@@ -390,11 +390,6 @@ main {
 
 .image-holder .input-holder {
   position: relative;
-  /**
-    input { background-color:rgba($white,0.35); border:none; margin: 0; display:block; width:100%; padding:$pad $pad $pad (4em + $pad); text-transform: capitalize;
-      &:focus { background: rgba($white,0.7); }
-    }
-    **/
 }
 
 .image-holder .input-holder select {
@@ -483,6 +478,10 @@ main {
 .image-holder button:hover {
   background: #3e98f2;
   color: #222730;
+}
+
+.image-holder .result {
+  padding-top: 0.5em;
 }
 
 [data-display="wrong"], [data-display="correct"], [data-display="play again"] {

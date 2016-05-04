@@ -621,6 +621,9 @@ var wikiHow = [
     slug: "Survive-Domestic-Violence"
   },
   {
+    slug: "Dance-Emo"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
