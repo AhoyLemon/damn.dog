@@ -627,6 +627,9 @@ var wikiHow = [
     slug: "Develop-Common-Sense"
   },
   {
+    slug: "Survive-a-Freestyle-Rap-Battle"
+  },
+  {
     slug: "Be-Unique"
   }
 ];
