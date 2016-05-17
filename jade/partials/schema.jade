@@ -3,16 +3,16 @@ script(type="application/ld+json").
     "@context": "http://schema.org",
     "@type": "VideoGame",
     "name": "damn.dog",
-    "url": "http://damn.dog",
+    "url": "#{siteURL}",
     "sameAs": "https://thefpl.us/also-made/damn-dog",
     "alternateName": "The WikiHow Illustration Game",
-    "image": "http://damn.dog/img/og-image.png",
+    "image": "#{siteURL}/img/og-image.png",
     "playMode": "SinglePlayer",
     "applicationCategory": "browser game",
     "gamePlatform": "web browser",
     "operatingSystem": "web browser",
     "genre": "guessing game",
-    "description": "damn.dog is a simple browser-based game where players are shown an actual WikiHow illustration, and must guess which article that illustration is used on.",
+    "description": "#{description}",
     "inLanguage": "English",
     "author": {
       "@type": "Person",
@@ -31,6 +31,32 @@ script(type="application/ld+json").
       "price": "0",
       "priceCurrency": "USD"
     },
+    "screenshot": [
+      {
+        "@type": "ImageObject",
+        "url": "#{siteURL}/screenshots/ss1.jpg",
+        "width": "800",
+        "height": "800"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "#{siteURL}/screenshots/ss2.jpg",
+        "width": "600",
+        "height": "745"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "#{siteURL}/screenshots/ss3.jpg",
+        "width": "898",
+        "height": "757"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "#{siteURL}/screenshots/ss4.jpg",
+        "width": "444",
+        "height": "747"
+      }
+    ],
     "reviews": [
       {
         "name": "Tumblr",
