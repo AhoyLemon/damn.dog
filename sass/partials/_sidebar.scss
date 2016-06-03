@@ -1,4 +1,4 @@
-.sidebar { @include position(fixed,$header-height,0); background: $offwhite; width: 12rem; padding: 1rem; z-index: $z-sidebar;
+.sidebar { @include position(fixed,$header-height,0); background: $offwhite; width: 13rem; padding: 1rem; z-index: $z-sidebar; overflow-x: hidden; overflow-y: auto; max-height: calc(100% - #{$header-height});
   li { margin-bottom: 0.65em; }
   .label { display: block; }
   .indent { display: block; padding-left: 0.75em; font-weight: $bold; }

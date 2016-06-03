@@ -499,9 +499,12 @@ main {
   top: 2.5rem;
   right: 0;
   background: #f0f1f2;
-  width: 12rem;
+  width: 13rem;
   padding: 1rem;
   z-index: 3;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc(100% - 2.5rem);
   transform: translateX(101%);
   transition: all 0.3s ease;
 }

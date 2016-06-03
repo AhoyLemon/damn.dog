@@ -25,7 +25,7 @@ $(document).ready(function() {
   browser = "";
   
   if (ua.indexOf("android") > -1) {
-    device = "android"
+    device = "android";
     if (ua.indexOf("firefox") > -1) {
       // Android Firefox
       browser="firefox";
@@ -37,9 +37,9 @@ $(document).ready(function() {
       browser="chrome";
     }
   } else if (ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('ipod') > -1) {
-    device = "ios"
+    device = "ios";
   } else if (ua.indexOf('windows') > -1) {
-    device = "windows"
+    device = "windows";
     if (ua.indexOf("edge") > -1) {
       browser = "edge";
     } else if (ua.indexOf("trident") > -1) {
@@ -64,22 +64,22 @@ $(document).ready(function() {
 
 function addToHomeScreen(device,browser) {
   if (device == "android") {
-    $('#HomescreenLink').text('Add To Home Screen');
+    $('#HomescreenLink').text('add to home screen');
     $('#HomescreenLink, #HomescreenHolder').addClass('android').addClass(browser);
   } else if (device == "ios") {
-    $('#HomescreenLink').text('Add To Home Screen');
+    $('#HomescreenLink').text('add to home screen');
     $('#HomescreenLink, #HomescreenHolder').addClass('ios safari');
   } else if (browser == "edge" || browser == "ie") {  
-    $('#HomescreenLink').text('Pin To Start');
+    $('#HomescreenLink').text('pin to start');
     $('#HomescreenLink, #HomescreenHolder').addClass('windows edge');
   } else if (browser == "opera") {
-    $('#HomescreenLink').text('Add To Favorites');
+    $('#HomescreenLink').text('add to favorites');
     $('#HomescreenLink, #HomescreenHolder').addClass('windows opera');
   } else if (browser == "chrome") {
-    $('#HomescreenLink').text('Add To Desktop');
+    $('#HomescreenLink').text('add to desktop');
     $('#HomescreenLink, #HomescreenHolder').addClass('desktop-chrome');
   } else if (browser == "firefox") {
-    $('#AddToHomeScreen').html('Bookmark damn.dog<span class="indent">Control+D</span>');
+    $('#AddToHomeScreen').html('<span class="label">bookmark damn.dog</span><span class="indent">Control+D</span>');
   } else {
     $('#AddToHomeScreen').remove();
   }
@@ -326,7 +326,7 @@ $('#HomescreenLink').click(function() {
 
 $('#CloseHomeScreenHelp').click(function() {
   $('#HomescreenHolder').hide();
-})
+});
 
 $('#CloseSharebox').click(function() {
   $('.share-round-holder').hide();
