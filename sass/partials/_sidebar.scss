@@ -48,3 +48,8 @@
     &:hover { color:$blue; background:$black; border-color: $blue; }
   }
 }
+
+
+@media all and (display-mode: standalone) {
+  #AddToHomeScreen, .homescreen-help-holder { display: none; }
+}
