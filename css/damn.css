@@ -699,7 +699,7 @@ main {
 }
 
 @media all and (display-mode: standalone) {
-  #AddToHomeScreen, .homescreen-help-holder {
+  #AddToHomeScreen {
     display: none;
   }
 }
