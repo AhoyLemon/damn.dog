@@ -1,755 +1,221 @@
-header > .inner {
-  width: 100%;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.share-round-holder .share-round, .game-over .stripes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.share-round-holder .share-round > .child, .game-over .stripes > .child {
-  flex-basis: 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-dialog,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-font,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-hr,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-main,
-mark,
-menu,
-meter,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-progress,
-q,
-rp,
-rt,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video,
-xmp {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-b,
-strong {
-  font-weight: bold;
-}
-
-img {
-  color: transparent;
-  font-size: 0;
-  vertical-align: middle;
-  -ms-interpolation-mode: bicubic;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-li {
-  display: list-item;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-th,
-td,
-caption {
-  font-weight: normal;
-  vertical-align: top;
-  text-align: left;
-}
-
-q {
-  quotes: none;
-}
-
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-sub,
-sup,
-small {
-  font-size: 75%;
-}
-
-sub,
-sup {
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-svg {
-  overflow: hidden;
-}
-
-body {
-  font-family: "Roboto Slab", serif;
-  font-size: 16px;
-  background: #222730;
-}
-
-h1, h2, h3, h4, h5 h6 {
-  font-family: "Roboto Slab", serif;
-}
-
-p {
-  padding-bottom: 1em;
-}
-
-svg * {
-  fill: currentColor;
-}
-
-header {
-  background-color: #2A313A;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  height: 2.5rem;
-  z-index: 4;
-}
-
-header span {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-header .percent {
-  display: none;
-}
-
-header .label {
-  font-size: 0.7em;
-  font-family: "Roboto", sans-serif;
-  line-height: 200%;
-  padding-right: 0.5em;
-}
-
-header .number {
-  font-size: 1.8em;
-  font-weight: 300;
-  line-height: 50%;
-  color: #6CB200;
-}
-
-header .number.bad {
-  color: #b22028;
-}
-
-header > .inner {
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-top: 0.2rem;
-}
-
-header > .inner .box {
-  flex-basis: 50%;
-  flex-grow: 1;
-  flex-shrink: 1;
-  align-self: auto;
-  text-align: center;
-}
-
-header .hamburger {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #3e98f2;
-  outline: none;
-  height: 2.5rem;
-  width: 2.5rem;
-  position: absolute;
-  top: 0;
-  right: 2rem;
-}
-
-header .hamburger g {
-  transform-origin: center;
-  transition: all 0.3s linear;
-}
-
-header .hamburger .close {
-  opacity: 0.2;
-  transform: scale(0.2);
-}
-
-header .hamburger.is-active .close {
-  opacity: 1;
-  transform: scale(1);
-}
-
-header .hamburger.is-active .open {
-  opacity: 0.2;
-  transform: scale(0.2);
-}
-
-@media (max-width: 700px) {
-  header > .inner .box {
-    flex-basis: 33.3333%;
-    flex-grow: 1;
-    flex-shrink: 1;
-    align-self: auto;
-  }
-  header > .inner .box.hamburger-holder {
-    flex-basis: 3rem;
-    flex-grow: 1;
-    flex-shrink: 1;
-    align-self: auto;
-  }
-  header .hamburger-holder {
-    text-align: right !important;
-  }
-  header .hamburger-holder .hamburger {
-    position: relative;
-    top: auto;
-    right: auto;
-    height: 100%;
-  }
-  header .hamburger-holder .hamburger svg {
-    height: 1.6rem;
-  }
-}
-
-main {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow-y: auto;
-}
-
-.image-holder {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-  min-height: 100%;
-  padding-top: 2.5rem;
-}
-
-.image-holder .child {
-  text-align: center;
-  width: 100%;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.image-holder img {
-  max-width: 100%;
-}
-
-.image-holder h1 {
-  font-weight: 300;
-  font-size: 1.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.image-holder h1.nope {
-  color: #b22028;
-}
-
-.image-holder h1.yup {
-  color: #6CB200;
-}
-
-.image-holder a {
-  color: #3e98f2;
-  text-decoration: none;
-}
-
-.image-holder .input-holder {
-  position: relative;
-}
-
-.image-holder .input-holder select {
-  font-family: "Roboto Slab", serif;
-  color: black;
-  font-size: 1.3rem;
-}
-
-.image-holder .input-holder select {
-  background-color: rgba(255, 255, 255, 0.65);
-  border: none;
-  margin: 0;
-  display: block;
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  height: 3em;
-  text-transform: capitalize;
-}
-
-.image-holder .input-holder select:focus {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.image-holder .input-holder select option {
-  padding-left: 2rem;
-  font-size: 1rem;
-}
-
-.image-holder .input-holder label {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-}
-
-.image-holder h2 {
-  font-size: 2em;
-  font-weight: 300;
-  margin-top: 0.2em;
-  margin-bottom: 0.4em;
-  display: block;
-}
-
-.image-holder h2.nope {
-  color: #b22028;
-}
-
-.image-holder h2.yup {
-  color: #6CB200;
-}
-
-.image-holder .correctis {
-  color: #fff;
-  font-weight: 300;
-  font-size: 0.8em;
-  text-transform: uppercase;
-}
-
-.image-holder .correct-title {
-  margin: 0;
-  display: block;
-  font-size: 1.5em;
-  color: #9ecbf8;
-  font-weight: 300;
-}
-
-.image-holder .correct-title:hover {
-  text-decoration: underline;
-}
-
-.image-holder .button-holder {
-  padding-top: 1em;
-}
-
-.image-holder button {
-  background: transparent;
-  border: 2px solid #3e98f2;
-  color: #3e98f2;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.4em;
-  font-weight: 300;
-  padding: .25em 1em;
-  cursor: pointer;
-}
-
-.image-holder button:hover {
-  background: #3e98f2;
-  color: #222730;
-}
-
-.image-holder .result {
-  padding-top: 0.5em;
-}
-
-[data-display="wrong"], [data-display="correct"], [data-display="play again"] {
-  display: none;
-}
-
-@media (max-width: 700px) {
-  .image-holder h1 {
-    font-size: 5vw;
-  }
-}
-
-.sidebar {
-  position: fixed;
-  top: 2.5rem;
-  right: 0;
-  background: #f0f1f2;
-  width: 13rem;
-  padding: 1rem;
-  z-index: 3;
-  overflow-x: hidden;
-  overflow-y: auto;
-  max-height: calc(100% - 2.5rem);
-  transform: translateX(101%);
-  transition: all 0.3s ease;
-}
-
-.sidebar li {
-  margin-bottom: 0.65em;
-}
-
-.sidebar .label {
-  display: block;
-}
-
-.sidebar .indent {
-  display: block;
-  padding-left: 0.75em;
-  font-weight: 700;
-}
-
-.sidebar a {
-  color: #3e98f2;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.sidebar a:hover {
-  text-decoration: underline;
-}
-
-.sidebar .smaller {
-  font-size: 0.8em;
-}
-
-.sidebar.visible {
-  transform: translateX(0);
-}
-
-.share-round-holder {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  background: rgba(51, 51, 51, 0.73);
-  display: none;
-}
-
-.share-round-holder .share-round {
-  position: relative;
-  height: 100%;
-}
-
-.share-round-holder .child {
-  text-align: center;
-  color: #fff;
-  font-size: 2rem;
-}
-
-.share-round-holder span {
-  display: block;
-  margin-bottom: 0.5em;
-}
-
-.share-round-holder .button {
-  background: transparent;
-  font-size: 0.7em;
-  border: 2px solid #3e98f2;
-  color: #3e98f2;
-  font-family: "Roboto Slab", serif;
-  padding: .25em 1em;
-  cursor: pointer;
-}
-
-.share-round-holder .button:hover {
-  background: #3e98f2;
-  color: #222730;
-}
-
-.homescreen-help-holder {
-  background: #3e98f2;
-  color: #333;
-  z-index: 6;
-  display: none;
-}
-
-.homescreen-help-holder.android {
-  position: fixed;
-  top: 0;
-  right: 0;
-  max-width: 16em;
-}
-
-.homescreen-help-holder.android .ios, .homescreen-help-holder.android .edge, .homescreen-help-holder.android .opera, .homescreen-help-holder.android .desktop-chrome {
-  display: none;
-}
-
-.homescreen-help-holder.android b {
-  display: block;
-}
-
-.homescreen-help-holder.android .tap-that-icon {
-  margin-top: -1.2em;
-}
-
-.homescreen-help-holder.android .bottom-center-icon {
-  display: none;
-}
-
-.homescreen-help-holder.ios {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.homescreen-help-holder.ios .homescreen-help {
-  text-align: center;
-}
-
-.homescreen-help-holder.ios .android, .homescreen-help-holder.ios .edge, .homescreen-help-holder.ios .opera, .homescreen-help-holder.ios .desktop-chrome {
-  display: none;
-}
-
-.homescreen-help-holder.ios span.arrow {
-  display: block;
-  text-align: center;
-}
-
-.homescreen-help-holder.ios .top-right-icon {
-  display: none;
-}
-
-.homescreen-help-holder.edge {
-  position: fixed;
-  top: 0;
-  right: 0;
-  max-width: 16em;
-}
-
-.homescreen-help-holder.edge .ios, .homescreen-help-holder.edge .android, .homescreen-help-holder.edge .opera, .homescreen-help-holder.edge .desktop-chrome {
-  display: none;
-}
-
-.homescreen-help-holder.opera {
-  position: fixed;
-  top: 0;
-  right: 0;
-  max-width: 16em;
-}
-
-.homescreen-help-holder.opera .top-right-icon {
-  padding-right: 2.1em;
-}
-
-.homescreen-help-holder.opera .ios, .homescreen-help-holder.opera .android, .homescreen-help-holder.opera .edge, .homescreen-help-holder.opera .desktop-chrome {
-  display: none;
-}
-
-.homescreen-help-holder.desktop-chrome {
-  position: fixed;
-  top: 0;
-  right: 0;
-  max-width: 16em;
-}
-
-.homescreen-help-holder.desktop-chrome .ios, .homescreen-help-holder.desktop-chrome .android, .homescreen-help-holder.desktop-chrome .edge, .homescreen-help-holder.desktop-chrome .opera {
-  display: none;
-}
-
-.homescreen-help-holder .homescreen-help {
-  text-align: right;
-  padding-right: 0.5em;
-  padding-bottom: 1em;
-  padding-left: 1em;
-}
-
-.homescreen-help-holder span.arrow {
-  font-size: 3.2em;
-}
-
-.homescreen-help-holder .button {
-  color: #333;
-  border: 2px solid #333;
-  padding: .25em 1em;
-  cursor: pointer;
-}
-
-.homescreen-help-holder .button:hover {
-  color: #3e98f2;
-  background: #333;
-  border-color: #3e98f2;
-}
-
-@media all and (display-mode: standalone) {
-  #AddToHomeScreen {
-    display: none;
-  }
-}
-
-.game-over {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  background-color: rgba(34, 39, 48, 0.8);
-  color: rgba(255, 255, 255, 0.6);
-  display: none;
-}
-
-.game-over .stripes {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.game-over h2 {
-  font-size: 14vw;
-  text-align: center;
-}
-
-.game-over table {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 5vw;
-}
-
-.game-over table th, .game-over table td {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  text-align: center;
-  line-height: 100%;
-}
-
-.game-over table th {
-  text-transform: uppercase;
-  font-size: 0.6em;
-}
-
-.game-over table td {
-  font-weight: 300;
-  font-size: 2em;
-}
+header > .inner { width: 100%; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+.share-round-holder .share-round, .game-over .stripes { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
+.share-round-holder .share-round > .child, .game-over .stripes > .child { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; }
+
+* { box-sizing: border-box; }
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, main, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video, xmp { border: 0; margin: 0; padding: 0; font-size: 100%; }
+
+html, body { height: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+b, strong { font-weight: bold; }
+
+img { color: transparent; font-size: 0; vertical-align: middle; -ms-interpolation-mode: bicubic; }
+
+ul, ol { list-style: none; }
+
+li { display: list-item; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+th, td, caption { font-weight: normal; vertical-align: top; text-align: left; }
+
+q { quotes: none; }
+
+q:before, q:after { content: ""; content: none; }
+
+sub, sup, small { font-size: 75%; }
+
+sub, sup { line-height: 0; position: relative; vertical-align: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+svg { overflow: hidden; }
+
+body { font-family: "Roboto Slab", serif; font-size: 16px; background: #222730; }
+
+h1, h2, h3, h4, h5 h6 { font-family: "Roboto Slab", serif; }
+
+p { padding-bottom: 1em; }
+
+svg * { fill: currentColor; }
+
+header { background-color: #2A313A; position: fixed; top: 0; right: 0; left: 0; padding-top: 0.25em; padding-bottom: 0.25em; height: 2.5rem; z-index: 4; }
+
+header span { display: inline-block; vertical-align: middle; }
+
+header .percent { display: none; }
+
+header .label { font-size: 0.7em; font-family: "Roboto", sans-serif; line-height: 200%; padding-right: 0.5em; }
+
+header .number { font-size: 1.8em; font-weight: 300; line-height: 50%; color: #6CB200; }
+
+header .number.bad { color: #b22028; }
+
+header > .inner { color: #fff; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding-top: 0.2rem; }
+
+header > .inner .box { -webkit-flex-basis: 50%; -ms-flex-preferred-size: 50%; flex-basis: 50%; -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; -webkit-flex-shrink: 1; -ms-flex-negative: 1; flex-shrink: 1; -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto; text-align: center; }
+
+header .hamburger { background: transparent; border: none; cursor: pointer; color: #3e98f2; outline: none; height: 2.5rem; width: 2.5rem; position: absolute; top: 0; right: 2rem; }
+
+header .hamburger g { -webkit-transform-origin: center; -ms-transform-origin: center; transform-origin: center; transition: all 0.3s linear; }
+
+header .hamburger .close { opacity: 0.2; -webkit-transform: scale(0.2); -ms-transform: scale(0.2); transform: scale(0.2); }
+
+header .hamburger.is-active .close { opacity: 1; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
+
+header .hamburger.is-active .open { opacity: 0.2; -webkit-transform: scale(0.2); -ms-transform: scale(0.2); transform: scale(0.2); }
+
+@media (max-width: 700px) { header > .inner .box { -webkit-flex-basis: 33.3333%; -ms-flex-preferred-size: 33.3333%; flex-basis: 33.3333%; -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; -webkit-flex-shrink: 1; -ms-flex-negative: 1; flex-shrink: 1; -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto; }
+  header > .inner .box.hamburger-holder { -webkit-flex-basis: 3rem; -ms-flex-preferred-size: 3rem; flex-basis: 3rem; -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; -webkit-flex-shrink: 1; -ms-flex-negative: 1; flex-shrink: 1; -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto; }
+  header .hamburger-holder { text-align: right !important; }
+  header .hamburger-holder .hamburger { position: relative; top: auto; right: auto; height: 100%; }
+  header .hamburger-holder .hamburger svg { height: 1.6rem; } }
+
+main { position: fixed; top: 0; right: 0; bottom: 0; left: 0; overflow-y: auto; }
+
+.image-holder { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; position: relative; min-height: 100%; padding-top: 2.5rem; }
+
+.image-holder .child { text-align: center; width: 100%; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+.image-holder img { max-width: 100%; }
+
+.image-holder h1 { font-weight: 300; font-size: 1.5em; margin-top: 0.5em; margin-bottom: 0.5em; color: rgba(255, 255, 255, 0.6); }
+
+.image-holder h1.nope { color: #b22028; }
+
+.image-holder h1.yup { color: #6CB200; }
+
+.image-holder a { color: #3e98f2; text-decoration: none; }
+
+.image-holder .input-holder { position: relative; }
+
+.image-holder .input-holder select { font-family: "Roboto Slab", serif; color: black; font-size: 1.3rem; }
+
+.image-holder .input-holder select { background-color: rgba(255, 255, 255, 0.65); border: none; margin: 0; display: block; width: 100%; padding-left: 2rem; padding-right: 2rem; height: 3em; text-transform: capitalize; }
+
+.image-holder .input-holder select:focus { background: rgba(255, 255, 255, 0.9); }
+
+.image-holder .input-holder select option { padding-left: 2rem; font-size: 1rem; }
+
+.image-holder .input-holder label { position: absolute; top: 2rem; left: 2rem; }
+
+.image-holder h2 { font-size: 2em; font-weight: 300; margin-top: 0.2em; margin-bottom: 0.4em; display: block; }
+
+.image-holder h2.nope { color: #b22028; }
+
+.image-holder h2.yup { color: #6CB200; }
+
+.image-holder .correctis { color: #fff; font-weight: 300; font-size: 0.8em; text-transform: uppercase; }
+
+.image-holder .correct-title { margin: 0; display: block; font-size: 1.5em; color: #9ecbf8; font-weight: 300; }
+
+.image-holder .correct-title:hover { text-decoration: underline; }
+
+.image-holder .button-holder { padding-top: 1em; }
+
+.image-holder button { background: transparent; border: 2px solid #3e98f2; color: #3e98f2; font-family: "Roboto Slab", serif; font-size: 1.4em; font-weight: 300; padding: .25em 1em; cursor: pointer; }
+
+.image-holder button:hover { background: #3e98f2; color: #222730; }
+
+.image-holder .result { padding-top: 0.5em; }
+
+[data-display="wrong"], [data-display="correct"], [data-display="play again"] { display: none; }
+
+@media (max-width: 700px) { .image-holder h1 { font-size: 5vw; } }
+
+.sidebar { position: fixed; top: 2.5rem; right: 0; background: #f0f1f2; width: 13rem; padding: 1rem; z-index: 3; overflow-x: hidden; overflow-y: auto; max-height: calc(100% - 2.5rem); -webkit-transform: translateX(101%); -ms-transform: translateX(101%); transform: translateX(101%); transition: all 0.3s ease; }
+
+.sidebar li { margin-bottom: 0.65em; }
+
+.sidebar .label { display: block; }
+
+.sidebar .indent { display: block; padding-left: 0.75em; font-weight: 700; }
+
+.sidebar a { color: #3e98f2; text-decoration: none; cursor: pointer; }
+
+.sidebar a:hover { text-decoration: underline; }
+
+.sidebar .smaller { font-size: 0.8em; }
+
+.sidebar.visible { -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
+
+.share-round-holder { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 5; background: rgba(51, 51, 51, 0.73); display: none; }
+
+.share-round-holder .share-round { position: relative; height: 100%; }
+
+.share-round-holder .child { text-align: center; color: #fff; font-size: 2rem; }
+
+.share-round-holder span { display: block; margin-bottom: 0.5em; }
+
+.share-round-holder .button { background: transparent; font-size: 0.7em; border: 2px solid #3e98f2; color: #3e98f2; font-family: "Roboto Slab", serif; padding: .25em 1em; cursor: pointer; }
+
+.share-round-holder .button:hover { background: #3e98f2; color: #222730; }
+
+.homescreen-help-holder { background: #3e98f2; color: #333; z-index: 6; display: none; }
+
+.homescreen-help-holder.android { position: fixed; top: 0; right: 0; max-width: 16em; }
+
+.homescreen-help-holder.android .ios, .homescreen-help-holder.android .edge, .homescreen-help-holder.android .opera, .homescreen-help-holder.android .desktop-chrome { display: none; }
+
+.homescreen-help-holder.android b { display: block; }
+
+.homescreen-help-holder.android .tap-that-icon { margin-top: -1.2em; }
+
+.homescreen-help-holder.android .bottom-center-icon { display: none; }
+
+.homescreen-help-holder.ios { position: fixed; right: 0; bottom: 0; left: 0; }
+
+.homescreen-help-holder.ios .homescreen-help { text-align: center; }
+
+.homescreen-help-holder.ios .android, .homescreen-help-holder.ios .edge, .homescreen-help-holder.ios .opera, .homescreen-help-holder.ios .desktop-chrome { display: none; }
+
+.homescreen-help-holder.ios span.arrow { display: block; text-align: center; }
+
+.homescreen-help-holder.ios .top-right-icon { display: none; }
+
+.homescreen-help-holder.edge { position: fixed; top: 0; right: 0; max-width: 16em; }
+
+.homescreen-help-holder.edge .ios, .homescreen-help-holder.edge .android, .homescreen-help-holder.edge .opera, .homescreen-help-holder.edge .desktop-chrome { display: none; }
+
+.homescreen-help-holder.opera { position: fixed; top: 0; right: 0; max-width: 16em; }
+
+.homescreen-help-holder.opera .top-right-icon { padding-right: 2.1em; }
+
+.homescreen-help-holder.opera .ios, .homescreen-help-holder.opera .android, .homescreen-help-holder.opera .edge, .homescreen-help-holder.opera .desktop-chrome { display: none; }
+
+.homescreen-help-holder.desktop-chrome { position: fixed; top: 0; right: 0; max-width: 16em; }
+
+.homescreen-help-holder.desktop-chrome .ios, .homescreen-help-holder.desktop-chrome .android, .homescreen-help-holder.desktop-chrome .edge, .homescreen-help-holder.desktop-chrome .opera { display: none; }
+
+.homescreen-help-holder .homescreen-help { text-align: right; padding-right: 0.5em; padding-bottom: 1em; padding-left: 1em; }
+
+.homescreen-help-holder span.arrow { font-size: 3.2em; }
+
+.homescreen-help-holder .button { color: #333; border: 2px solid #333; padding: .25em 1em; cursor: pointer; }
+
+.homescreen-help-holder .button:hover { color: #3e98f2; background: #333; border-color: #3e98f2; }
+
+@media all and (display-mode: standalone) { #AddToHomeScreen { display: none; } }
+
+.game-over { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 100; background-color: rgba(34, 39, 48, 0.8); color: rgba(255, 255, 255, 0.6); display: none; }
+
+.game-over .stripes { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+
+.game-over h2 { font-size: 14vw; text-align: center; }
+
+.game-over table { margin-left: auto; margin-right: auto; font-size: 5vw; }
+
+.game-over table th, .game-over table td { padding-left: 0.5em; padding-right: 0.5em; text-align: center; line-height: 100%; }
+
+.game-over table th { text-transform: uppercase; font-size: 0.6em; }
+
+.game-over table td { font-weight: 300; font-size: 2em; }
 
 /*# sourceMappingURL=damn.css.map */
