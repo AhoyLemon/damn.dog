@@ -255,7 +255,7 @@ function showScore() {
     $('header .percent').fadeIn(600);
     $('#ScorePercent').text(player.percent+'%');
     
-    if (player.percent < 60) {
+    if (player.percent < 63) {
       $('#ScorePercent').addClass('bad');
     } else {
       $('#ScorePercent').removeClass('bad');
