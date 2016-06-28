@@ -1,6 +1,16 @@
 // Twitter
-each val, index in {'card':'summary', 'creator':'@AhoyLemon', 'title':siteTitle, 'description':description, 'image':siteURL+'/img/twitter-card.png', 'url':siteURL}
-  meta(name="twitter:#{index}" content="#{val}")
-// Facebook
-each val, index in {'title':siteTitle, 'type':'website', 'url':siteURL, 'image':siteURL+'/img/og-image.png', 'description':description, 'email':'lemon@thefpl.us'}
-  meta(property="og:#{index}" content="#{val}")
+meta(name="twitter:card" content="summary")
+meta(name="twitter:creator" content="@AhoyLemon")
+meta(name="twitter:site" content="@AhoyLemon")
+meta(name="twitter:title" content="#{siteTitle}")
+meta(name="twitter:description" content="#{description}")
+meta(name="twitter:image" content="#{siteURL}/img/twitter-card.png")
+meta(name="twitter:url" content="#{siteURL}")
+
+// OpenGraph
+meta(property="og:title" content="#{siteTitle}")
+meta(property="og:type" content="website")
+meta(property="og:url" content="#{siteURL}")
+meta(property="og:image" content="#{siteURL}/img/og-image.png")
+meta(property="og:description" content="#{description}")
+meta(property="og:email" content="lemon@thefpl.us")
