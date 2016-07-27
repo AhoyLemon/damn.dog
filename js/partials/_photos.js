@@ -652,5 +652,23 @@ var wikiHow = [
   },
   {
     slug: "Get-Rid-of-Dry-Skin-on-Cats"
+  },
+  {
+    slug: "Play-Wink-Murder"
+  },
+  {
+    slug: "Enhance-Your-Sarcasm-Skills"
+  },
+  {
+    slug: "Respond-to-Sarcasm"
+  },
+  {
+    slug: "Be-Hipster-Yet-Emo"
+  },
+  {
+    slug: "Start-an-Indie-Lifestyle"
+  },
+  {
+    slug: "Care-for-Uromastyx-Lizards"
   }
 ];
