@@ -1,5 +1,5 @@
 // jshint -W117
-//@prepros-prepend partials/_photos.js
+//@prepros-prepend partials/_drawings.js
 //@prepros-prepend partials/_analytics.js
 
 $(document).ready(function() {

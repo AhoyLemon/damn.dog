@@ -633,9 +633,6 @@ var wikiHow = [
     slug: "Be-Unique"
   },
   {
-    slug: "Pierce-Your-Own-Belly-Button-at-Home"
-  },
-  {
     slug: "Help-Paranoid-People"
   },
   {
@@ -643,15 +640,6 @@ var wikiHow = [
   },
   {
     slug: "Be-Persuasive"
-  },
-  {
-    slug: "Build-Hamster-Toys-out-of-Household-Items"
-  },
-  {
-    slug: "Breed-Hamsters"
-  },
-  {
-    slug: "Get-Rid-of-Dry-Skin-on-Cats"
   },
   {
     slug: "Play-Wink-Murder"
