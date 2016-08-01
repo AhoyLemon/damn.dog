@@ -658,5 +658,26 @@ var wikiHow = [
   },
   {
     slug: "Care-for-Uromastyx-Lizards"
+  },
+  {
+    slug: "Get-a-Free-Car-if-You-Have-a-Disability"
+  },
+  {
+    slug: "Build-a-Child's-Self-Esteem"
+  },
+  {
+    slug: "Play-a-Prank"
+  },
+  {
+    slug: "Not-Get-Nervous"
+  },
+  {
+    slug: "Run-Away-From-Home"
+  },
+  {
+    slug: "Be-a-Successful-Teenager"
+  },
+  {
+    slug: "Tell-if-a-Church-is-a-Cult"
   }
 ];
