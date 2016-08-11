@@ -679,5 +679,32 @@ var wikiHow = [
   },
   {
     slug: "Tell-if-a-Church-is-a-Cult"
+  },
+  {
+    slug: "Know-If-You-Have-DID-Or-Dissociative-Personality-Disorder"
+  },
+  {
+    slug: "Play-With-a-Pet"
+  },
+  {
+    slug: "Buy-Used-Electronics"
+  },
+  {
+    slug: "Stop-Thinking-that-Accepting-Help-is-a-Sign-of-Weakness"
+  },
+  {
+    slug: "Be-an-Educated-Man"
+  },
+  {
+    slug: "Be-a-Good-Entertainer"
+  },
+  {
+    slug: "Support-the-Arts"
+  },
+  {
+    slug: "Act-when-Your-Boyfriend-Keeps-Paying-for-Everything"
+  },
+  {
+    slug: "Deal-with-Strict-Christian-Parents"
   }
 ];
