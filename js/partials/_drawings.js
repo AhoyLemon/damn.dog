@@ -6,9 +6,6 @@ var wikiHow = [
     slug: "Do-Laughter-Yoga"
   },
   {
-    slug: "Be-Happy"
-  },
-  {
     slug: "Avoid-Uncomfortable-Conversations-About-Religion"
   },
   {
@@ -58,9 +55,6 @@ var wikiHow = [
   },
   {
     slug: "Clear-a-Stuffy-Nose"
-  },
-  {
-    slug: "See-in-the-Dark"
   },
   {
     slug: "Write-a-Dystopian-Novel"
@@ -259,9 +253,6 @@ var wikiHow = [
   },
   {
     slug: "Survive-in-a-Hotel"
-  },
-  {
-    slug: "Know-if-Your-Ex-Misses-You"
   },
   {
     slug: "Date-a-Stripper"
@@ -522,22 +513,13 @@ var wikiHow = [
     slug: "Become-an-Olympian"
   },
   {
-    slug: "Look-and-Act-Like-a-Magic-Mermaid"
-  },
-  {
     slug: "Smell-Seductive-on-Dates"
-  },
-  {
-    slug: "Dance-at-a-Rave"
   },
   {
     slug: "Prevent-Identity-Theft"
   },
   {
     slug: "Pick-Up-Girls-in-High-School"
-  },
-  {
-    slug: "Track-Money"
   },
   {
     slug: "Be-a-Stripper-Who-Knows-What-She-is-Doing"
