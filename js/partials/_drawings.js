@@ -688,5 +688,17 @@ var wikiHow = [
   },
   {
     slug: "Deal-with-Strict-Christian-Parents"
+  },
+  {
+    slug: "Choose-a-Rigorous-College-Schedule-for-Your-First-Year"
+  },
+  {
+    slug: "Speak-Finnish"
+  },
+  {
+    slug: "Start-a-Best-Friends-Club"
+  },
+  {
+    slug: "Work-and-Study-at-the-Same-Time"
   }
 ];
