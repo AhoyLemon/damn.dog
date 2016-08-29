@@ -700,5 +700,11 @@ var wikiHow = [
   },
   {
     slug: "Work-and-Study-at-the-Same-Time"
+  },
+  {
+    slug: "Get-Over-a-Crush-on-Your-Best-Friend"
+  },
+  {
+    slug: "Grow-Your-Hair-Super-Long"
   }
 ];
