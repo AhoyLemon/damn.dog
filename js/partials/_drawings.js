@@ -1,3 +1,5 @@
+// jshint -W098
+
 var wikiHow = [
   {
     slug: "Choose-a-Puppy"
@@ -706,5 +708,44 @@ var wikiHow = [
   },
   {
     slug: "Grow-Your-Hair-Super-Long"
+  },
+  {
+    slug: "Catch-a-Cheating-Girlfriend"
+  },
+  {
+    slug: "Succeed-in-a-Relationship-with-the-Perfect-Girl"
+  },
+  {
+    slug: "Be-Less-Clingy"
+  },
+  {
+    slug: "Catch-a-Cheating-Boyfriend"
+  },
+  {
+    slug: "Survive-a-Coyote-Attack"
+  },
+  {
+    slug: "Tell-if-You-Genuinely-Like-Someone"
+  },
+  {
+    slug: "Get-Along-with-Your-Crush"
+  },
+  {
+    slug: "Become-Good-at-Knife-Fighting"
+  },
+  {
+    slug: "Win-a-Race"
+  },
+  {
+    slug: "Come-Down-from-a-High"
+  },
+  {
+    slug: "Control-Your-Urge-to-Masturbate"
+  },
+  {
+    slug: "Enjoy-Pornography-in-the-Comfort-of-Your-Home"
+  },
+  {
+    slug: "Cosplay-Barbie"
   }
 ];
