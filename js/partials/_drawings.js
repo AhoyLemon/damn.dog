@@ -747,5 +747,20 @@ var wikiHow = [
   },
   {
     slug: "Cosplay-Barbie"
+  },
+  {
+    slug: "Dance-at-a-Nightclub"
+  },
+  {
+    slug: "Ask-a-Girl-to-a-Dance"
+  },
+  {
+    slug: "Play-Bridge"
+  },
+  {
+    slug: "Decide-if-You-Should-Become-a-Stripper"
+  },
+  {
+    slug: "Appreciate-Death-Metal"
   }
 ];
