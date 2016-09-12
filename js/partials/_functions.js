@@ -107,6 +107,7 @@ function getChoices() {
   $.each(choices, function(idx, obj){ 
     $('#GuessTitle').append('<option>'+obj.title+'</option>');
   });
+  $('#GuessTitle').append('<optgroup label=""></optgroup>');
 }
 
 function goodGuess() {
