@@ -833,7 +833,7 @@ var wikiHow = [
     slug: "Create-an-Effective-Action-Plan"
   },
   {
-    slug: "Raise-Goats0"
+    slug: "Raise-Goats"
   },
   {
     slug: "Get-Your-Nipples-Pierced"
