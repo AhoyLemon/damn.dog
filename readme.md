@@ -15,6 +15,7 @@ The name actually came first. I was surprised to find out that the domain `damn.
 * [Eldritchhat](https://github.com/Eldritchhat)
 * [Chai Tea Latte](https://thefpl.us/meet/chai-tea-latte)
 * [Boots Raingear](https://thefpl.us/meet/boots-raingear)
+* [Thomas Stoeckert](https://github.com/thomasstoeckert)
 * [Jayden Bailey](https://github.com/jaydenkieran)
 
 ## Any more places for illustratons?
