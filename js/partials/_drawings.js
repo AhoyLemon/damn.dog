@@ -761,43 +761,16 @@ var wikiHow = [
     slug: "Decide-if-You-Should-Become-a-Stripper"
   },
   {
-    slug: "Appreciate-Death-Metal"
-  },
-  {
     slug: "Heal-Broken-Bones"
   },
   {
     slug: "Show-Respect"
   },
   {
-    slug: "Do-Internet-Research"
-  },
-  {
-    slug: "Prevent-The-Spread-of-Pinkeye"
-  },
-  {
-    slug: "Let-a-Guy-Down-Gently"
-  },
-  {
     slug: "Keep-Dogs-off-Lawn"
   },
   {
-    slug: "Copyright-a-Name"
-  },
-  {
-    slug: "Pretend-to-Be-a-Sea-Nymph"
-  },
-  {
-    slug: "Prepare-for-an-X-ray"
-  },
-  {
-    slug: "Act-Smart"
-  },
-  {
     slug: "Create-a-Benefit-Concert-Series"
-  },
-  {
-    slug: "Remember-to-Take-Medication"
   },
   {
     slug: "Have-a-Successful-Open-Source-Project"
@@ -809,40 +782,13 @@ var wikiHow = [
     slug: "Deal-with-a-Love-Triangle"
   },
   {
-    slug: "Become-a-Marine-Pilot"
-  },
-  {
-    slug: "Take-Care-of-Your-Braces"
-  },
-  {
     slug: "Love-Yourself"
   },
   {
     slug: "Disappear-Like-a-Ninja"
   },
   {
-    slug: "Cure-an-Ear-Infection"
-  },
-  {
-    slug: "Prepare-for-a-Career-in-Politics"
-  },
-  {
-    slug: "Define-Love"
-  },
-  {
-    slug: "Create-an-Effective-Action-Plan"
-  },
-  {
-    slug: "Raise-Goats"
-  },
-  {
     slug: "Get-Your-Nipples-Pierced"
-  },
-  {
-    slug: "Stop-a-Bruise-from-Hurting"
-  },
-  {
-    slug: "Say-No-to-Sex"
   },
   {
     slug: "Accept-Your-Boyfriend's-Interest-in-Pornography"
@@ -852,9 +798,6 @@ var wikiHow = [
   },
   {
     slug: "Make-Friends"
-  },
-  {
-    slug: "Become-a-Personal-Caregiver"
   },
   {
     slug: "Afford-Expensive-Stuff-(Teens)"
