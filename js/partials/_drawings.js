@@ -761,6 +761,48 @@ var wikiHow = [
     slug: "Decide-if-You-Should-Become-a-Stripper"
   },
   {
-    slug: "Appreciate-Death-Metal"
+    slug: "Heal-Broken-Bones"
+  },
+  {
+    slug: "Show-Respect"
+  },
+  {
+    slug: "Keep-Dogs-off-Lawn"
+  },
+  {
+    slug: "Create-a-Benefit-Concert-Series"
+  },
+  {
+    slug: "Have-a-Successful-Open-Source-Project"
+  },
+  {
+    slug: "Become-a-Hacker"
+  },
+  {
+    slug: "Deal-with-a-Love-Triangle"
+  },
+  {
+    slug: "Love-Yourself"
+  },
+  {
+    slug: "Disappear-Like-a-Ninja"
+  },
+  {
+    slug: "Get-Your-Nipples-Pierced"
+  },
+  {
+    slug: "Accept-Your-Boyfriend's-Interest-in-Pornography"
+  },
+  {
+    slug: "Find-a-Husband-when-the-Women-out-Number-the-Men-in-Your-Country"
+  },
+  {
+    slug: "Make-Friends"
+  },
+  {
+    slug: "Afford-Expensive-Stuff-(Teens)"
+  },
+  {
+    slug: "Make-Lemonade-when-Life-Gives-You-Lemons"
   }
 ];

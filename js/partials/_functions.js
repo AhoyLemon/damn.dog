@@ -103,11 +103,13 @@ function getChoices() {
   });
   shuffle(choices);
   $('#GuessTitle').empty();
+  
   $('#GuessTitle').append('<option value="default" selected disabled hidden>How To</option>');
+  //$('#GuessTitle').append('<optgroup label="How To"></optgroup>');
   $.each(choices, function(idx, obj){ 
     $('#GuessTitle').append('<option>'+obj.title+'</option>');
   });
-  $('#GuessTitle').append('<optgroup label=""></optgroup>');
+  
 }
 
 function goodGuess() {
