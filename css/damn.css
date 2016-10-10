@@ -170,6 +170,14 @@ main { position: fixed; top: 0; right: 0; bottom: 0; left: 0; overflow-y: auto; 
 
 .homescreen-help-holder.android .bottom-center-icon { display: none; }
 
+.homescreen-help-holder.android.opera { left: 0; right: null; padding-top: 20px; }
+
+.homescreen-help-holder.android.opera .tap-that-icon { text-align: left; padding-top: 1em; padding-left: 2em; }
+
+.homescreen-help-holder.android.opera span.arrow { position: absolute; top: -16px; left: 10px; }
+
+.homescreen-help-holder.android.opera .button { margin-top: 1em; display: inline-block; }
+
 .homescreen-help-holder.ios { position: fixed; right: 0; bottom: 0; left: 0; }
 
 .homescreen-help-holder.ios .homescreen-help { text-align: center; }
