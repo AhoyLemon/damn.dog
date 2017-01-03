@@ -804,5 +804,8 @@ var wikiHow = [
   },
   {
     slug: "Make-Lemonade-when-Life-Gives-You-Lemons"
+  },
+  {
+   slug: "Humanely-Kill-a-Fish"
   }
 ];
