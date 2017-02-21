@@ -807,5 +807,8 @@ var wikiHow = [
   },
   {
    slug: "Humanely-Kill-a-Fish"
+  },
+  {
+   slug: "Put-on-Pantyhose"
   }
 ];
