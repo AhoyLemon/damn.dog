@@ -21,6 +21,7 @@ The name actually came first. I was surprised to find out that the domain `damn.
 ## Any more places for illustratons?
 * [wikiHow Illustrations Tumblr](http://wikihow-illustrations.tumblr.com/)
 * [@wikiHowArt](https://twitter.com/WikiHowArt)
+* [wikiHow Image Uploads (wikiVisual)](https://www.wikihow.com/index.php?title=Special%3ALog&type=upload&user=WikiVisual&page=&year=2017&month=-1&tagfilter=&hide_patrol_log=1)
 
 ## Hey, how do I add images?
 I wrote [this guide](https://github.com/AhoyLemon/Damn-Dog/wiki/How-To-Add-New-Images-To-Damn.Dog)
