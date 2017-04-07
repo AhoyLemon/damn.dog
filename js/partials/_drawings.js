@@ -806,9 +806,24 @@ var wikiHow = [
     slug: "Make-Lemonade-when-Life-Gives-You-Lemons"
   },
   {
-   slug: "Humanely-Kill-a-Fish"
+    slug: "Humanely-Kill-a-Fish"
   },
   {
-   slug: "Put-on-Pantyhose"
+    slug: "Put-on-Pantyhose"
+  },
+  {
+    slug: "Freak-People-Out"
+  },
+  {
+    slug: "Fake-Pregnancy"
+  },
+  {
+    slug: "Cope-With-Being-in-Love-With-a-Fictional-Character"
+  },
+  {
+    slug: "Act-Depressed"
+  },
+  {
+    slug: "Be-a-Girl-Spy"
   }
 ];
