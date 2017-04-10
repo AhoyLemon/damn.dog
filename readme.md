@@ -1,5 +1,5 @@
 ![damn.dog](http://damn.dog/img/twitter-card.png)
-###(a wikiHow Picture Guessing Game)
+#### (a wikiHow Picture Guessing Game)
 
 ## What is this?
 Damn.dog is a game where you are shown an actual wikiHow illustration, and have to figure out which actual wikiHow article it belongs to. [Pull requests](https://github.com/AhoyLemon/Damn-Dog/pull/new/gh-pages) welcome.
