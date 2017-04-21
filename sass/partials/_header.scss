@@ -11,13 +11,15 @@ header { background-color:$lessdark; @include position(fixed,0,0,null,0); paddin
     .box { @include flex-item(50%); text-align: center; }
   }
   
-  .hamburger { background:transparent; border:none; cursor: pointer; color:$blue; outline:none; height: $header-height; width: $header-height; @include position(absolute,0,2rem);
-    svg {  }
-    g { transform-origin: center; transition:all 0.3s linear; }
-    .close { opacity: 0.2; transform: scale(0.2); }
+  .hamburger { background:transparent; padding:3px; border:none; cursor: pointer; color:$blue; outline:none; height: $header-height; width: $header-height; @include position(absolute,0,2rem);
+    .fill, .x { opacity: 0; }
+    &:hover { 
+      .fill { opacity: 1; }
+      .question-mark, .x { fill:$dark; }
+    }
     &.is-active {
-      .close { opacity: 1; transform: scale(1);}
-      .open { opacity: 0.2; transform: scale(0.2);}
+      .question-mark { opacity: 0; }
+      .x { opacity: 1; }
     }
   }
 }
