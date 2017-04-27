@@ -825,5 +825,8 @@ var wikiHow = [
   },
   {
     slug: "Be-a-Girl-Spy"
+  },
+  {
+    slug: "Appreciate-The-Simpsons"
   }
 ];
