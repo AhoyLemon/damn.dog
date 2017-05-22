@@ -828,5 +828,23 @@ var wikiHow = [
   },
   {
     slug: "Appreciate-The-Simpsons"
-  }
+  },
+  {
+    slug: "Be-a-Dominatrix"
+  },
+  {
+    slug: "End-a-Controlling-or-Manipulative-Relationship"
+  },
+  {
+    slug: "Create-a-Fictional-Character-from-Scratch"
+  },
+  {
+    slug: "Eat-in-Islam"
+  },
+  {
+    slug: "Be-a-Hipster"
+  },
+  {
+    slug: "Be-a-Femme-Fatale"
+  },
 ];
