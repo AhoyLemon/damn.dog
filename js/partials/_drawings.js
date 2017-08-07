@@ -847,4 +847,10 @@ var wikiHow = [
   {
     slug: "Be-a-Femme-Fatale"
   },
+  {
+    slug: "Be-a-Femme-Fatale"
+  },
+  {
+    slug: "Help-Someone"
+  }
 ];
