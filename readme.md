@@ -1,8 +1,8 @@
-![damn.dog](http://damn.dog/img/twitter-card.png)
+![damn.dog](https://damn.dog/img/twitter-card.png)
 #### (a wikiHow Picture Guessing Game)
 
 ## What is this?
-Damn.dog is a game where you are shown an actual wikiHow illustration, and have to figure out which actual wikiHow article it belongs to. [Pull requests](https://github.com/AhoyLemon/Damn-Dog/pull/new/gh-pages) welcome.
+Damn.dog is a game where you are shown an actual wikiHow illustration, and have to figure out which actual wikiHow article it belongs to. [Pull requests](https://github.com/AhoyLemon/damn.dog/pull/new/gh-pages) welcome.
 
 ## What's with the name?
 The name actually came first. I was surprised to find out that the domain `damn.dog` was not already taken, so I had to get it for myself. After that point I had to try to figure out what to do with it. This is what came to mind.
@@ -23,4 +23,4 @@ The name actually came first. I was surprised to find out that the domain `damn.
 * [@wikiHowArt](https://twitter.com/WikiHowArt)
 
 ## Hey, how do I add images?
-I wrote [this guide](https://github.com/AhoyLemon/Damn-Dog/wiki/How-To-Add-New-Images-To-Damn.Dog)
+I wrote [this guide](https://github.com/AhoyLemon/damn.dog/wiki/How-To-Add-New-Images-To-Damn.Dog)
