@@ -852,5 +852,14 @@ var wikiHow = [
   },
   {
     slug: "Help-Someone"
+  },
+  {
+    slug: "Win-an-Eating-Contest"
+  },
+  {
+    slug: "Watch-a-Horror-Movie"
+  },
+  {
+    slug: "Lose-Your-Fear-of-Being-Fired"
   }
 ];
