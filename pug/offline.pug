@@ -1,0 +1,22 @@
+- var pageTitle = "Home"
+- var siteTitle = "damn.dog"
+- var description = "A guessing game for wikiHow illustrations."
+- var d = new Date()
+- var lastUpdated = d.getFullYear() + '-' + (d.getMonth()<10?'0':'') + d.getMonth() + '-' + (d.getDate()<10?'0':'') + d.getDate() + '@' + (d.getHours()<10?'0':'') + d.getHours() + ':' + (d.getMinutes()<10?'0':'') + d.getMinutes() + ':' + (d.getSeconds()<10?'0':'') + d.getSeconds()
+- var siteURL = "https://damn.dog"
+
+doctype html
+html(lang="en")
+  head
+    include partials/_head.pug
+  body
+    
+    include partials/_header.pug
+    include partials/_sidebar.pug
+    
+    main.offline
+      img.offline-dog(src="/svg/offline-dog.svg")
+    
+    include partials/_gameover.pug
+    include partials/_javascripts.pug
+    include partials/_schema.pug

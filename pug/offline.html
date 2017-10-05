@@ -5,10 +5,10 @@
     <title>damn.dog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic">
-    <link rel="stylesheet" href="css/damn.css?v=2017-09-04@20:18:29">
+    <link rel="stylesheet" href="css/damn.css?v=2017-09-04@20:36:37">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A guessing game for wikiHow illustrations.">
-    <meta http-equiv="last-modified" content="2017-09-04@20:18:29">
+    <meta http-equiv="last-modified" content="2017-09-04@20:36:37">
     <!-- favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -93,27 +93,7 @@
         <div class="tap-that-icon ios bottom-center-icon"><span class="arrow">↓</span></div>
       </div>
     </div>
-    <main>
-      <!-- PAGE CONTENT-->
-      <section class="image-holder">
-        <div class="child">
-          <h1 data-display="guess">What is the title of this wikiHow article?</h1>
-          <h1 class="nope" data-display="wrong">Nope.</h1>
-          <h1 class="yup" data-display="correct">That's right.</h1><img id="HeroPic">
-          <div class="input-holder" data-display="guess">
-            <select id="GuessTitle">
-              <option></option>
-              <optgroup label=""></optgroup>
-            </select>
-          </div>
-          <div class="result" data-display="wrong"><span class="correctis">Correct answer is </span><a class="correct-title" id="CorrectTitle" target="_blank"></a></div>
-          <div class="result" data-display="correct"><a class="correct-title" id="ActualTitle" target="_blank"></a></div>
-          <div class="button-holder" data-display="play again">
-            <button id="PlayAgain">Play Again</button>
-          </div>
-        </div>
-      </section>
-    </main>
+    <main class="offline"><img src="/svg/offline.svg"></main>
     <section class="game-over" id="GameOver">
       <div class="stripes">
         <div class="child"> 
@@ -142,7 +122,7 @@
       </div>
     </section>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/min/damn.min.js?v=2017-09-04@20:18:29"></script>
+    <script src="js/min/damn.min.js?v=2017-09-04@20:36:37"></script>
     <script type="text/javascript">
       // Register the service worker
       if ('serviceWorker' in navigator) {
