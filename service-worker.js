@@ -28,16 +28,15 @@ self.addEventListener('install', e => {
 });
 
 self.addEventListener('fetch', function(event) {
-  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
-    event.respondWith(
-      fetch(event.request.url).catch(error => {
-        return caches.match(offlineUrl);
-      })
-    );
-  } else {
-    event.respondWith(caches.match(event.request).then(function (response) {
-      return response || fetch(event.request);
-      })
-    );
-  }
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
 });
