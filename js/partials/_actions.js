@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
   $('.number-of-rounds').text(wikiHow.length);
+  $('a.correct-title').attr('target','_blank');
   if(window.location.hash) {
     var hash = window.location.hash.substring(1); 
     if (hash < wikiHow.length) {
