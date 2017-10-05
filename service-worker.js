@@ -1,8 +1,6 @@
 'use strict';
 
-const cacheName = 'v0.1a';
-const offlineUrl = '/offline.html';
-
+const cacheName = 'v0.2a';
 
 self.addEventListener('install', e => {
   // once the SW is installed, go ahead and fetch the resources
@@ -10,18 +8,12 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache.addAll([
-        '/',
+        '/index.html',
         '/manifest.json',
         '/css/damn.css',
         '/js/min/damn.min.js',
         '/svg/offline-dog.svg',
-        offlineUrl
-        /*
-          DEAR READER,
-          ADD A LIST OF YOUR ASSETS THAT
-          YOU WANT TO WORK WHEN OFFLINE
-          TO THIS ARRAY OF URLS
-        */
+        '/offline.html'
       ]).then(() => self.skipWaiting());
     })
   );
