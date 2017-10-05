@@ -5,10 +5,10 @@
     <title>damn.dog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic">
-    <link rel="stylesheet" href="css/damn.css?v=2017-09-04@20:18:29">
+    <link rel="stylesheet" href="css/damn.css?v=2017-09-04@21:04:14">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A guessing game for wikiHow illustrations.">
-    <meta http-equiv="last-modified" content="2017-09-04@20:18:29">
+    <meta http-equiv="last-modified" content="2017-09-04@21:04:14">
     <!-- favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -52,7 +52,7 @@
         <div class="box score-box"><span class="score label">score</span><span class="score number" id="ScoreNumber">0</span></div>
         <div class="box percent-box"><span class="percent label">correct</span><span class="percent number" id="ScorePercent">0%</span></div>
         <div class="box hamburger-holder">
-          <button class="hamburger">
+          <button class="hamburger" aria-label="Toggle Sidebar">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <circle class="fill" cx="50.6" cy="49.7" r="42"></circle>
               <path class="outline" d="M50 96C24.6 96 4 75.4 4 50S24.6 4 50 4s46 20.6 46 46-20.6 46-46 46zm0-86.2C27.8 9.8 9.8 27.8 9.8 50s18 40.3 40.2 40.3S90.3 72.2 90.3 50 72.2 9.8 50 9.8z"></path>
@@ -69,10 +69,10 @@
     </header>
     <div class="sidebar">
       <ul>
-        <li><span class="label">Game by</span><span class="indent"><a href="http://ahoylemon.xyz" target="blank" onclick="sendGA('outside link', 'http://ahoylemon.xyz')">Lemon</a></span></li>
+        <li><span class="label">Game by</span><span class="indent"><a href="http://ahoylemon.xyz" onclick="sendGA('outside link', 'http://ahoylemon.xyz')">Lemon</a></span></li>
         <li> <span class="label">Current round count</span><span class="indent"><span class="number-of-rounds"></span></span></li>
         <li><span class="label">Global average</span><span class="indent">63% correct</span></li>
-        <li> <span class="label">Learn more</span><span class="indent"><a href="https://github.com/AhoyLemon/damn.dog#readme" target="blank" onclick="sendGA('outside link', 'https://github.com/AhoyLemon/damn.dog')">here</a></span></li>
+        <li> <span class="label">Learn more</span><span class="indent"><a href="https://github.com/AhoyLemon/damn.dog#readme" onclick="sendGA('outside link', 'https://github.com/AhoyLemon/damn.dog')">here</a></span></li>
         <li><span class="label">You can</span><span class="indent"><a id="OpenSharebox">share this round.</a></span></li>
         <li id="AddToHomeScreen"><span class="label">or </span><span class="indent"> <a style="font-weight:bold;" id="HomescreenLink"></a></span></li>
         <li class="smaller">Your progress will be saved if you close this browser.</li>
@@ -142,7 +142,7 @@
       </div>
     </section>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/min/damn.min.js?v=2017-09-04@20:18:29"></script>
+    <script src="js/min/damn.min.js?v=2017-09-04@21:04:14"></script>
     <script type="text/javascript">
       // Register the service worker
       if ('serviceWorker' in navigator) {
