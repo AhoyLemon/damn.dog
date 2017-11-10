@@ -11,30 +11,32 @@ html(lang="en")
     include partials/_head.pug
   body
     
-    include partials/_header.pug
-    include partials/_sidebar.pug
-    
-    main
-      
-      // PAGE CONTENT
-      section.image-holder
-        .child
-          h1(data-display="guess") What is the title of this wikiHow article?
-          h1.nope(data-display="wrong") Nope.
-          h1.yup(data-display="correct") That's right.
-          img#HeroPic()
-          .input-holder(data-display="guess")
-            select#GuessTitle
-              option
-              optgroup(label="")
-          .result(data-display="wrong")
-            span.correctis Correct answer is 
-            a.correct-title#CorrectTitle
-          .result(data-display="correct")
-            a.correct-title#ActualTitle
-          .button-holder(data-display="play again")
-            button#PlayAgain Play Again
-    
-    include partials/_gameover.pug
+    #app
+      include partials/_header.pug
+      include partials/_sidebar.pug
+
+      main
+
+        // PAGE CONTENT
+        section.image-holder(v-cloak)
+          .child
+            h1(v-if="!current.correct") What is the title of this wikiHow article?
+            h1.nope(v-else-if="current.correct == 'wrong'") Nope.
+            h1.yup(v-else-if="current.correct == 'right'") That's right.
+            img#HeroPic(:src="current.pic")
+            .input-holder(data-display="guess")
+              select(v-model="current.guess" v-on:change="checkGuess(current.guess)" v-bind:disabled="current.correct == 'right' || current.correct == 'wrong'")
+                option(value="" disabled hidden) How To
+                option(v-for="choice in current.choices") {{choice.title}}
+                  
+            .result(v-if="current.correct == 'wrong'")
+              span.correctis Correct answer is 
+              a.correct-title(v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank") {{current.title}}
+            .result(v-if="current.correct == 'right'")
+              a.correct-title(v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank") {{current.title}}
+            .button-holder(v-if="current.correct == 'right' || current.correct == 'wrong'")
+              button(v-on:click="newRound()") Play Again
+
+      include partials/_gameover.pug
     include partials/_javascripts.pug
     include partials/_schema.pug

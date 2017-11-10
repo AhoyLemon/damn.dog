@@ -10,7 +10,7 @@
   &.visible { transform:translateX(0); }
 }
 
-.share-round-holder { @include position(fixed,0,0,0,0); z-index: $z-sharebox; background:rgba($black,0.73); display: none;
+.share-round-holder { @include position(fixed,0,0,0,0); z-index: $z-sharebox; background:rgba($black,0.73);
   .share-round { @extend %center-child; position: relative; height: 100%; }
   .child { text-align: center; color:$white; font-size:2rem; }
   span { display: block; margin-bottom: 0.5em; }
@@ -19,7 +19,9 @@
   }
 }
 
-.homescreen-help-holder {  background:$blue; color:$black; z-index:$z-homescreenbox; display: none;  
+/*
+
+.homescreen-help-holder {  background:$blue; color:$black; z-index:$z-homescreenbox;
   &.android { @include position(fixed,0,0); max-width: 16em;
     .ios, .edge, .opera, .desktop-chrome { display: none; }
     b { display: block; }
@@ -52,6 +54,55 @@
   .button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; 
     &:hover { color:$blue; background:$black; border-color: $blue; }
   }
+}
+*/
+.homescreen-help-holder { background-color:rgba($black,0.9); @include position(fixed,0,0,0,0); z-index:$z-homescreenbox;
+  .homescreen-help { background:white; color:$black; @include position(fixed,0,0); padding:1em; }
+  svg { fill:currentColor;
+    * { fill:currentColor; }
+  }
+  .help { text-align: right; line-height: 160%;
+    span { display: block; }
+    svg { width:0.8em; height: 0.8em; }
+  }
+  &.ios { top:auto; bottom:0; right: 0; left:0; width:100%; max-width: 100%;
+    .help { text-align: center; }
+  }
+  .button-holder { padding-top: 1em; text-align: center;
+    button { font-size:20px; }
+  }
+  /*
+  &.android { @include position(fixed,0,0); max-width: 16em;
+    .ios, .edge, .opera, .desktop-chrome { display: none; }
+    b { display: block; }
+    .tap-that-icon { margin-top: -1.2em; }
+    .bottom-center-icon { display:none; }
+    &.firefox { padding-top:1em; }
+  }
+  &.ios { @include position(fixed,null,0,0,0);
+    .homescreen-help { text-align: center; }
+    .android, .edge, .opera, .desktop-chrome { display: none; }
+    span.arrow { display:block; text-align: center;  }
+    .top-right-icon { display:none; }
+  }
+  &.edge { @include position(fixed,0,0); max-width: 16em;
+    .ios, .android, .opera, .desktop-chrome { display: none; }
+  }
+  &.opera { @include position(fixed,0,0); max-width: 16em;
+    .top-right-icon { padding-right: 2.1em; }
+    .ios, .android, .edge, .desktop-chrome { display: none; }
+  }
+  &.desktop-chrome { @include position(fixed,0,0); max-width: 16em;
+    .ios, .android, .edge, .opera { display: none; }
+  }
+  .homescreen-help { text-align: right; padding:0.5em 0.5em 1em 1em; }  
+  span.arrow {
+    svg { height: 1em; width: 1em; }
+  }
+  .button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; display: inline-block; margin-top:0.5em; margin-bottom:0.5em;
+    &:hover { color:$yellow; background:$black; border-color: $yellow; }
+  }
+  */
 }
 
 

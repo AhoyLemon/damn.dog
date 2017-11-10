@@ -5,10 +5,10 @@
     <title>damn.dog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic">
-    <link rel="stylesheet" href="css/damn.css?v=2017-09-10@09:09:08">
+    <link rel="stylesheet" href="css/damn.css?v=2017-10-10@14:07:01">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A guessing game for wikiHow illustrations.">
-    <meta http-equiv="last-modified" content="2017-09-10@09:09:08">
+    <meta http-equiv="last-modified" content="2017-10-10@14:07:01">
     <!-- favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -47,102 +47,161 @@
     <meta property="og:email" content="lemon@thefpl.us">
   </head>
   <body>
-    <header id="ScoreHeader">
-      <div class="inner score-holder">
-        <div class="box score-box"><span class="score label">score</span><span class="score number" id="ScoreNumber">0</span></div>
-        <div class="box percent-box"><span class="percent label">correct</span><span class="percent number" id="ScorePercent">0%</span></div>
-        <div class="box hamburger-holder">
-          <button class="hamburger" aria-label="Toggle Sidebar">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <circle class="fill" cx="50.6" cy="49.7" r="42"></circle>
-              <path class="outline" d="M50 96C24.6 96 4 75.4 4 50S24.6 4 50 4s46 20.6 46 46-20.6 46-46 46zm0-86.2C27.8 9.8 9.8 27.8 9.8 50s18 40.3 40.2 40.3S90.3 72.2 90.3 50 72.2 9.8 50 9.8z"></path>
-              <g class="open" id="HamburgerOpen">
-                <path class="question-mark" d="M47.6 58.9c-.6-.7-.9-1.6-.9-2.8 0-2.4.4-4.3 1.3-5.9.9-1.6 2.1-3.3 3.8-5.2 1.2-1.4 2.2-2.6 2.7-3.6.6-.9.9-2 .9-3.2 0-1.3-.5-2.3-1.4-3.1-1-.7-2.3-1.1-3.9-1.1-1.5 0-2.9.3-4.1.9-1.3.6-3 1.5-5.1 2.8-1.3.7-2.4 1.1-3.3 1.1-1 0-1.8-.4-2.5-1.3s-1-1.9-1-3.1c0-.8.1-1.5.5-2.1.3-.6.8-1.1 1.4-1.6 2-1.6 4.4-2.9 7-3.8 2.7-.9 5.3-1.4 8-1.4 2.9 0 5.4.5 7.7 1.5s4.1 2.4 5.3 4.2c1.3 1.8 1.9 3.8 1.9 6 0 1.7-.3 3.3-1 4.7-.7 1.4-1.5 2.6-2.4 3.7-.9 1-2.2 2.3-3.7 3.8-1.8 1.6-3.1 3-4 4.1-.9 1.1-1.4 2.3-1.7 3.6-.2.9-.6 1.6-1.1 2-.6.5-1.3.7-2.1.7-1 .1-1.8-.2-2.3-.9zm-1.7 14.8c-1.1-1.1-1.7-2.6-1.7-4.3 0-1.7.6-3.1 1.7-4.3s2.5-1.7 4.2-1.7c1.7 0 3 .6 4.2 1.7 1.1 1.1 1.7 2.6 1.7 4.3 0 1.7-.6 3.1-1.7 4.3-1.1 1.1-2.5 1.7-4.2 1.7-1.7 0-3.1-.5-4.2-1.7z"></path>
-              </g>
-              <g class="close" id="HamburgerClose">
-                <path class="x" d="M70.3 69c0 1.3-.5 2.4-1.5 3.3-1 .9-2.1 1.4-3.4 1.4-1.3 0-2.4-.6-3.4-1.7L49.6 56.9 37 72.1c-1 1.1-2.1 1.7-3.4 1.7-1.2 0-2.3-.5-3.3-1.4-1-.9-1.5-2.1-1.5-3.3 0-1.1.4-2.1 1.2-3L43.5 50l-13-15.8c-.8-1-1.3-2-1.3-3 0-1.3.5-2.4 1.5-3.3 1-.9 2.1-1.4 3.3-1.4 1.3 0 2.5.6 3.4 1.7l12.1 14.6 12-14.6c1-1.1 2.1-1.7 3.4-1.7 1.2 0 2.3.5 3.3 1.4 1 .9 1.5 2.1 1.5 3.3 0 1.1-.4 2.1-1.2 3l-13 15.6L69 65.9c.9 1 1.3 2 1.3 3.1z"></path>
-              </g>
-            </svg>
-          </button>
+    <div id="app">
+      <header>
+        <div class="inner score-holder">
+          <div class="box score-box" v-cloak v-if="player.score &gt; 0"><span class="score label">score</span><span class="score number">{{player.score}}</span></div>
+          <div class="box percent-box" v-cloak v-if="scorePercent &gt; 0"><span class="percent label">correct</span><span class="percent number" v-bind:class="{bad: scorePercent &lt; averagePercent }">{{scorePercent}}%</span></div>
+          <div class="box hamburger-holder">
+            <button class="hamburger" v-on:click="drawerOpen = !drawerOpen">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <circle class="fill" cx="50.6" cy="49.7" r="42"></circle>
+                <path class="outline" d="M50 96C24.6 96 4 75.4 4 50S24.6 4 50 4s46 20.6 46 46-20.6 46-46 46zm0-86.2C27.8 9.8 9.8 27.8 9.8 50s18 40.3 40.2 40.3S90.3 72.2 90.3 50 72.2 9.8 50 9.8z"></path>
+                <g class="open" id="HamburgerOpen">
+                  <path class="question-mark" d="M47.6 58.9c-.6-.7-.9-1.6-.9-2.8 0-2.4.4-4.3 1.3-5.9.9-1.6 2.1-3.3 3.8-5.2 1.2-1.4 2.2-2.6 2.7-3.6.6-.9.9-2 .9-3.2 0-1.3-.5-2.3-1.4-3.1-1-.7-2.3-1.1-3.9-1.1-1.5 0-2.9.3-4.1.9-1.3.6-3 1.5-5.1 2.8-1.3.7-2.4 1.1-3.3 1.1-1 0-1.8-.4-2.5-1.3s-1-1.9-1-3.1c0-.8.1-1.5.5-2.1.3-.6.8-1.1 1.4-1.6 2-1.6 4.4-2.9 7-3.8 2.7-.9 5.3-1.4 8-1.4 2.9 0 5.4.5 7.7 1.5s4.1 2.4 5.3 4.2c1.3 1.8 1.9 3.8 1.9 6 0 1.7-.3 3.3-1 4.7-.7 1.4-1.5 2.6-2.4 3.7-.9 1-2.2 2.3-3.7 3.8-1.8 1.6-3.1 3-4 4.1-.9 1.1-1.4 2.3-1.7 3.6-.2.9-.6 1.6-1.1 2-.6.5-1.3.7-2.1.7-1 .1-1.8-.2-2.3-.9zm-1.7 14.8c-1.1-1.1-1.7-2.6-1.7-4.3 0-1.7.6-3.1 1.7-4.3s2.5-1.7 4.2-1.7c1.7 0 3 .6 4.2 1.7 1.1 1.1 1.7 2.6 1.7 4.3 0 1.7-.6 3.1-1.7 4.3-1.1 1.1-2.5 1.7-4.2 1.7-1.7 0-3.1-.5-4.2-1.7z"></path>
+                </g>
+                <g class="close" id="HamburgerClose">
+                  <path class="x" d="M70.3 69c0 1.3-.5 2.4-1.5 3.3-1 .9-2.1 1.4-3.4 1.4-1.3 0-2.4-.6-3.4-1.7L49.6 56.9 37 72.1c-1 1.1-2.1 1.7-3.4 1.7-1.2 0-2.3-.5-3.3-1.4-1-.9-1.5-2.1-1.5-3.3 0-1.1.4-2.1 1.2-3L43.5 50l-13-15.8c-.8-1-1.3-2-1.3-3 0-1.3.5-2.4 1.5-3.3 1-.9 2.1-1.4 3.3-1.4 1.3 0 2.5.6 3.4 1.7l12.1 14.6 12-14.6c1-1.1 2.1-1.7 3.4-1.7 1.2 0 2.3.5 3.3 1.4 1 .9 1.5 2.1 1.5 3.3 0 1.1-.4 2.1-1.2 3l-13 15.6L69 65.9c.9 1 1.3 2 1.3 3.1z"></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="sidebar" v-bind:class="{visible: drawerOpen}">
+        <ul>
+          <li><span class="label">Game by</span><span class="indent"><a href="http://ahoylemon.xyz" onclick="sendEvent('outside link', 'http://ahoylemon.xyz')">Lemon</a></span></li>
+          <li> <span class="label">Current round count</span><span class="indent"><span class="number-of-rounds">{{drawings.length}}</span></span></li>
+          <li><span class="label">Global average</span><span class="indent">{{averagePercent}}% correct</span></li>
+          <li> <span class="label">Learn more</span><span class="indent"><a href="https://github.com/AhoyLemon/damn.dog#readme" onclick="sendEvent('outside link', 'https://github.com/AhoyLemon/damn.dog')">here</a></span></li>
+          <li><span class="label">You can</span><span class="indent"><a v-on:click="help = 'share'">share this round.</a></span></li>
+          <li id="AddToHomeScreen" v-if="device"><span class="label">But first</span><span class="indent"> <a v-on:click="help = 'bookmark'"><span v-if="(device == 'android') || (device == 'ios')">add to home screen</span><span v-else-if="(browser == 'ie') || (browser == 'edge')">pin to start</span><span v-else-if="device == 'chrome'">add to shelf</span><span v-else-if="browser == 'chrome'">add to desktop</span><span v-else-if="(device == 'mac') || (browser == 'firefox') || (browser == 'opera') || (browser == 'vivaldi')">bookmark this</span></a></span></li>
+          <li class="smaller">Your progress will be saved if you close this browser.</li>
+        </ul>
+      </div>
+      <div class="share-round-holder helper-holder" v-cloak v-if="help == 'share'">
+        <div class="share-round">
+          <div class="child"><span>Just copy the URL. The other person will see this round.</span><a class="button close-sharebox" v-on:click="help = false">Alright.</a></div>
         </div>
       </div>
-    </header>
-    <div class="sidebar">
-      <ul>
-        <li><span class="label">Game by</span><span class="indent"><a href="http://ahoylemon.xyz" onclick="sendGA('outside link', 'http://ahoylemon.xyz')">Lemon</a></span></li>
-        <li> <span class="label">Current round count</span><span class="indent"><span class="number-of-rounds"></span></span></li>
-        <li><span class="label">Global average</span><span class="indent">63% correct</span></li>
-        <li> <span class="label">Learn more</span><span class="indent"><a href="https://github.com/AhoyLemon/damn.dog#readme" onclick="sendGA('outside link', 'https://github.com/AhoyLemon/damn.dog')">here</a></span></li>
-        <li><span class="label">You can</span><span class="indent"><a id="OpenSharebox">share this round.</a></span></li>
-        <li id="AddToHomeScreen"><span class="label">or </span><span class="indent"> <a style="font-weight:bold;" id="HomescreenLink"></a></span></li>
-        <li class="smaller">Your progress will be saved if you close this browser.</li>
-      </ul>
-    </div>
-    <div class="share-round-holder helper-holder">
-      <div class="share-round">
-        <div class="child"><span>Just copy the URL. The other person will see this round.</span><a class="button close-sharebox" id="CloseSharebox">Alright.</a></div>
-      </div>
-    </div>
-    <div class="homescreen-help-holder helper-holder" id="HomescreenHolder">
-      <div class="homescreen-help">
-        <div class="tap-that-icon top-right-icon">Tap that <span class="opera">heart </span>icon <span class="arrow">↑</span></div>
-        <p class="ios">Tap the icon below, then choose <b>Add To Home Screen </b>from the menu that appears.</p>
-        <p class="android">Then choose<b>Add to Home screen</b> from the menu that appears.</p>
-        <p class="edge">Then choose <b>Pin this page to start</b> from the menu that appears.</p>
-        <p class="desktop-chrome">Then choose <b>More Tools</b> and then <b>Add To Desktop</b></p><a class="button close-homescreen-help" id="CloseHomeScreenHelp">Okay, did it.</a>
-        <div class="tap-that-icon ios bottom-center-icon"><span class="arrow">↓</span></div>
-      </div>
-    </div>
-    <main>
-      <!-- PAGE CONTENT-->
-      <section class="image-holder">
-        <div class="child">
-          <h1 data-display="guess">What is the title of this wikiHow article?</h1>
-          <h1 class="nope" data-display="wrong">Nope.</h1>
-          <h1 class="yup" data-display="correct">That's right.</h1><img id="HeroPic">
-          <div class="input-holder" data-display="guess">
-            <select id="GuessTitle">
-              <option></option>
-              <optgroup label=""></optgroup>
-            </select>
+      <div class="homescreen-help-holder" v-cloak v-if="help == 'bookmark'">
+        <div class="homescreen-help" v-bind:class=" { ios: device == 'ios' } ">
+          <div class="help android-help" v-if="device == 'android'"><span>Tap the 
+              <svg class="kebab" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <circle cx="53.6" cy="13.1" r="11.4"></circle>
+                <circle cx="53.6" cy="49.8" r="11.4"></circle>
+                <circle cx="53.6" cy="86.5" r="11.4"></circle>
+              </svg> icon up there 
+              <svg class="arrow arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M89.5 41.1L54.9 3c-1.4-1.6-3.9-1.6-5.3 0L15 41c-2.3 2.6 0 6.6 3.4 5.9l21-4.2v50.4c0 2 1.6 3.6 3.6 3.6h18.2c2 0 3.6-1.6 3.6-3.6V42.7l21.5 4.2c3.2.9 5.5-3.3 3.2-5.8z"></path>
+              </svg></span><span>Then choose <b>Add to Home Screen</b></span></div>
+          <div class="help ios-help" v-else-if="device == 'ios'"><span>Tap the
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M41.7 18.1l9.5-9.5v52c0 1.3.9 2.2 2.2 2.2 1.3 0 2.2-.9 2.2-2.2v-52l9.5 9.5c.4.4.9.7 1.5.7.7 0 1.1-.2 1.5-.7.9-.9.9-2.2 0-3.1L54.9 1.8c-.2-.2-.4-.4-.7-.4-.4-.2-1.1-.2-1.8 0-.2.2-.4.2-.7.4L38.6 15c-.9.9-.9 2.2 0 3.1.9.9 2.2.9 3.1 0zm42.5 9.5H66.6V32h17.6v61.7H22.5V32h17.6v-4.4H22.5c-2.4 0-4.4 2-4.4 4.4v61.7c0 2.4 2 4.4 4.4 4.4h61.7c2.4 0 4.4-2 4.4-4.4V32c0-2.4-2-4.4-4.4-4.4z"></path>
+              </svg> icon below.</span><span>Then choose <b>Add To Home Screen</b></span></div>
+          <div class="help chrome-help" v-else-if="(browser == 'chrome')"><span v-if="device == 'mac'">Tap the 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M72.3 86.138c1.5-.2 2.6-1.6 2.4-3.2v-.1l-3.6-22 15.7-15.7c1.1-1.1 1.1-2.9 0-4-.4-.4-1-.7-1.6-.8l-21.8-3.4-9.9-19.9c-.7-1.4-2.4-2-3.8-1.3-.5.3-1 .7-1.2 1.3l-9.9 19.9-21.8 3.4c-1.5.2-2.6 1.7-2.3 3.2.1.6.4 1.1.8 1.6l15.7 15.7-3.6 22c-.3 1.5.8 3 2.3 3.3.6.1 1.2 0 1.8-.3l19.6-10.2 19.6 10.2c.4.2 1 .3 1.6.3zm-4-8l-15.9-8.3c-.8-.4-1.8-.4-2.6 0l-15.9 8.3 2.9-17.8c.1-.9-.2-1.8-.8-2.5l-12.8-12.7 17.7-2.7c.9-.1 1.7-.7 2.1-1.5l8.1-16.2 8.1 16.2c.4.8 1.2 1.4 2.1 1.5l17.7 2.7-12.8 12.7c-.6.6-.9 1.6-.8 2.5-.1 0 2.9 17.8 2.9 17.8z"></path>
+              </svg> icon.</span><span v-else>Tap the 
+              <svg class="kebab" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <circle cx="53.6" cy="13.1" r="11.4"></circle>
+                <circle cx="53.6" cy="49.8" r="11.4"></circle>
+                <circle cx="53.6" cy="86.5" r="11.4"></circle>
+              </svg> up there. 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M89.5 41.1L54.9 3c-1.4-1.6-3.9-1.6-5.3 0L15 41c-2.3 2.6 0 6.6 3.4 5.9l21-4.2v50.4c0 2 1.6 3.6 3.6 3.6h18.2c2 0 3.6-1.6 3.6-3.6V42.7l21.5 4.2c3.2.9 5.5-3.3 3.2-5.8z"></path>
+              </svg></span><span v-if="device == 'windows'">Then choose <b>More tools</b> and <b>Add to desktop</b></span><span v-if="device == 'chrome'">Then choose <b>More tools </b>and <b>Add to shelf</b></span></div>
+          <div class="help safari-help" v-else-if="browser == 'safari'"><span> 
+              <svg class="arrow arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M89.5 41.1L54.9 3c-1.4-1.6-3.9-1.6-5.3 0L15 41c-2.3 2.6 0 6.6 3.4 5.9l21-4.2v50.4c0 2 1.6 3.6 3.6 3.6h18.2c2 0 3.6-1.6 3.6-3.6V42.7l21.5 4.2c3.2.9 5.5-3.3 3.2-5.8z"></path>
+              </svg> Tap the
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M41.7 18.1l9.5-9.5v52c0 1.3.9 2.2 2.2 2.2 1.3 0 2.2-.9 2.2-2.2v-52l9.5 9.5c.4.4.9.7 1.5.7.7 0 1.1-.2 1.5-.7.9-.9.9-2.2 0-3.1L54.9 1.8c-.2-.2-.4-.4-.7-.4-.4-.2-1.1-.2-1.8 0-.2.2-.4.2-.7.4L38.6 15c-.9.9-.9 2.2 0 3.1.9.9 2.2.9 3.1 0zm42.5 9.5H66.6V32h17.6v61.7H22.5V32h17.6v-4.4H22.5c-2.4 0-4.4 2-4.4 4.4v61.7c0 2.4 2 4.4 4.4 4.4h61.7c2.4 0 4.4-2 4.4-4.4V32c0-2.4-2-4.4-4.4-4.4z"></path>
+              </svg> icon. </span><span>Then <b>Add Bookmark</b>.</span></div>
+          <div class="help edge-help" v-else-if="browser == 'edge'"><span>Tap the 
+              <svg xmlns="http://www.w3.org/2000/svg" width="96.1" height="22.8" viewBox="0 0 96.1 22.8">
+                <circle cx="84.7" cy="11.4" r="11.4"></circle>
+                <circle cx="48.1" cy="11.4" r="11.4"></circle>
+                <circle cx="11.4" cy="11.4" r="11.4"></circle>
+              </svg> icon up here 
+              <svg class="arrow arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M89.5 41.1L54.9 3c-1.4-1.6-3.9-1.6-5.3 0L15 41c-2.3 2.6 0 6.6 3.4 5.9l21-4.2v50.4c0 2 1.6 3.6 3.6 3.6h18.2c2 0 3.6-1.6 3.6-3.6V42.7l21.5 4.2c3.2.9 5.5-3.3 3.2-5.8z"></path>
+              </svg></span><span>Then choose <b>Pin this page to start.</b></span></div>
+          <div class="help firefox-help" v-else-if="browser == 'firefox'"><span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M89.5 41.1L54.9 3c-1.4-1.6-3.9-1.6-5.3 0L15 41c-2.3 2.6 0 6.6 3.4 5.9l21-4.2v50.4c0 2 1.6 3.6 3.6 3.6h18.2c2 0 3.6-1.6 3.6-3.6V42.7l21.5 4.2c3.2.9 5.5-3.3 3.2-5.8z"></path>
+              </svg> Tap the 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M72.3 86.138c1.5-.2 2.6-1.6 2.4-3.2v-.1l-3.6-22 15.7-15.7c1.1-1.1 1.1-2.9 0-4-.4-.4-1-.7-1.6-.8l-21.8-3.4-9.9-19.9c-.7-1.4-2.4-2-3.8-1.3-.5.3-1 .7-1.2 1.3l-9.9 19.9-21.8 3.4c-1.5.2-2.6 1.7-2.3 3.2.1.6.4 1.1.8 1.6l15.7 15.7-3.6 22c-.3 1.5.8 3 2.3 3.3.6.1 1.2 0 1.8-.3l19.6-10.2 19.6 10.2c.4.2 1 .3 1.6.3zm-4-8l-15.9-8.3c-.8-.4-1.8-.4-2.6 0l-15.9 8.3 2.9-17.8c.1-.9-.2-1.8-.8-2.5l-12.8-12.7 17.7-2.7c.9-.1 1.7-.7 2.1-1.5l8.1-16.2 8.1 16.2c.4.8 1.2 1.4 2.1 1.5l17.7 2.7-12.8 12.7c-.6.6-.9 1.6-.8 2.5-.1 0 2.9 17.8 2.9 17.8z"></path>
+              </svg> icon up there</span></div>
+          <div class="help opera-help" v-else-if="browser == 'opera'"><span>
+              <svg class="arrow arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M89.5 41.1L54.9 3c-1.4-1.6-3.9-1.6-5.3 0L15 41c-2.3 2.6 0 6.6 3.4 5.9l21-4.2v50.4c0 2 1.6 3.6 3.6 3.6h18.2c2 0 3.6-1.6 3.6-3.6V42.7l21.5 4.2c3.2.9 5.5-3.3 3.2-5.8z"></path>
+              </svg> Tap the 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M65.6 22.2c-5.1 0-10.3 1.9-14.1 5.8-3.9-3.9-9-5.8-14.1-5.8S27.2 24.1 23.3 28c-7.8 7.8-7.8 20.5 0 28.3l28.2 28.3 28.3-28.3c3.9-3.9 5.8-9 5.8-14.1S83.7 32 79.8 28.1c-3.9-4-9-5.9-14.2-5.9zm9.9 29.9l-24 24-24-24c-2.6-2.6-4.1-6.1-4.1-9.9 0-3.8 1.4-7.3 4.1-9.9 2.6-2.6 6.1-4.1 9.9-4.1 3.8 0 7.3 1.4 9.9 4.1l4.2 4.3 4.2-4.2c2.6-2.6 6.1-4.1 9.9-4.1s7.3 1.4 9.9 4.1c2.6 2.6 4.1 6.1 4.1 9.9s-1.4 7.1-4.1 9.8z"></path>
+              </svg> icon up there </span></div>
+          <div class="help vivaldi-help" v-else-if="browser == 'vivaldi'"><span>
+              <svg class="arrow arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M89.5 41.1L54.9 3c-1.4-1.6-3.9-1.6-5.3 0L15 41c-2.3 2.6 0 6.6 3.4 5.9l21-4.2v50.4c0 2 1.6 3.6 3.6 3.6h18.2c2 0 3.6-1.6 3.6-3.6V42.7l21.5 4.2c3.2.9 5.5-3.3 3.2-5.8z"></path>
+              </svg> Tap the bookmark icon up there.</span></div>
+          <div class="button-holder">
+            <button v-on:click="help = false"><span>Okay, did that.</span></button>
           </div>
-          <div class="result" data-display="wrong"><span class="correctis">Correct answer is </span><a class="correct-title" id="CorrectTitle"></a></div>
-          <div class="result" data-display="correct"><a class="correct-title" id="ActualTitle"></a></div>
-          <div class="button-holder" data-display="play again">
-            <button id="PlayAgain">Play Again</button>
+        </div>
+      </div>
+      <main>
+        <!-- PAGE CONTENT-->
+        <section class="image-holder" v-cloak>
+          <div class="child">
+            <h1 v-if="!current.correct">What is the title of this wikiHow article?</h1>
+            <h1 class="nope" v-else-if="current.correct == 'wrong'">Nope.</h1>
+            <h1 class="yup" v-else-if="current.correct == 'right'">That's right.</h1><img id="HeroPic" :src="current.pic">
+            <div class="input-holder" data-display="guess">
+              <select v-model="current.guess" v-on:change="checkGuess(current.guess)" v-bind:disabled="current.correct == 'right' || current.correct == 'wrong'">
+                <option value="" disabled hidden>How To</option>
+                <option v-for="choice in current.choices">{{choice.title}}</option>
+              </select>
+            </div>
+            <div class="result" v-if="current.correct == 'wrong'"><span class="correctis">Correct answer is </span><a class="correct-title" v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank">{{current.title}}</a></div>
+            <div class="result" v-if="current.correct == 'right'"><a class="correct-title" v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank">{{current.title}}</a></div>
+            <div class="button-holder" v-if="current.correct == 'right' || current.correct == 'wrong'">
+              <button v-on:click="newRound()">Play Again</button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section class="game-over" id="GameOver">
+        <div class="stripes">
+          <div class="child"> 
+            <h2>GAME OVER</h2>
+          </div>
+          <div class="child">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rounds Played</th>
+                  <th>Correct</th>
+                  <th>Incorrect</th>
+                  <th>Percent</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="FinalPlayed"></td>
+                  <td id="FinalCorrect"></td>
+                  <td id="FinalIncorrect"></td>
+                  <td id="FinalPercent"></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
-    </main>
-    <section class="game-over" id="GameOver">
-      <div class="stripes">
-        <div class="child"> 
-          <h2>GAME OVER</h2>
-        </div>
-        <div class="child">
-          <table>
-            <thead>
-              <tr>
-                <th>Rounds Played</th>
-                <th>Correct</th>
-                <th>Incorrect</th>
-                <th>Percent</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td id="FinalPlayed"></td>
-                <td id="FinalCorrect"></td>
-                <td id="FinalIncorrect"></td>
-                <td id="FinalPercent"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/min/damn.min.js?v=2017-09-10@09:09:08"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/min/damn.vue.min.js?v=2017-10-10@14:07:01"></script>
     <script type="text/javascript">
       // Register the service worker
       if ('serviceWorker' in navigator) {

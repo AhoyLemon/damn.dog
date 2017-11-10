@@ -1,5 +1,6 @@
 // jshint -W117
 
+/*
 function addToHomeScreen(device,browser) {
   if (device == "android") {
     $('#HomescreenLink').text('add to home screen');
@@ -22,12 +23,14 @@ function addToHomeScreen(device,browser) {
     $('#AddToHomeScreen').remove();
   }
 }
+*/
 
 function shuffle(o){
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
   return o;
 }
 
+/*
 function newRound() {
   $('[data-display="wrong"], [data-display="correct"], [data-display="play again"]').hide();
   $('[data-display="guess"]').fadeIn(600);
@@ -36,7 +39,9 @@ function newRound() {
   getPhoto();
   getChoices();
 }
+*/
 
+/*
 function getPhoto(p) {
   var r;
   if (p) {
@@ -77,7 +82,9 @@ function getPhoto(p) {
     }
   }
 }
+*/
 
+/*
 function getChoices() {
   var i = 0;
   while (i < 3) {
@@ -109,9 +116,10 @@ function getChoices() {
   $.each(choices, function(idx, obj){ 
     $('#GuessTitle').append('<option>'+obj.title+'</option>');
   });
-  
 }
+*/
 
+/*
 function goodGuess() {
   player.rounds++;
   player.score++;
@@ -121,7 +129,9 @@ function goodGuess() {
   localStorage.playerCorrect = player.correct;
   sendGA("guess", "correct", wiki.title);
 }
+*/
 
+/*
 function badGuess() {
   player.rounds++;
   player.incorrect++;
@@ -129,13 +139,17 @@ function badGuess() {
   localStorage.playerIncorrect = player.incorrect;
   sendGA("guess", "incorrect", wiki.title);
 }
+*/
 
+/*
 function calculatePercent() {
   if (player.correct > 0 && player.incorrect > 0) {
     player.percent = Math.floor((player.correct / player.rounds ) * 100);
   }
 }
+*/
 
+/*
 function showScore() {
   calculatePercent();
   $('#ScoreNumber').text(player.score);
@@ -155,7 +169,9 @@ function showScore() {
     }
   }
 }
+*/
 
+/*
 function verifyTitle() {
   var tl = wiki.title.toLowerCase();
   var g = $('#GuessTitle').val().toLocaleLowerCase();
@@ -176,6 +192,7 @@ function verifyTitle() {
   }
   showScore();
 }
+*/
 
 function gameOver() {
   $('#FinalRounds').text(player.rounds);

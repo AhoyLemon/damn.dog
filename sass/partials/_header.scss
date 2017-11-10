@@ -1,7 +1,7 @@
 header { background-color:$lessdark; @include position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom:0.25em; height:$header-height; z-index:$z-header;
   //> .inner { color:$white; @extend %inner; }
   span { display:inline-block; vertical-align: middle; }
-  .percent { display: none; }
+  //.percent { display: none; }
   .label { font-size:0.7em; font-family: $sans; line-height: 200%; padding-right: 0.5em; }
   .number { font-size:1.8em; font-weight: $light; line-height: 50%; color:$green;
     &.bad { color:$red; }
