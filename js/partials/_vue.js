@@ -262,5 +262,12 @@ var app = new Vue({
     
     this.checkBrowser();
     this.newRound();
+  },
+  
+  mounted: function() {
+    var self = this;
+    setTimeout(function(){ 
+      self.bannerVisible = true;
+    }, 14000);
   }
 });

@@ -1,4 +1,4 @@
-.banner { background-color:yellow; width:305px; @include position(fixed,null,20px,20px); @include flex-container();
+.banner { background-color:yellow; width:305px; @include position(fixed,null,10px,10px); @include flex-container();
   .icon-holder { @include flex-item(76px); padding: 10px; }
   .text-holder { @include flex-item(calc(100% - 76px)); padding-top:20px; padding-right: 20px; font-size:120%; }
   .text { color:$black; text-decoration: none;

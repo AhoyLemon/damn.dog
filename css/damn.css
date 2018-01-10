@@ -613,8 +613,8 @@ main {
   background-color: yellow;
   width: 305px;
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 10px;
+  bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
