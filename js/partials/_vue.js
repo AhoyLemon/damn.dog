@@ -16,6 +16,7 @@ var app = new Vue({
       correct: null
     },
     drawerOpen: false,
+    bannerVisible: false,
     help: false,
     player: {
       rounds:0,

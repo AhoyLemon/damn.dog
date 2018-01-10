@@ -29,6 +29,10 @@
   align-self: $align;
 }
 
+@mixin flex-center() {
+  @include flex-container(row,wrap,center); justify-content: center;
+}
+
 @mixin flex-split($desktop, $mobile) {
   @include respond-to(desktop) { @include flex-item($desktop); }
   @include respond-to(mobile) { @include flex-item($mobile); }

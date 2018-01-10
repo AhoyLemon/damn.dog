@@ -609,6 +609,119 @@ main {
   #AddToHomeScreen {
     display: none; } }
 
+.banner {
+  background-color: yellow;
+  width: 305px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .banner .icon-holder {
+    -ms-flex-preferred-size: 76px;
+    flex-basis: 76px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    padding: 10px; }
+  .banner .text-holder {
+    -ms-flex-preferred-size: calc(100% - 76px);
+    flex-basis: calc(100% - 76px);
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 120%; }
+  .banner .text {
+    color: #333;
+    text-decoration: none; }
+    .banner .text:hover {
+      text-decoration: underline; }
+  .banner .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer; }
+    .banner .close svg {
+      width: 18px;
+      height: 18px; }
+    .banner .close .fill {
+      opacity: 0; }
+    .banner .close:hover .x {
+      fill: yellow; }
+    .banner .close:hover .fill {
+      opacity: 1; }
+
+.animated {
+  -webkit-animation-duration: 0.65s;
+  animation-duration: 0.65s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0); }
+  to {
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0); }
+  to {
+    -webkit-transform: none;
+    transform: none; } }
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown; }
+
 .game-over {
   position: fixed;
   top: 0;
