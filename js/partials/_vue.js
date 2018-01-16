@@ -267,7 +267,10 @@ var app = new Vue({
   mounted: function() {
     var self = this;
     setTimeout(function(){ 
-      self.bannerVisible = true;
+      new Audio('audio/bylemon.mp3').play()
+      setTimeout(function(){ 
+        self.bannerVisible = true;
+      }, 800);
     }, 14000);
   }
 });

@@ -36,8 +36,7 @@ html(lang="en")
               a.correct-title(v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank") {{current.title}}
             .button-holder(v-if="current.correct == 'right' || current.correct == 'wrong'")
               button(v-on:click="newRound()") Play Again
-              
-              
+        
       include partials/_banner.pug
       include partials/_gameover.pug
       
