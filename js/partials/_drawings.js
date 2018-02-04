@@ -861,5 +861,8 @@ var wikiHow = [
   },
   {
     slug: "Lose-Your-Fear-of-Being-Fired"
+  },
+  {
+    slug: "Stop-Snacking-Between-Meals"
   }
 ];
