@@ -4,6 +4,7 @@ var app = new Vue({
   data: {
     drawings: wikiHow,
     averagePercent: 56,
+    roundsThisSession: -1,
     device: '',
     browser: '',
     current: {
@@ -44,10 +45,23 @@ var app = new Vue({
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // NEW ROUND
     newRound: function() {
+      var self = this;
       this.current.correct = null;
       this.current.choices = [];
       this.getPic();
       this.getChoices();
+      
+      self.roundsThisSession++;
+      
+      if (self.roundsThisSession == 3) {
+        new Audio('audio/bylemon.mp3').play()
+        setTimeout(function(){ 
+          self.bannerVisible = true;
+        }, 800);
+      }
+      
+      
+      
     },
     
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -262,15 +276,5 @@ var app = new Vue({
     
     this.checkBrowser();
     this.newRound();
-  },
-  
-  mounted: function() {
-    var self = this;
-    setTimeout(function(){ 
-      new Audio('audio/bylemon.mp3').play()
-      setTimeout(function(){ 
-        self.bannerVisible = true;
-      }, 800);
-    }, 14000);
   }
 });
