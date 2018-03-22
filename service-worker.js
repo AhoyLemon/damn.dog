@@ -1,6 +1,6 @@
 'use strict';
 
-const cacheName = 'v0.2a';
+const cacheName = 'v1.01a';
 
 self.addEventListener('install', e => {
   // once the SW is installed, go ahead and fetch the resources
@@ -11,24 +11,12 @@ self.addEventListener('install', e => {
         '/index.html',
         '/manifest.json',
         '/css/damn.css',
-        '/js/min/damn.min.js',
+        '/js/min/damn.vue.min.js',
+        'js/libraries/vue.js',
+        'js/libraries/vue.min.js',
         '/svg/offline-dog.svg',
         '/offline.html'
       ]).then(() => self.skipWaiting());
     })
-  );
-});
-
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
   );
 });

@@ -1,5 +1,10 @@
 script(src="https://code.jquery.com/jquery-2.1.4.min.js")
-script(src="https://unpkg.com/vue")
+
+if testing
+  script(src="js/libraries/vue.js")
+else
+  script(src="js/libraries/vue.min.js")
+
 script(src="js/min/damn.vue.min.js?v="+lastUpdated)
 script(type="text/javascript").
   // Register the service worker
