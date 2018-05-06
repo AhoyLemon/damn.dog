@@ -1,34 +1,39 @@
 'use strict';
 
-const cacheName = 'v0.2a';
+const PRECACHE = 'precache-v104b';
+const RUNTIME = 'runtime';
+const offlineUrl = '/offline.html';
 
-self.addEventListener('install', e => {
-  // once the SW is installed, go ahead and fetch the resources
-  // to make this work offline
-  e.waitUntil(
-    caches.open(cacheName).then(cache => {
-      return cache.addAll([
-        '/index.html',
-        '/manifest.json',
-        '/css/damn.css',
-        '/js/min/damn.min.js',
-        '/svg/offline-dog.svg',
-        '/offline.html'
-      ]).then(() => self.skipWaiting());
-    })
+// A list of local resources we always want to be cached.
+const PRECACHE_URLS = [
+  './', // Alias for index.html
+  '/index.html',
+  '/manifest.json',
+  '/css/damn.css',
+  '/js/min/damn.vue.min.js',
+  'js/libraries/vue.js',
+  'js/libraries/vue.min.js',
+  '/svg/offline-dog.svg',
+  offlineUrl
+];
+
+// The install handler takes care of precaching the resources we always need.
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(PRECACHE)
+      .then(cache => cache.addAll(PRECACHE_URLS))
+      .then(self.skipWaiting())
   );
 });
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
+  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
+    event.respondWith(
+      fetch(event.request.url).catch(error => {
+        return caches.match(offlineUrl);
+      })
+    );
+  } else {
+    return response
+  }
 });

@@ -1,10 +1,10 @@
+- var testing = true
 - var pageTitle = "Home"
 - var siteTitle = "damn.dog"
 - var description = "A guessing game for wikiHow illustrations."
 - var d = new Date()
 - var lastUpdated = d.getFullYear() + '-' + (d.getMonth()<10?'0':'') + d.getMonth() + '-' + (d.getDate()<10?'0':'') + d.getDate() + '@' + (d.getHours()<10?'0':'') + d.getHours() + ':' + (d.getMinutes()<10?'0':'') + d.getMinutes() + ':' + (d.getSeconds()<10?'0':'') + d.getSeconds()
 - var siteURL = "https://damn.dog"
-
 doctype html
 html(lang="en")
   head
@@ -31,9 +31,9 @@ html(lang="en")
                   
             .result(v-if="current.correct == 'wrong'")
               span.correctis Correct answer is 
-              a.correct-title(v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank") {{current.title}}
+              a.correct-title(v-if="current.url" v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank") {{current.title}}
             .result(v-if="current.correct == 'right'")
-              a.correct-title(v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank") {{current.title}}
+              a.correct-title(v-if="current.url" v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank") {{current.title}}
             .button-holder(v-if="current.correct == 'right' || current.correct == 'wrong'")
               button(v-on:click="newRound()") Play Again
         
