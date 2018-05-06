@@ -54,7 +54,7 @@ var app = new Vue({
       self.roundsThisSession++;
       
       if (self.roundsThisSession == 3) {
-        new Audio('audio/bylemon.mp3').play()
+        new Audio('audio/bylemon.mp3').play();
         setTimeout(function(){ 
           self.bannerVisible = true;
         }, 800);
