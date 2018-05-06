@@ -74,7 +74,7 @@ var app = new Vue({
         if (a > -1) {
           reroll++;
           if (reroll < 9) {
-            getPhoto();
+            getPic();
           } else {
             gameOver();
           }
