@@ -730,8 +730,7 @@ main {
   left: 0;
   z-index: 100;
   background-color: rgba(34, 39, 48, 0.8);
-  color: rgba(255, 255, 255, 0.6);
-  display: none; }
+  color: rgba(255, 255, 255, 0.6); }
   .game-over .stripes {
     position: absolute;
     top: 0;
@@ -756,6 +755,19 @@ main {
     .game-over table td {
       font-weight: 300;
       font-size: 2em; }
+  .game-over .button-holder {
+    text-align: center; }
+  .game-over .button {
+    color: #3e98f2;
+    background: transparent;
+    padding: 0.5em 1.5em;
+    border: 1px solid #3e98f2;
+    font-size: 22px;
+    font-family: "Roboto Slab", serif;
+    cursor: pointer; }
+    .game-over .button:hover {
+      background: #3e98f2;
+      color: #333; }
 
 main.offline {
   display: -webkit-box;

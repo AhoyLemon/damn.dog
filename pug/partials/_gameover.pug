@@ -1,7 +1,9 @@
-section.game-over#GameOver
+section.game-over(v-if="gameOverScreen")
   .stripes
+  
     .child 
       h2 GAME OVER
+      
     .child
       table
         thead
@@ -12,7 +14,11 @@ section.game-over#GameOver
             th Percent
         tbody
           tr
-            td#FinalPlayed
-            td#FinalCorrect
-            td#FinalIncorrect
-            td#FinalPercent
+            td(v-text="player.rounds")
+            td(v-text="player.correct")
+            td(v-text="player.incorrect")
+            td(v-text="scorePercent + '%'")
+    
+    .child
+      .button-holder
+        button.button(v-on:click="clearScores()") Play again

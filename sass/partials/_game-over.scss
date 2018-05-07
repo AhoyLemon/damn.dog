@@ -1,5 +1,5 @@
 
-.game-over { @include position(fixed,0,0,0,0); z-index: 100; background-color:rgba($dark,0.8); color:rgba($white,0.6); display: none;
+.game-over { @include position(fixed,0,0,0,0); z-index: 100; background-color:rgba($dark,0.8); color:rgba($white,0.6);
   .stripes { @extend %center-child; @include position(absolute,0,0,0,0); }
   h2 { font-size:14vw; text-align: center; }
   
@@ -9,4 +9,11 @@
     td { font-weight: $light; font-size:2em; }
   }
   
+  .button-holder { text-align: center;
+    
+  }
+  
+  .button { color:$blue; background:transparent; padding:0.5em 1.5em; border:1px solid $blue; font-size:22px; font-family: $font; cursor: pointer;
+    &:hover { background:$blue; color:$black; }
+  }
 }

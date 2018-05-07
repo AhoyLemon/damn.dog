@@ -18,6 +18,7 @@ var app = new Vue({
     },
     drawerOpen: false,
     bannerVisible: false,
+    gameOverScreen: false,
     help: false,
     player: {
       rounds:0,
@@ -183,6 +184,32 @@ var app = new Vue({
     wikiClick: function(u,t) {
       var self = this;
       sendEvent('Wikihow Link', u, t);
+    },
+    
+    gameOver: function() {
+      var self = this;
+      self.gameOverScreen = true;
+      
+      // Clear out local storage.
+      localStorage.removeItem("roundsPlayed");
+      localStorage.removeItem("playerRounds");
+      localStorage.removeItem("playerScore");
+      localStorage.removeItem("playerCorrect");
+      localStorage.removeItem("playerIncorrect");
+      
+    },
+    
+    clearScores: function() {
+      var self = this
+      self.player.correct = 0;
+      self.player.incorrect = 0;
+      self.player.rounds = 0;
+      self.player.score = 0;
+      self.roundsPlayed = [];
+      
+      self.gameOverScreen = false;
+      self.getPic();
+    
     },
     
     
