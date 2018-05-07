@@ -88,9 +88,9 @@ var app = new Vue({
         if (a > -1) {
           reroll++;
           if (reroll < 9) {
-            getPic();
+            self.getPic();
           } else {
-            gameOver();
+            self.gameOver();
           }
         } else {
           reroll = 0;
