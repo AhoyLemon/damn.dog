@@ -14,6 +14,6 @@ var player = {
 };
 
 var roundsPlayed = [];
-var reroll = 0;
+let reroll = 0;
 var choices = [];
 var choiceids = [];

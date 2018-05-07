@@ -49,6 +49,7 @@ var app = new Vue({
       var self = this;
       this.current.correct = null;
       this.current.choices = [];
+      reroll = 0;
       this.getPic();
       this.getChoices();
       
@@ -73,7 +74,6 @@ var app = new Vue({
       self.current.guess = '';
       if (p) {
         r = p;
-        reroll = 0;
         wiki.gid = r;
         if (!wikiHow[r].pic) {
           self.current.pic = 'img/pics/'+self.drawings[r].slug.toLowerCase()+'.jpg';
@@ -208,6 +208,7 @@ var app = new Vue({
       self.roundsPlayed = [];
       
       self.gameOverScreen = false;
+      reroll = 0;
       self.getPic();
     
     },
