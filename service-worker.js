@@ -1,39 +1,34 @@
-'use strict';
+//This is the "Offline page" service worker
 
-const PRECACHE = 'precache-v104b';
-const RUNTIME = 'runtime';
-const offlineUrl = '/offline.html';
-
-// A list of local resources we always want to be cached.
-const PRECACHE_URLS = [
-  './', // Alias for index.html
-  '/index.html',
-  '/manifest.json',
-  '/css/damn.css',
-  '/js/min/damn.vue.min.js',
-  'js/libraries/vue.js',
-  'js/libraries/vue.min.js',
-  '/svg/offline-dog.svg',
-  offlineUrl
-];
-
-// The install handler takes care of precaching the resources we always need.
-self.addEventListener('install', event => {
+//Install stage sets up the offline page in the cache and opens a new cache
+self.addEventListener('install', function(event) {
+  var offlinePage = new Request('offline.html');
   event.waitUntil(
-    caches.open(PRECACHE)
-      .then(cache => cache.addAll(PRECACHE_URLS))
-      .then(self.skipWaiting())
-  );
+    fetch(offlinePage).then(function(response) {
+      return caches.open('pwabuilder-offline').then(function(cache) {
+        console.log('[PWA Builder] Cached offline page during Install'+ response.url);
+        return cache.put(offlinePage, response);
+      });
+  }));
 });
 
+//If any fetch fails, it will show the offline page.
+//Maybe this should be limited to HTML documents?
 self.addEventListener('fetch', function(event) {
-  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
-    event.respondWith(
-      fetch(event.request.url).catch(error => {
-        return caches.match(offlineUrl);
-      })
-    );
-  } else {
-    return response
-  }
+  event.respondWith(
+    fetch(event.request).catch(function(error) {
+      console.error( '[PWA Builder] Network request Failed. Serving offline page ' + error );
+      return caches.open('pwabuilder-offline').then(function(cache) {
+        return cache.match('offline.html');
+      });
+    }
+  ));
+});
+
+//This is a event that can be fired from your page to tell the SW to update the offline page
+self.addEventListener('refreshOffline', function(response) {
+  return caches.open('pwabuilder-offline').then(function(cache) {
+    console.log('[PWA Builder] Offline page updated from refreshOffline event: '+ response.url);
+    return cache.put(offlinePage, response);
+  });
 });
