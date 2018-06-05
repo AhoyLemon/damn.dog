@@ -1,7 +1,7 @@
 {
   "manifest_version": 2.01,
-  "name": "damn.dog",
-  "short_name": "damn dog",
+  "name": "damn dog",
+  "short_name": "damndog",
   "description": "A guessing game for wikiHow illustrations.",
   "default_locale": "en",
   "display": "standalone",
