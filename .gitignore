@@ -1,5 +1,6 @@
 .sass-cache/
 *.css.map
+node_modules/
 
 # =========================
 # Operating System Files
