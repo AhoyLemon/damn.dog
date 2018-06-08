@@ -7,6 +7,7 @@ var app = new Vue({
     roundsThisSession: -1,
     device: '',
     browser: '',
+    standalone: false,
     current: {
       slug: '',
       pic: '',
@@ -200,7 +201,7 @@ var app = new Vue({
     },
     
     clearScores: function() {
-      var self = this
+      var self = this;
       self.player.correct = 0;
       self.player.incorrect = 0;
       self.player.rounds = 0;
@@ -262,13 +263,20 @@ var app = new Vue({
         this.device = "chrome";
         this.browser = "chrome";
       }
+    },
+
+    checkIfStandalone: function() {
+      var self = this;
+      //return (window.matchMedia('(display-mode: standalone)').matches);
+      if (window.matchMedia('(display-mode: standalone)').matches) {
+        self.standalone = true;
+      }
     }
-    
     
   },
   beforeMount: function() {
-    
-    
+
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // LOAD IN DATA FROM LOCALSTORAGE
     if(typeof(Storage) !== "undefined") {
