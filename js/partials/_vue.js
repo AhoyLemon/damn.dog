@@ -311,6 +311,7 @@ var app = new Vue({
     }
     
     this.checkBrowser();
+    this.checkIfStandalone();
     this.newRound();
   }
 });
