@@ -2,8 +2,7 @@ aside.banner.animated.bounceInDown(v-cloak v-if="bannerVisible")
   .icon-holder
     img.icon(src="svg/lemon.svg")
   .text-holder
-    //-a.text(href="https://ahoylemon.xyz" target="_blank") This site is by Lemon.
-    a.text(href="https://ahoylemon.xyz" target="_blank" onclick="sendEvent('outside link', 'https://ahoylemon.xyz', 'banner')") This site is by Lemon.
+    a.text(href="https://ahoylemon.xyz" onclick="sendEvent('outside link', 'https://ahoylemon.xyz', 'banner')") This site is by Lemon.
   a.close(v-on:click="bannerVisible = false")
     svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100")
       circle.fill(cx="50.6" cy="49.7" r="42")
