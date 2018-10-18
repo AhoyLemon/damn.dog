@@ -1,11 +1,15 @@
-script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
-
+//- jQuery and Vue (minified if on prod)
 if testing
+  script(src="js/libraries/jquery-3.3.1.js")
   script(src="js/libraries/vue.js")
 else
+  script(src="js/libraries/jquery-3.3.1.min.js")
   script(src="js/libraries/vue.min.js")
 
+//-  Minified site script
 script(src="js/min/damn.vue.min.js?v="+lastUpdated)
+
+//- ServiceWorker
 script(type="text/javascript").
   //This is the "Offline page" service worker
   if (navigator.serviceWorker.controller) {
@@ -19,6 +23,7 @@ script(type="text/javascript").
     });
   }
 
+//- Google Analytics
 script(type="text/javascript").
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,6 +32,8 @@ script(type="text/javascript").
 
   ga('create', 'UA-15129990-16', 'auto');
   ga('send', 'pageview');
+
+//- trackJS
 script(type="text/javascript").
   window._trackJs = {
     token: "9947e081831c42b8aeb3a5fb81a152c4",
