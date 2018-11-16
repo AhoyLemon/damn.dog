@@ -46,13 +46,18 @@ var app = new Vue({
     
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // NEW ROUND
-    newRound: function() {
+    newRound: function(r) {
       var self = this;
-      this.current.correct = null;
-      this.current.choices = [];
+      self.current.correct = null;
+      self.current.choices = [];
       reroll = 0;
-      this.getPic(297);
-      this.getChoices();
+      if (r) {
+        self.getPic(r);
+      } else {
+        self.getPic();
+      }
+      
+      self.getChoices();
       
       self.roundsThisSession++;
       
@@ -272,13 +277,13 @@ var app = new Vue({
     }
     
   },
-  beforeMount: function() {
+  mounted: function() {
 
+    var self = this;
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // LOAD IN DATA FROM LOCALSTORAGE
     if(typeof(Storage) !== "undefined") {
-      var self = this;
       if (localStorage.roundsPlayed === undefined || localStorage.roundsPlayed === null) {
         localStorage.setItem('roundsPlayed', '');
       } else {
@@ -310,6 +315,14 @@ var app = new Vue({
     
     this.checkBrowser();
     this.checkIfStandalone();
-    this.newRound();
+
+    if (window.location.hash) {
+      var r = window.location.hash.replace('#','');
+      self.newRound();
+    } else {
+      self.newRound();
+    }
+
+    
   }
 });
