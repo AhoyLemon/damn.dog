@@ -318,7 +318,7 @@ var app = new Vue({
 
     if (window.location.hash) {
       var r = window.location.hash.replace('#','');
-      self.newRound();
+      self.newRound(r);
     } else {
       self.newRound();
     }

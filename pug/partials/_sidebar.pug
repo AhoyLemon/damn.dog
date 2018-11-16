@@ -21,7 +21,7 @@
       span.label Learn more
       span.indent
         a(href="https://github.com/AhoyLemon/damn.dog#readme" onclick="sendEvent('outside link', 'https://github.com/AhoyLemon/damn.dog')") here
-    //-li(v-if="standalone == false")
+    li(v-if="standalone == false")
       span.label You can
       span.indent
         a(v-on:click="help = 'share'") share this round.
