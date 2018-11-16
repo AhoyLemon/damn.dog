@@ -864,5 +864,38 @@ var wikiHow = [
   },
   {
     slug: "Stop-Snacking-Between-Meals"
+  },
+  {
+    slug: "Differentiate-Between-a-Real-Skater-and-a-Poser-Skater"
+  },
+  {
+    slug: "Change-from-a-Poser-Goth-to-a-Real-One"
+  },
+  {
+    slug: "Tell-if-You-Are-a-Metal-Poser"
+  },
+  {
+    slug: "Get-an-Emo-Girlfriend"
+  },
+  {
+    slug: "Cure-Knock-Knees-Naturally"
+  },
+  {
+    slug: "Open-a-Jiffy-Lube-Franchise"
+  },
+  {
+    slug: "Have-an-Imaginary-Boyfriend-or-Girlfriend"
+  },
+  {
+    slug: "Pretend-to-Be-a-Wizard"
+  },
+  {
+    slug: "Drink-More-Milk-Every-Day"
+  },
+  {
+    slug: "Quit-Drinking-Alcohol"
+  },
+  {
+    slug: "Spot-Signs-of-LSD-Use"
   }
 ];

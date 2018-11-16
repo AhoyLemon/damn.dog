@@ -51,7 +51,7 @@ var app = new Vue({
       this.current.correct = null;
       this.current.choices = [];
       reroll = 0;
-      this.getPic();
+      this.getPic(297);
       this.getChoices();
       
       self.roundsThisSession++;
@@ -62,8 +62,6 @@ var app = new Vue({
           self.bannerVisible = true;
         }, 800);
       }
-      
-      
       
     },
     
