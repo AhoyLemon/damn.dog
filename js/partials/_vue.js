@@ -51,7 +51,9 @@ var app = new Vue({
       self.current.correct = null;
       self.current.choices = [];
       reroll = 0;
-      if (r) {
+      //alert(wikiHow.length);
+      if (r && r <= wikiHow.length) {
+
         self.getPic(r);
       } else {
         self.getPic();
