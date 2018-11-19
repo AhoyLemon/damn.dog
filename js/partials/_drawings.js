@@ -897,5 +897,11 @@ var wikiHow = [
   },
   {
     slug: "Spot-Signs-of-LSD-Use"
+  },
+  {
+    slug: "Deal-With-a-Lying-Child"
+  },
+  {
+    slug: "Help-Someone-Overcome-Marijuana-Addiction"
   }
 ];
