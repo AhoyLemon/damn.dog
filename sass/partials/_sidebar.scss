@@ -69,7 +69,9 @@
     .help { text-align: center; }
   }
   .button-holder { padding-top: 1em; text-align: center;
-    button { font-size:20px; }
+    button { background:transparent; font-size:1em; border:2px solid $link; color:$link; font-weight: $bold; font-family:$font; padding:.25em 1em; cursor:pointer;
+      &:hover { background:$link; color:$dark; }
+    }
   }
   /*
   &.android { @include position(fixed,0,0); max-width: 16em;

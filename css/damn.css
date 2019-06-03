@@ -256,6 +256,7 @@ header {
       -ms-flex-negative: 1;
       flex-shrink: 1;
       -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
       align-self: auto;
       text-align: center; }
   header .hamburger {
@@ -291,6 +292,7 @@ header {
     -ms-flex-negative: 1;
     flex-shrink: 1;
     -ms-flex-item-align: auto;
+    -ms-grid-row-align: auto;
     align-self: auto; }
     header > .inner .box.hamburger-holder {
       -ms-flex-preferred-size: 3rem;
@@ -301,6 +303,7 @@ header {
       -ms-flex-negative: 1;
       flex-shrink: 1;
       -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
       align-self: auto; }
   header .hamburger-holder {
     text-align: right !important; }
@@ -603,7 +606,17 @@ main {
     padding-top: 1em;
     text-align: center; }
     .homescreen-help-holder .button-holder button {
-      font-size: 20px; }
+      background: transparent;
+      font-size: 1em;
+      border: 2px solid #3e98f2;
+      color: #3e98f2;
+      font-weight: 700;
+      font-family: "Roboto Slab", serif;
+      padding: .25em 1em;
+      cursor: pointer; }
+      .homescreen-help-holder .button-holder button:hover {
+        background: #3e98f2;
+        color: #222730; }
 
 @media all and (display-mode: standalone) {
   #AddToHomeScreen {
@@ -633,6 +646,7 @@ main {
     -ms-flex-negative: 1;
     flex-shrink: 1;
     -ms-flex-item-align: auto;
+    -ms-grid-row-align: auto;
     align-self: auto;
     padding: 10px; }
   .banner .text-holder {
@@ -644,6 +658,7 @@ main {
     -ms-flex-negative: 1;
     flex-shrink: 1;
     -ms-flex-item-align: auto;
+    -ms-grid-row-align: auto;
     align-self: auto;
     padding-top: 20px;
     padding-right: 20px;

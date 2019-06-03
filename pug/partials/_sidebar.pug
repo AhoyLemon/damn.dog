@@ -32,7 +32,7 @@
           span(v-if="(device == 'android') || (device == 'ios')") add to home screen
           span(v-else-if="(browser == 'ie') || (browser == 'edge')") pin to start
           span(v-else-if="device == 'chrome'") add to shelf
-          span(v-else-if="browser == 'chrome'") add to desktop
+          span(v-else-if="browser == 'chrome'") save this
           span(v-else-if="(device == 'mac') || (browser == 'firefox') || (browser == 'opera') || (browser == 'vivaldi')") bookmark this
     li.smaller Your progress will be saved if you close this browser.
     
@@ -83,9 +83,7 @@
           path(d="M89.5 41.1L54.9 3c-1.4-1.6-3.9-1.6-5.3 0L15 41c-2.3 2.6 0 6.6 3.4 5.9l21-4.2v50.4c0 2 1.6 3.6 3.6 3.6h18.2c2 0 3.6-1.6 3.6-3.6V42.7l21.5 4.2c3.2.9 5.5-3.3 3.2-5.8z")
       span(v-if="device == 'windows'")
         | Then choose 
-        b More tools
-        |  and 
-        b Add to desktop
+        b Install damn dog
       span(v-if="device == 'chrome'")
         | Then choose 
         b More tools 
