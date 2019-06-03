@@ -30,9 +30,9 @@ html(lang="en")
                   
             .result(v-if="current.correct == 'wrong'")
               span.correctis Correct answer is 
-              a.correct-title(v-if="current.url" v-on:click="wikiClick(current.url, current.title)" :href="current.url") {{current.title}}
+              a.correct-title(v-if="current.url" v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank") {{current.title}}
             .result(v-if="current.correct == 'right'")
-              a.correct-title(v-if="current.url" v-on:click="wikiClick(current.url, current.title)" :href="current.url") {{current.title}}
+              a.correct-title(v-if="current.url" v-on:click="wikiClick(current.url, current.title)" :href="current.url" target="_blank") {{current.title}}
             .button-holder(v-if="current.correct == 'right' || current.correct == 'wrong'")
               button(v-on:click="newRound()") Play Again
         
