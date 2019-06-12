@@ -903,5 +903,36 @@ var wikiHow = [
   },
   {
     slug: "Help-Someone-Overcome-Marijuana-Addiction"
-  }
+  },
+  {
+    slug: "Wear-a-Dance-Belt"
+  },
+  {
+    slug: "Be-a-Sweet-Lolita"
+  },
+  {
+    slug: "Improve-Public-Speaking-Skills"
+  },
+  {
+    slug: "Date-a-Girl-That-Is-Taller-Than-You"
+  },
+  {
+    slug: "Cope-With-Arrogant-People"
+  },
+  {
+    slug: "Be-Older-Than-Your-Age"
+  },
+  {
+    slug: "Be-Better-Than-Your-Enemy"
+  },
+  {
+    slug: "Deal-With-Enemies"
+  },
+  {
+    slug: "Be-Mean-and-Intimidating-when-Necessary"
+  },
+  {
+    slug: "Recognize-a-Controlling-Person"
+  },
+
 ];
