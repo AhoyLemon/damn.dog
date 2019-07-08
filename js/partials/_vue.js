@@ -167,7 +167,13 @@ var app = new Vue({
       localStorage.playerRounds = self.player.rounds;
       localStorage.playerScore = self.player.score;
       localStorage.playerCorrect = self.player.correct;
-      sendEvent("guess", "correct", self.current.title);
+      //-sendEvent("guess", "correct", self.current.title);
+
+      dataLayer.push({
+        'guess': 'correct',
+        'title': self.current.title,
+        'scorePercent': self.scorePercent + '%'
+      });
       self.current.correct = "right";
     },
     
@@ -180,7 +186,13 @@ var app = new Vue({
       localStorage.roundsPlayed = self.roundsPlayed;
       localStorage.playerRounds = self.player.rounds;
       localStorage.playerIncorrect = self.player.incorrect;
-      sendEvent("guess", "incorrect", self.current.title);
+
+      dataLayer.push({
+        'guess': 'correct',
+        'title': self.current.title,
+        'scorePercent': self.scorePercent + '%'
+      });
+
       self.current.correct = "wrong";
     },
     
@@ -189,7 +201,14 @@ var app = new Vue({
     // CLICK ON A WIKIHOW LINK
     wikiClick: function(u,t) {
       var self = this;
-      sendEvent('Wikihow Link', u, t);
+      //sendEvent('Wikihow Link', u, t);
+
+      dataLayer.push({
+        'wikiHowLink': 'clicked',
+        'wikihowURL': u,
+        'title': t
+      });
+
     },
     
     gameOver: function() {
