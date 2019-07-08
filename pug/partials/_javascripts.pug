@@ -34,9 +34,9 @@ script(type="text/javascript").
   ga('send', 'pageview');
 
 //- trackJS
-script(type="text/javascript").
-  window._trackJs = {
+script(src="https://cdn.trackjs.com/agent/v3/latest/t.js" crossorigin)
+script.
+  window.TrackJS && TrackJS.install({
     token: "9947e081831c42b8aeb3a5fb81a152c4",
-    application: "damnDog"
-  }
-script(type="text/javascript" crossorigin="anonymous" src="https://cdn.trackjs.com/releases/current/tracker.js")
+    application: "damndog"
+  });
