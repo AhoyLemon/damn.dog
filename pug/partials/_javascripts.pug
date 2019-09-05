@@ -2,9 +2,13 @@
 if testing
   script(src="js/libraries/jquery-3.3.1.js")
   script(src="js/libraries/vue.js")
+  script.
+    const testing = true;
 else
   script(src="js/libraries/jquery-3.3.1.min.js")
   script(src="js/libraries/vue.min.js")
+  script.
+    const testing = false;
 
 //- ServiceWorker
 script(type="text/javascript").
