@@ -167,13 +167,8 @@ var app = new Vue({
       localStorage.playerRounds = self.player.rounds;
       localStorage.playerScore = self.player.score;
       localStorage.playerCorrect = self.player.correct;
-      //-sendEvent("guess", "correct", self.current.title);
+      sendEvent("guess", "correct", self.current.title);
 
-      dataLayer.push({
-        'guess': 'correct',
-        'title': self.current.title,
-        'scorePercent': self.scorePercent + '%'
-      });
       self.current.correct = "right";
     },
     
@@ -187,11 +182,7 @@ var app = new Vue({
       localStorage.playerRounds = self.player.rounds;
       localStorage.playerIncorrect = self.player.incorrect;
 
-      dataLayer.push({
-        'guess': 'correct',
-        'title': self.current.title,
-        'scorePercent': self.scorePercent + '%'
-      });
+      sendEvent("guess", "wrong", self.current.title);
 
       self.current.correct = "wrong";
     },
@@ -201,14 +192,7 @@ var app = new Vue({
     // CLICK ON A WIKIHOW LINK
     wikiClick: function(u,t) {
       var self = this;
-      //sendEvent('Wikihow Link', u, t);
-
-      dataLayer.push({
-        'wikiHowLink': 'clicked',
-        'wikihowURL': u,
-        'title': t
-      });
-
+      sendEvent('Wikihow Link', u, t);
     },
     
     gameOver: function() {
@@ -222,6 +206,9 @@ var app = new Vue({
       localStorage.removeItem("playerCorrect");
       localStorage.removeItem("playerIncorrect");
       
+      sendEvent("GAME OVER", 
+                self.player.correct + ' CORRECT | ' + self.player.incorrect + ' WRONG | ' + self.player.rounds + ' ROUNDS',
+                self.scorePercent + '%');
     },
     
     clearScores: function() {
@@ -329,6 +316,11 @@ var app = new Vue({
           self.player.incorrect = parseInt(localStorage.playerIncorrect);
         }
         console.log(self.roundsPlayed);
+
+        sendEvent("Returning Player", 
+                  self.player.correct + ' CORRECT | ' + self.player.incorrect + ' WRONG | ' + self.player.rounds + ' ROUNDS',
+                  self.player.rounds + ' ROUNDS PLAYED');
+
       }
     } else {
       // Sorry! No Web Storage support..
