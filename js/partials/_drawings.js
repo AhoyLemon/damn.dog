@@ -934,5 +934,8 @@ var wikiHow = [
   {
     slug: "Recognize-a-Controlling-Person"
   },
+  {
+    slug: "Turn-Down-a-Drink"
+  },
 
 ];
