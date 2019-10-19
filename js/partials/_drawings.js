@@ -937,5 +937,31 @@ var wikiHow = [
   {
     slug: "Turn-Down-a-Drink"
   },
-
+  {
+    slug: "Use-Chocolate-to-Spice-up-Your-Relationship"
+  },
+  {
+    slug: "Have-a-Raw-Food-Thanksgiving"
+  },
+  {
+    slug: "Eat-a-Bowl-of-Cereal"
+  },
+  {
+    slug: "Chew-Gum"
+  },
+  {
+    slug: "Eat-a-Donut"
+  },
+  {
+    slug: "Eat-Nachos"
+  },
+  {
+    slug: "Choose-a-Healthy-Fast-Food-Breakfast"
+  },
+  {
+    slug: "Entertain"
+  },
+  {
+    slug: "Eat-Worms"
+  },
 ];
