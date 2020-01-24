@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: damn.dog
-Token: 17106654065fd88c5a8864522e46996329394ffaf906c06eb8e6a90e738c566d
