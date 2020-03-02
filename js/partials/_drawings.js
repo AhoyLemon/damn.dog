@@ -964,4 +964,112 @@ var wikiHow = [
   {
     slug: "Eat-Worms"
   },
+  {
+    slug: "Turn-On-Your-Boyfriend"
+  },
+  {
+    slug: "Get-Money-Without-Working"
+  },
+  {
+    slug: "Deal-With-a-Cheating-Boyfriend"
+  },
+  {
+    slug: "Tell-Your-Crush-You-Like-Him-Without-Words"
+  },
+  {
+    slug: "Stop-Hating-Other-Women"
+  },
+  {
+    slug: "Deal-with-a-Fear-of-Being-Murdered"
+  },
+  {
+    slug: "Defend-Yourself"
+  },
+  {
+    slug: "Tell-if-Someone-Hates-You"
+  },
+  {
+    slug: "Improve-Sexual-Stamina"
+  },
+  {
+    slug: "Become-the-Most-Popular-Girl-in-Your-Class"
+  },
+  {
+    slug: "Talk-to-a-Girl-Without-It-Getting-Boring"
+  },
+  {
+    slug: "Make-a-Girl-Become-Obsessed-with-You"
+  },
+  {
+    slug: "Talk-to-a-Shy-Boy-That-You-Don't-Know-Very-Well"
+  },
+  {
+    slug: "Change-a-Girl's-Mind"
+  },
+  {
+    slug: "Stop-Hating-Children"
+  },
+  {
+    slug: "Teach-Your-Child-Math"
+  },
+  {
+    slug: "Teach-a-Toddler-to-Walk"
+  },
+  {
+    slug: "Deal-With-Annoying-Kids"
+  },
+  {
+    slug: "Set-a-Schedule-for-Toddlers"
+  },
+  {
+    slug: "Teach-Manners-to-a-Toddler"
+  },
+  {
+    slug: "Explain-Lent-to-a-Child"
+  },
+  {
+    slug: "Be-a-Man"
+  },
+  {
+    slug: "Not-Be-Lame"
+  },
+  {
+    slug: "Stop-Being-Selfish"
+  },
+  {
+    slug: "Release-Anger"
+  },
+  {
+    slug: "Get-Over-Anger-Caused-by-Video-Games"
+  },
+  {
+    slug: "Stop-Hating-Someone"
+  },
+  {
+    slug: "Detect-Lies"
+  },
+  {
+    slug: "Become-a-Good-Liar"
+  },
+  {
+    slug: "Trust-a-Wife"
+  },
+  {
+    slug: "Trust-Your-Husband"
+  },
+  {
+    slug: "Overcome-Emotional-Sensitivity"
+  },
+  {
+    slug: "Be-Less-Judgmental"
+  },
+  {
+    slug: "Deal-With-Being-Replaced"
+  },
+  {
+    slug: "Not-Care-What-People-Think"
+  },
+  {
+    slug: "Be-Honest"
+  },
 ];

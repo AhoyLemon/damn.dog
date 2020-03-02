@@ -5,10 +5,10 @@
     <title>damn.dog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic">
-    <link rel="stylesheet" href="css/damn.css?v=2020-01-15@12:20:43">
+    <link rel="stylesheet" href="css/damn.css?v=2020-02-02@14:33:00">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A guessing game for wikiHow illustrations.">
-    <meta http-equiv="last-modified" content="2020-01-15@12:20:43">
+    <meta http-equiv="last-modified" content="2020-02-02@14:33:00">
     <!-- favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -215,20 +215,6 @@
     <script src="js/libraries/jquery-3.3.1.js"></script>
     <script src="js/libraries/vue.js"></script>
     <script>const testing = true;</script>
-    <script type="text/javascript">
-      //This is the "Offline page" service worker
-      if (navigator.serviceWorker.controller) {
-        console.log('active service worker found, no need to register')
-      } else {
-        //Register the ServiceWorker
-        navigator.serviceWorker.register('pwabuilder-sw.js', {
-          scope: './'
-        }).then(function(reg) {
-          console.log('Service worker has been registered for scope: '+ reg.scope);
-        });
-      }
-      
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15129990-16"></script>
     <script>
