@@ -1072,4 +1072,7 @@ var wikiHow = [
   {
     slug: "Be-Honest"
   },
+  {
+    slug: "Know-That-a-Girl-Hates-You"
+  },
 ];
