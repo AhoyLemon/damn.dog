@@ -1,6 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://damn.dog</loc>
+    <loc>https://damn.dog</loc>
+    <changefreq>monthly</changefreq>
     <priority>1</priority>
+    <lastmod>2020-02-23@09:24:36</lastmod>
   </url>
 </urlset>
