@@ -1,14 +1,15 @@
 const cacheName = 'v2.17';
 const offlineUrl = '/offline.html';
 const offlineFiles = [
+  '/index.html',
   '/offline.html',
   '/manifest.json',
   '/css/damn.css',
   'https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic',
   '/js/libraries/jquery-3.3.1.js',
-  '/js/js/libraries/vue.js',
-  '/audio/party.mp3',
-  '/audio/venga.mp3'
+  '/js/libraries/vue.min.js',
+  '/js/min/damn.vue.min.js',
+  '/svg/offline-dog.svg'
 ];
 
 

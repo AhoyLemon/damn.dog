@@ -27,7 +27,10 @@ var app = new Vue({
       correct:0,
       incorrect:0
     },
-    roundsPlayed: []
+    roundsPlayed: [],
+    
+    // PWA stuff
+    installEvent: null
   },
   computed: {
     scorePercent: function() {
@@ -282,6 +285,11 @@ var app = new Vue({
       if (window.matchMedia('(display-mode: standalone)').matches) {
         self.standalone = true;
       }
+    },
+
+    installPrompt: function() {
+      let self = this;
+      self.installEvent.prompt();
     }
     
   },
@@ -328,6 +336,13 @@ var app = new Vue({
     
     this.checkBrowser();
     this.checkIfStandalone();
+
+    /////////////////////////////////////
+    // Let's look at the install event.
+    window.addEventListener('beforeinstallprompt', (event) => {
+      event.preventDefault();
+      self.installEvent = event
+    });
 
     if (window.location.hash) {
       var r = window.location.hash.replace('#','');

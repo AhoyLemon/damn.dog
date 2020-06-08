@@ -18,6 +18,26 @@ script(type="text/javascript").
     // site using the default scope.
     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
       console.log('Service worker registration succeeded:', registration);
+
+      
+
+      /*
+      Notification.requestPermission(result => {
+        if (result === 'granted') {
+          alert('thanks for giving permission');
+          navigator.serviceWorker.ready.then(registration => {
+            registration.showNotification('Damn Dog has been updated', {
+              icon: '/android-chrome-96x96.png',
+              vibrate: [500, 100, 500],
+              body: 'Hello Me',
+              title: "It's me again",
+              tag: 'vibration-sample'
+            });
+          });
+        }
+      });
+      */
+
     }, function(error) {
       console.log('Service worker registration failed:', error);
     });

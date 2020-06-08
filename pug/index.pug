@@ -30,6 +30,8 @@ html(lang="en")
             .button-holder(v-if="current.correct == 'right' || current.correct == 'wrong'")
               button(v-on:click="newRound()") Play Again
         
+        //-button.add-button(@click="installPrompt()") Add to home screen.
+        
       include partials/_banner.pug
       include partials/_gameover.pug
       
