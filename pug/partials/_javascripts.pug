@@ -19,31 +19,28 @@ script(type="text/javascript").
     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
       console.log('Service worker registration succeeded:', registration);
 
-      
-
-      /*
-      Notification.requestPermission(result => {
-        if (result === 'granted') {
-          alert('thanks for giving permission');
-          navigator.serviceWorker.ready.then(registration => {
-            registration.showNotification('Damn Dog has been updated', {
-              icon: '/android-chrome-96x96.png',
-              vibrate: [500, 100, 500],
-              body: 'Hello Me',
-              title: "It's me again",
-              tag: 'vibration-sample'
-            });
-          });
-        }
-      });
-      */
-
     }, function(error) {
       console.log('Service worker registration failed:', error);
     });
   } else {
     console.log('Service workers are not supported.');
   }
+
+  /*
+  Notification.requestPermission(result => {
+    if (result === 'granted') {
+      //permission granted.
+      navigator.serviceWorker.ready.then(registration => {
+        registration.showNotification('Damn Dog has been updated', {
+          icon: '/android-chrome-96x96.png',
+          vibrate: [500, 100, 500],
+          body: '7 new rounds have been added to damn.dog, bringing the total up to 358.',
+          tag: 'vibration-sample'
+        });
+      });
+    }
+  });
+  */
 
 // Global site tag (gtag.js) - Google Analytics
 script(async src='https://www.googletagmanager.com/gtag/js?id=UA-15129990-16')

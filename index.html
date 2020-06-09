@@ -5,10 +5,10 @@
     <title>damn.dog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic">
-    <link rel="stylesheet" href="css/damn.css?v=2020-05-07@19:31:09">
+    <link rel="stylesheet" href="css/damn.css?v=2020-05-07@20:23:47">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A guessing game for wikiHow illustrations.">
-    <meta http-equiv="last-modified" content="2020-05-07@19:31:09">
+    <meta http-equiv="last-modified" content="2020-05-07@20:23:47">
     <!-- favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -225,31 +225,28 @@
         navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
           console.log('Service worker registration succeeded:', registration);
       
-          
-      
-          /*
-          Notification.requestPermission(result => {
-            if (result === 'granted') {
-              alert('thanks for giving permission');
-              navigator.serviceWorker.ready.then(registration => {
-                registration.showNotification('Damn Dog has been updated', {
-                  icon: '/android-chrome-96x96.png',
-                  vibrate: [500, 100, 500],
-                  body: 'Hello Me',
-                  title: "It's me again",
-                  tag: 'vibration-sample'
-                });
-              });
-            }
-          });
-          */
-      
         }, function(error) {
           console.log('Service worker registration failed:', error);
         });
       } else {
         console.log('Service workers are not supported.');
       }
+      
+      /*
+      Notification.requestPermission(result => {
+        if (result === 'granted') {
+          //permission granted.
+          navigator.serviceWorker.ready.then(registration => {
+            registration.showNotification('Damn Dog has been updated', {
+              icon: '/android-chrome-96x96.png',
+              vibrate: [500, 100, 500],
+              body: '7 new rounds have been added to damn.dog, bringing the total up to 358.',
+              tag: 'vibration-sample'
+            });
+          });
+        }
+      });
+      */
       
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics-->

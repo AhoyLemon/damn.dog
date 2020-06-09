@@ -341,7 +341,7 @@ var app = new Vue({
     // Let's look at the install event.
     window.addEventListener('beforeinstallprompt', (event) => {
       event.preventDefault();
-      self.installEvent = event
+      self.installEvent = event;
     });
 
     if (window.location.hash) {
