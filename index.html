@@ -5,10 +5,10 @@
     <title>damn.dog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700|Roboto:400,300,700,400italic">
-    <link rel="stylesheet" href="css/damn.css?v=2020-05-08@21:20:58">
+    <link rel="stylesheet" href="css/damn.css?v=2020-07-19@10:11:40">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A guessing game for wikiHow illustrations.">
-    <meta http-equiv="last-modified" content="2020-05-08@21:20:58">
+    <meta http-equiv="last-modified" content="2020-07-19@10:11:40">
     <!-- favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -152,8 +152,8 @@
         <section class="image-holder" v-cloak>
           <div class="child">
             <h1 v-if="!current.correct">What is the title of this wikiHow article?</h1>
-            <h1 class="nope" v-else-if="current.correct == 'wrong'">Nope.</h1>
-            <h1 class="yup" v-else-if="current.correct == 'right'">That's right.</h1><img id="HeroPic" :src="current.pic">
+            <h2 class="nope" v-else-if="current.correct == 'wrong'">Nope.</h2>
+            <h2 class="yup" v-else-if="current.correct == 'right'">That's right.</h2><img id="HeroPic" :src="current.pic">
             <div class="input-holder" data-display="guess">
               <select v-model="current.guess" v-on:change="checkGuess(current.guess)" v-bind:disabled="current.correct == 'right' || current.correct == 'wrong'">
                 <option value="" disabled hidden>How To</option>

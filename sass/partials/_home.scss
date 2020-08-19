@@ -2,7 +2,7 @@ main { @include position(fixed,0,0,0,0); overflow-y: auto; }
 .image-holder { @include flex-container(stretch);  position: relative; min-height: 100%; padding-top:($header-height);
   .child { text-align: center; width:100%; max-width:$max-width; margin-left: auto; margin-right: auto; }
   img { max-width: 100%; }
-  h1 { font-weight: $light; font-size:1.5em; margin-top: 0.5em; margin-bottom: 0.5em; color:rgba($white,0.6);
+  h1, h2 { font-weight: $light; font-size:1.5em; margin-top: 0.5em; margin-bottom: 0.5em; color:rgba($white,0.6);
     &.nope { color:$red; }
     &.yup { color:$green; }
   }
@@ -16,10 +16,12 @@ main { @include position(fixed,0,0,0,0); overflow-y: auto; }
     label { position: absolute; top:$pad; left:$pad; }
   }
   
+  /*
   h2 { font-size:2em; font-weight: $light; margin-top: 0.2em; margin-bottom: 0.4em; display: block;
     &.nope { color:$red; }
     &.yup { color:$green; }
   }
+  */
   
   .correctis { color:$white; font-weight: $light; font-size:0.8em; text-transform: uppercase; }
   .correct-title { margin:0; display: block; font-size:1.5em; color:lighten($blue,20%); font-weight:$light;

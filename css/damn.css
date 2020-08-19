@@ -380,6 +380,12 @@ main {
   position: relative;
   min-height: 100%;
   padding-top: 2.5rem;
+  /*
+  h2 { font-size:2em; font-weight: $light; margin-top: 0.2em; margin-bottom: 0.4em; display: block;
+    &.nope { color:$red; }
+    &.yup { color:$green; }
+  }
+  */
 }
 .image-holder .child {
   text-align: center;
@@ -391,17 +397,17 @@ main {
 .image-holder img {
   max-width: 100%;
 }
-.image-holder h1 {
+.image-holder h1, .image-holder h2 {
   font-weight: 300;
   font-size: 1.5em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   color: rgba(255, 255, 255, 0.6);
 }
-.image-holder h1.nope {
+.image-holder h1.nope, .image-holder h2.nope {
   color: #b22028;
 }
-.image-holder h1.yup {
+.image-holder h1.yup, .image-holder h2.yup {
   color: #6CB200;
 }
 .image-holder a {
@@ -438,19 +444,6 @@ main {
   position: absolute;
   top: 2rem;
   left: 2rem;
-}
-.image-holder h2 {
-  font-size: 2em;
-  font-weight: 300;
-  margin-top: 0.2em;
-  margin-bottom: 0.4em;
-  display: block;
-}
-.image-holder h2.nope {
-  color: #b22028;
-}
-.image-holder h2.yup {
-  color: #6CB200;
 }
 .image-holder .correctis {
   color: #fff;
