@@ -110,7 +110,6 @@ var app = new Vue({
           } else {
             self.current.pic = self.drawings[r].pic;
           }
-          //$('#HeroPic').attr('src', wiki.pic);
           self.current.slug = self.drawings[r].slug;
           self.current.title = 'How To '+self.drawings[r].slug.replace(/-/g, " ");
           self.current.url = "http://www.wikihow.com/"+self.drawings[r].slug;
