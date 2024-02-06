@@ -22,25 +22,23 @@
   }
 }
 
-
-
-.homescreen-help-holder { background-color:rgba($black,0.9); @include position(fixed,0,0,0,0); z-index:$z-homescreenbox;
-  .homescreen-help { background:white; color:$black; @include position(fixed,0,0); padding:1em; }
-  svg { fill:currentColor;
-    * { fill:currentColor; }
-  }
-  .help { text-align: right; line-height: 160%;
-    span { display: block; }
-    svg { width:0.8em; height: 0.8em; }
-  }
-  &.ios { top:auto; bottom:0; right: 0; left:0; width:100%; max-width: 100%;
-    .help { text-align: center; }
-  }
-  .button-holder { padding-top: 1em; text-align: center;
-    button { background:transparent; font-size:1em; border:2px solid $link; color:$link; font-weight: $bold; font-family:$font; padding:.25em 1em; cursor:pointer;
-      &:hover { background:$link; color:$dark; }
-    }
-  }
+// .homescreen-help-holder { background-color:rgba($black,0.9); @include position(fixed,0,0,0,0); z-index:$z-homescreenbox;
+//   .homescreen-help { background:white; color:$black; @include position(fixed,0,0); padding:1em; }
+//   svg { fill:currentColor;
+//     * { fill:currentColor; }
+//   }
+//   .help { text-align: right; line-height: 160%;
+//     span { display: block; }
+//     svg { width:0.8em; height: 0.8em; }
+//   }
+//   &.ios { top:auto; bottom:0; right: 0; left:0; width:100%; max-width: 100%;
+//     .help { text-align: center; }
+//   }
+//   .button-holder { padding-top: 1em; text-align: center;
+//     button { background:transparent; font-size:1em; border:2px solid $link; color:$link; font-weight: $bold; font-family:$font; padding:.25em 1em; cursor:pointer;
+//       &:hover { background:$link; color:$dark; }
+//     }
+//   }
   /*
   &.android { @include position(fixed,0,0); max-width: 16em;
     .ios, .edge, .opera, .desktop-chrome { display: none; }
@@ -73,9 +71,9 @@
     &:hover { color:$yellow; background:$black; border-color: $yellow; }
   }
   */
-}
+//}
 
 
-@media all and (display-mode: standalone) {
-  #AddToHomeScreen { display: none; }
-}
+// @media all and (display-mode: standalone) {
+//   #AddToHomeScreen { display: none; }
+// }

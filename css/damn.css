@@ -584,107 +584,38 @@ main {
   color: #222730;
 }
 
-.homescreen-help-holder {
-  background-color: rgba(51, 51, 51, 0.9);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 6;
-  /*
-  &.android { @include position(fixed,0,0); max-width: 16em;
-    .ios, .edge, .opera, .desktop-chrome { display: none; }
-    b { display: block; }
-    .tap-that-icon { margin-top: -1.2em; }
-    .bottom-center-icon { display:none; }
-    &.firefox { padding-top:1em; }
-  }
-  &.ios { @include position(fixed,null,0,0,0);
-    .homescreen-help { text-align: center; }
-    .android, .edge, .opera, .desktop-chrome { display: none; }
-    span.arrow { display:block; text-align: center;  }
-    .top-right-icon { display:none; }
-  }
-  &.edge { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android, .opera, .desktop-chrome { display: none; }
-  }
-  &.opera { @include position(fixed,0,0); max-width: 16em;
-    .top-right-icon { padding-right: 2.1em; }
-    .ios, .android, .edge, .desktop-chrome { display: none; }
-  }
-  &.desktop-chrome { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android, .edge, .opera { display: none; }
-  }
-  .homescreen-help { text-align: right; padding:0.5em 0.5em 1em 1em; }  
-  span.arrow {
-    svg { height: 1em; width: 1em; }
-  }
-  .button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; display: inline-block; margin-top:0.5em; margin-bottom:0.5em;
-    &:hover { color:$yellow; background:$black; border-color: $yellow; }
-  }
-  */
+/*
+&.android { @include position(fixed,0,0); max-width: 16em;
+  .ios, .edge, .opera, .desktop-chrome { display: none; }
+  b { display: block; }
+  .tap-that-icon { margin-top: -1.2em; }
+  .bottom-center-icon { display:none; }
+  &.firefox { padding-top:1em; }
 }
-.homescreen-help-holder .homescreen-help {
-  background: white;
-  color: #333;
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 1em;
+&.ios { @include position(fixed,null,0,0,0);
+  .homescreen-help { text-align: center; }
+  .android, .edge, .opera, .desktop-chrome { display: none; }
+  span.arrow { display:block; text-align: center;  }
+  .top-right-icon { display:none; }
 }
-.homescreen-help-holder svg {
-  fill: currentColor;
+&.edge { @include position(fixed,0,0); max-width: 16em;
+  .ios, .android, .opera, .desktop-chrome { display: none; }
 }
-.homescreen-help-holder svg * {
-  fill: currentColor;
+&.opera { @include position(fixed,0,0); max-width: 16em;
+  .top-right-icon { padding-right: 2.1em; }
+  .ios, .android, .edge, .desktop-chrome { display: none; }
 }
-.homescreen-help-holder .help {
-  text-align: right;
-  line-height: 160%;
+&.desktop-chrome { @include position(fixed,0,0); max-width: 16em;
+  .ios, .android, .edge, .opera { display: none; }
 }
-.homescreen-help-holder .help span {
-  display: block;
+.homescreen-help { text-align: right; padding:0.5em 0.5em 1em 1em; }  
+span.arrow {
+  svg { height: 1em; width: 1em; }
 }
-.homescreen-help-holder .help svg {
-  width: 0.8em;
-  height: 0.8em;
+.button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; display: inline-block; margin-top:0.5em; margin-bottom:0.5em;
+  &:hover { color:$yellow; background:$black; border-color: $yellow; }
 }
-.homescreen-help-holder.ios {
-  top: auto;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100%;
-}
-.homescreen-help-holder.ios .help {
-  text-align: center;
-}
-.homescreen-help-holder .button-holder {
-  padding-top: 1em;
-  text-align: center;
-}
-.homescreen-help-holder .button-holder button {
-  background: transparent;
-  font-size: 1em;
-  border: 2px solid #3e98f2;
-  color: #3e98f2;
-  font-weight: 700;
-  font-family: "Roboto Slab", serif;
-  padding: 0.25em 1em;
-  cursor: pointer;
-}
-.homescreen-help-holder .button-holder button:hover {
-  background: #3e98f2;
-  color: #222730;
-}
-
-@media all and (display-mode: standalone) {
-  #AddToHomeScreen {
-    display: none;
-  }
-}
+*/
 .banner {
   background-color: yellow;
   width: 305px;
