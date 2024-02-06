@@ -12,10 +12,8 @@ else
 
 //- ServiceWorker
 
-script(type="text/javascript").
+//-script(type="text/javascript").
   if ('serviceWorker' in navigator) {
-    // Register a service worker hosted at the root of the
-    // site using the default scope.
     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
       console.log('Service worker registration succeeded:', registration);
 
@@ -53,9 +51,9 @@ script.
 script(src="js/min/damn.vue.min.js?v="+lastUpdated)
 
 //- trackJS
-script(src="https://cdn.trackjs.com/agent/v3/latest/t.js" crossorigin)
-script.
-  window.TrackJS && TrackJS.install({
-    token: "9947e081831c42b8aeb3a5fb81a152c4",
-    application: "damndog"
-  });
+//- script(src="https://cdn.trackjs.com/agent/v3/latest/t.js" crossorigin)
+//- script.
+//-   window.TrackJS && TrackJS.install({
+//-     token: "9947e081831c42b8aeb3a5fb81a152c4",
+//-     application: "damndog"
+//-   });
