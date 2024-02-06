@@ -235,7 +235,7 @@ var app = new Vue({
       const currentUrl = window.location.href;
       if (navigator.share) {
         navigator.share({
-          title: 'damn.dog',
+          title: 'DAMN DOG',
           text: 'What is the title of this wikiHow article?',
           url: currentUrl,
         })
