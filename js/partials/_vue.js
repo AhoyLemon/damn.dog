@@ -227,69 +227,41 @@ var app = new Vue({
     
     },
     
-    
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // CHECK BROWSER
-    checkBrowser: function() {
-      var ua = navigator.userAgent.toLowerCase();
-      //console.log(ua);
-      if (ua.indexOf("android") > -1) {
-        this.device = "android";
-        if (ua.indexOf("firefox") > -1) {
-          // Android Firefox
-          this.browser="firefox";
-        } else if (ua.indexOf("opr") > -1) {
-          // Android Opera
-          this.browser="opera";
-        } else if (ua.indexOf("chrome") > -1) {
-          // Android Chrome
-          this.browser="chrome";
-        }
-      } else if (ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('ipod') > -1) {
-        this.device = "ios";
-      } else if (ua.indexOf('windows') > -1) {
-        this.device = "windows";
-        if (ua.indexOf("edge") > -1) {
-          this.browser = "edge";
-        } else if (ua.indexOf("trident") > -1) {
-          this.browser = "ie";
-        } else if (ua.indexOf('firefox') > -1) {
-          this.browser = "firefox";
-        } else if (ua.indexOf('opr') > -1) {
-          this.browser = "opera";
-        } else if (ua.indexOf('vivaldi') > -1) {
-          this.browser = "vivaldi";
-        } else if (ua.indexOf('chrome') > -1) {
-          this.browser = "chrome";
-        }
-      } else if (ua.indexOf('mac') > -1) {
-        this.device = "mac";
+    // SHARE THIS ROUND
 
-        if (ua.indexOf('chrome') > -1) {
-          this.browser = "chrome";
-        } else if (ua.indexOf('safari') > -1) {
-          this.browser = "safari";
-        } else if (ua.indexOf('firefox') > -1) {
-          this.browser = "firefox";
-        }
-      } else if (ua.indexOf('cros') > -1) {
-        this.device = "chrome";
-        this.browser = "chrome";
+    shareThisRound: function() {
+      const self = this;
+      const currentUrl = window.location.href;
+      if (navigator.share) {
+        navigator.share({
+          title: 'damn.dog',
+          text: 'What is the title of this wikiHow article?',
+          url: currentUrl,
+        })
+        .then(() => {
+          sendEvent('share round', currentUrl)
+        })
+        .catch((error) => {
+          self.help = "share";
+        });
       }
+      
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Install This
+    installPWA: function() {
+      const self = this;
+      self.installEvent.prompt();
     },
 
     checkIfStandalone: function() {
       var self = this;
-      //return (window.matchMedia('(display-mode: standalone)').matches);
       if (window.matchMedia('(display-mode: standalone)').matches) {
         self.standalone = true;
       }
     },
-
-    installPrompt: function() {
-      let self = this;
-      self.installEvent.prompt();
-    }
     
   },
   mounted: function() {
@@ -333,7 +305,6 @@ var app = new Vue({
       // Sorry! No Web Storage support..
     }
     
-    this.checkBrowser();
     this.checkIfStandalone();
 
     /////////////////////////////////////
