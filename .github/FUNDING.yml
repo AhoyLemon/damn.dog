@@ -1,3 +1,4 @@
 # These are supported funding model platforms
 
-github: [AhoyLemon]
+github: [ AhoyLemon ]
+custom: [ 'https://paypal.me/TheFPlus', 'https://venmo.com/u/TheFPlus' ]
