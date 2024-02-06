@@ -3,7 +3,10 @@
   .label { display: block; }
   .indent { display: block; padding-left: 0.75em; font-weight: $bold; }
   a { color:$blue; text-decoration: none; cursor: pointer; 
-    &:hover { text-decoration: underline; }
+    &:hover, &:focus { text-decoration: underline; }
+  }
+  button {  color:$blue; font-size: 1em; border:none; display: inline; font-family: $font; font-weight: 700; cursor: pointer;
+    &:hover, &:focus { text-decoration: underline; }
   }
   .smaller { font-size:0.8em; }
   transform: translateX(101%); transition: all 0.3s ease;
@@ -19,43 +22,8 @@
   }
 }
 
-/*
 
-.homescreen-help-holder {  background:$blue; color:$black; z-index:$z-homescreenbox;
-  &.android { @include position(fixed,0,0); max-width: 16em;
-    .ios, .edge, .opera, .desktop-chrome { display: none; }
-    b { display: block; }
-    .tap-that-icon { margin-top: -1.2em; }
-    .bottom-center-icon { display:none; }
-    &.opera { left:0; right: null; padding-top:20px;
-      .tap-that-icon { text-align: left; padding-top: 1em; padding-left: 2em; }
-      span.arrow { @include position(absolute,-16px,null,null,10px); }
-      .button { margin-top: 1em; display: inline-block; }
-    }
-  }
-  &.ios { @include position(fixed,null,0,0,0);
-    .homescreen-help { text-align: center; }
-    .android, .edge, .opera, .desktop-chrome { display: none; }
-    span.arrow { display:block; text-align: center;  }
-    .top-right-icon { display:none; }
-  }
-  &.edge { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android, .opera, .desktop-chrome { display: none; }
-  }
-  &.opera { @include position(fixed,0,0); max-width: 16em;
-    .top-right-icon { padding-right: 2.1em; }
-    .ios, .android, .edge, .desktop-chrome { display: none; }
-  }
-  &.desktop-chrome { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android, .edge, .opera { display: none; }
-  }
-  .homescreen-help { text-align: right; padding-right: 0.5em; padding-bottom: 1em; padding-left: 1em; }  
-  span.arrow { font-size:3.2em; }
-  .button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; 
-    &:hover { color:$blue; background:$black; border-color: $blue; }
-  }
-}
-*/
+
 .homescreen-help-holder { background-color:rgba($black,0.9); @include position(fixed,0,0,0,0); z-index:$z-homescreenbox;
   .homescreen-help { background:white; color:$black; @include position(fixed,0,0); padding:1em; }
   svg { fill:currentColor;

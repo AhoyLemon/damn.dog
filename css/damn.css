@@ -506,7 +506,6 @@ main {
       -ms-transform: translateX(101%);
           transform: translateX(101%);
   -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .sidebar li {
@@ -525,7 +524,19 @@ main {
   text-decoration: none;
   cursor: pointer;
 }
-.sidebar a:hover {
+.sidebar a:hover, .sidebar a:focus {
+  text-decoration: underline;
+}
+.sidebar button {
+  color: #3e98f2;
+  font-size: 1em;
+  border: none;
+  display: inline;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+.sidebar button:hover, .sidebar button:focus {
   text-decoration: underline;
 }
 .sidebar .smaller {
@@ -573,43 +584,6 @@ main {
   color: #222730;
 }
 
-/*
-
-.homescreen-help-holder {  background:$blue; color:$black; z-index:$z-homescreenbox;
-  &.android { @include position(fixed,0,0); max-width: 16em;
-    .ios, .edge, .opera, .desktop-chrome { display: none; }
-    b { display: block; }
-    .tap-that-icon { margin-top: -1.2em; }
-    .bottom-center-icon { display:none; }
-    &.opera { left:0; right: null; padding-top:20px;
-      .tap-that-icon { text-align: left; padding-top: 1em; padding-left: 2em; }
-      span.arrow { @include position(absolute,-16px,null,null,10px); }
-      .button { margin-top: 1em; display: inline-block; }
-    }
-  }
-  &.ios { @include position(fixed,null,0,0,0);
-    .homescreen-help { text-align: center; }
-    .android, .edge, .opera, .desktop-chrome { display: none; }
-    span.arrow { display:block; text-align: center;  }
-    .top-right-icon { display:none; }
-  }
-  &.edge { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android, .opera, .desktop-chrome { display: none; }
-  }
-  &.opera { @include position(fixed,0,0); max-width: 16em;
-    .top-right-icon { padding-right: 2.1em; }
-    .ios, .android, .edge, .desktop-chrome { display: none; }
-  }
-  &.desktop-chrome { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android, .edge, .opera { display: none; }
-  }
-  .homescreen-help { text-align: right; padding-right: 0.5em; padding-bottom: 1em; padding-left: 1em; }  
-  span.arrow { font-size:3.2em; }
-  .button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; 
-    &:hover { color:$blue; background:$black; border-color: $blue; }
-  }
-}
-*/
 .homescreen-help-holder {
   background-color: rgba(51, 51, 51, 0.9);
   position: fixed;
