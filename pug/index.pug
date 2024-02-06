@@ -9,8 +9,6 @@ html(lang="en")
       include partials/_header.pug
       include partials/_sidebar.pug
       
-      // HEY! WORK PLEASE
-      
       main
         //- PAGE CONTENT
         section.image-holder(v-cloak)
@@ -18,9 +16,9 @@ html(lang="en")
             h1(v-if="!current.correct") What is the title of this wikiHow article?
             h2.nope(v-else-if="current.correct == 'wrong'") Nope.
             h2.yup(v-else-if="current.correct == 'right'") That's right.
-            img#HeroPic(:src="current.pic")
+            img#HeroPic(:src="current.pic" alt="an actual image from an actual wikiHow article")
             .input-holder(data-display="guess")
-              select(v-model="current.guess" v-on:change="checkGuess(current.guess)" v-bind:disabled="current.correct == 'right' || current.correct == 'wrong'")
+              select(v-model="current.guess" v-on:change="checkGuess(current.guess)" v-bind:disabled="current.correct == 'right' || current.correct == 'wrong'" aria-label="Your guess...")
                 option(value="" disabled hidden) How To
                 option(v-for="choice in current.choices") {{choice.title}}
                   
