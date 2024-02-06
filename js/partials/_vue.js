@@ -243,7 +243,7 @@ var app = new Vue({
           sendEvent('share round', currentUrl)
         })
         .catch((error) => {
-          self.help = "share";
+          // This seems to happen regardless.
         });
       }
       
