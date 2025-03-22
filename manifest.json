@@ -18,6 +18,11 @@
     "standalone",
     "browser"
   ],
+  "handle_links": "preferred",
+  "edge_side_panel": {
+    "preferred_width": 600
+  },
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/favicon_maskable-1200x1200.png?v=2024",
