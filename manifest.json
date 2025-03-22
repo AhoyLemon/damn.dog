@@ -13,6 +13,11 @@
   "start_url": "/",
   "theme_color": "#222730",
   "background_color": "#222730",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "browser"
+  ],
   "icons": [
     {
       "src": "/favicon_maskable-1200x1200.png?v=2024",
