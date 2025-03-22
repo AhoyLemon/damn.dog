@@ -1,0 +1,59 @@
+doctype html
+include partials/_variables.pug
+html(lang="en")
+  head
+    include partials/_head.pug
+  body
+    
+    #app
+      include partials/_header.pug
+      include partials/_sidebar.pug
+      
+      main.page.privacy
+        //- PAGE CONTENT
+        article
+          h1 Privacy Policy
+          p Effective Date: 2025-03-22
+
+          h2 Introduction
+          p damn.dog ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy outlines how we handle your information when you use our website.
+
+          h2 Information We Do Not Collect
+          p damn.dog does not collect, store, or process any personal information. We do not require user accounts, and we do not track or store user interactions beyond anonymous analytics.
+
+          h2 Third-Party Analytics
+          ul
+            li Your general geographic location (not precise)
+            li The pages you visit on damn.dog
+            li The time spent on the website
+            li Browser type and device information
+          
+
+          h2 Cookies
+          p damn.dog uses cookies for two purposes:
+          ul
+            li
+              strong Analytics:
+              span We use cookies to collect anonymous usage data for improving the website experience.
+            li
+              strong Game Score Tracking: 
+              span We use cookies to store your game score locally on your device. This data is occasionally saved anonymously to track gameplay averages.
+
+          h2 No Advertisements or Monetization
+          p We do not display advertisements, collect data for advertising purposes, or engage in any monetization of user interactions.
+
+          h2 Your Privacy Choices
+          p If you wish to limit the data collected by Google Analytics, you can:
+          ul
+            li Disable cookies in your browser settings
+            li Use Google's 
+              a(href="https://tools.google.com/dlpage/gaoptout") opt-out browser add-on
+        
+          h2 Changes to This Policy
+          p We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date.
+        
+      include partials/_banner.pug
+      include partials/_gameover.pug
+      
+    include partials/_javascripts.pug
+    include partials/_schema.pug

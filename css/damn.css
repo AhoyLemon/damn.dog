@@ -835,4 +835,37 @@ main.offline .offline-dog {
   max-width: 80vw;
   width: 100%;
 }
+
+main.page article {
+  color: #f0f1f2;
+  font-family: "Roboto", sans-serif;
+  padding: 100px 20px;
+  display: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+main.page h1, main.page h2, main.page h3 {
+  font-family: "Roboto Slab", serif;
+}
+main.page h1 {
+  font-size: 2.5rem;
+}
+main.page h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+main.page ul {
+  padding-left: 2rem;
+}
+main.page ul li {
+  list-style: disc;
+  margin-bottom: 0.5em;
+}
+main.page a {
+  color: #3e98f2;
+}
+main.page a:hover, main.page a:focus-visible {
+  text-decoration: none;
+}
 /*# sourceMappingURL=damn.css.map */

@@ -4,6 +4,12 @@
     <loc>https://damn.dog</loc>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
-    <lastmod>2024-02-06T02:16:16.269Z</lastmod>
+    <lastmod>2025-03-22T20:09:12.136Z</lastmod>
+  </url>
+  <url>
+    <loc>https://damn.dog/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <lastmod>2025-03-22T20:09:12.136Z</lastmod>
   </url>
 </urlset>
