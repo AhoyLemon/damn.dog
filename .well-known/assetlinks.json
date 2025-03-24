@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "dog.damn",
+        "sha256_cert_fingerprints": ["18:F9:85:1E:27:1D:4C:78:4C:74:89:E1:AA:3B:98:27:53:3E:89:8E:E4:C7:38:C8:2F:73:10:0E:35:86:F0:B9"]
+      }
+    }]
