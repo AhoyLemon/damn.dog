@@ -23,7 +23,10 @@
     "preferred_width": 600
   },
   "prefer_related_applications": false,
-  "iarc_rating_id": "https://apps.microsoft.com/detail/9NHQB8N7HCBJ?hl=en&amp;gl=US&amp;ocid=pdpshare",
+  "iarc_rating_id": "E",
+  "launch_handler": {
+    "enabled": "focus-existing"
+  },
   "icons": [
     {
       "src": "/favicon_maskable-1200x1200.png?v=2024",
