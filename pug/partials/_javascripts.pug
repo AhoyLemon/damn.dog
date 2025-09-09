@@ -1,23 +1,18 @@
-//- jQuery and Vue (minified if on prod)
 if testing
-  //-script(src="js/libraries/jquery-3.3.1.js")
   script(src="js/libraries/vue.js")
   script.
     const testing = true;
 else
-  //-script(src="js/libraries/jquery-3.3.1.min.js")
   script(src="js/libraries/vue.min.js")
   script.
     const testing = false;
 
 //- ServiceWorker
+//-script(type="text/javascript").
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('/service-worker.js')
+  }
 
-script(type="text/javascript").
-  //- if (typeof navigator.serviceWorker !== 'undefined') {
-  //-   navigator.serviceWorker.register('/service-worker.js')
-  //- }
-
-  /*
   Notification.requestPermission(result => {
     if (result === 'granted') {
       //permission granted.
@@ -31,7 +26,6 @@ script(type="text/javascript").
       });
     }
   });
-  */
 
 // Global site tag (gtag.js) - Google Analytics
 script(async src='https://www.googletagmanager.com/gtag/js?id=UA-15129990-16')
