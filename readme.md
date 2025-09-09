@@ -36,3 +36,9 @@ The name actually came first. I was surprised to find out that the domain `damn.
 
 ## Hey, how do I add images?
 I wrote [this guide](https://github.com/AhoyLemon/damn.dog/wiki/How-To-Add-New-Images-To-Damn.Dog)
+
+### What's this written in?
+[![Vue](https://img.shields.io/badge/-Vue-313131?style=flat&logo=vue.js&logoColor=fff&labelColor=42b883)](https://vuejs.org/)
+[![Pug](https://img.shields.io/badge/-Pug-313131?style=flat&logo=pug&logoColor=fff&labelColor=a86454)](https://pugjs.org/)
+[![Sass](https://img.shields.io/badge/-Sass-313131?style=flat&logo=sass&logoColor=fff&labelColor=cc6699)](https://sass-lang.com/)
+[![GitHub Pages](https://img.shields.io/badge/-GitHub%20Pages-313131?style=flat&logo=github&logoColor=fff&labelColor=2088ff)](https://pages.github.com/)
