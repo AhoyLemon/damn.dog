@@ -1,5 +1,6 @@
 @use "variables" as vars;
 @use "mixins" as mix;
+@use "sass:color";
 
 main {
   @include mix.position(fixed, 0, 0, 0, 0);
@@ -80,7 +81,7 @@ main {
     margin: 0;
     display: block;
     font-size: 1.5em;
-    color: lighten(vars.$blue, 20%);
+    color: color.scale(vars.$blue, $lightness: 49.5%);
     font-weight: vars.$light;
     &:hover {
       text-decoration: underline;

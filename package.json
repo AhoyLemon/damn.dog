@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "setup": "tsx scripts/setup.ts",
-    "build:sass": "sass sass/damn.scss:css/damn.css --no-source-map",
+    "build:sass": "sass sass/damn.scss:css/damn.css --no-source-map --style=compressed",
     "build:pug": "tsx scripts/build-pug.ts",
     "build:ts": "tsc",
-    "watch:sass": "sass sass/damn.scss:css/damn.css --no-source-map --watch",
+    "watch:sass": "sass sass/damn.scss:css/damn.css --watch",
     "watch:pug": "tsx scripts/watch-pug.ts",
     "watch:ts": "tsc --watch",
     "serve": "browser-sync start --server --files \"*.html, css/*.css, js/**/*.js\" --no-notify --no-open",

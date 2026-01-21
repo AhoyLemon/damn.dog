@@ -86,12 +86,12 @@
   }
 
   &.pad-insides {
-    margin-left: -(vars.$base-margin / 2);
-    margin-right: -(vars.$base-margin / 2);
+    margin-left: calc(vars.$base-margin / -2);
+    margin-right: calc(vars.$base-margin / -2);
     .pad-me {
-      padding-left: vars.$base-margin / 2;
-      padding-right: vars.$base-margin / 2;
-      padding-bottom: vars.$base-margin / 2;
+      padding-left: calc(vars.$base-margin / 2);
+      padding-right: calc(vars.$base-margin / 2);
+      padding-bottom: calc(vars.$base-margin / 2);
     }
   }
 }
