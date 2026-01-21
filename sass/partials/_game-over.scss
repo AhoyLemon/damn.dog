@@ -1,19 +1,21 @@
+@use "variables" as vars;
+@use "mixins" as mix;
 
-.game-over { @include position(fixed,0,0,0,0); z-index: 100; background-color:rgba($dark,0.8); color:rgba($white,0.6);
+.game-over { @include mix.position(fixed,0,0,0,0); z-index: 100; background-color:rgba(vars.$dark,0.8); color:rgba(vars.$white,0.6);
   .stripes { @extend %center-child; @include position(absolute,0,0,0,0); }
   h2 { font-size:14vw; text-align: center; }
   
   table { margin-left: auto; margin-right: auto; font-size:5vw;
     th, td { padding-left: 0.5em; padding-right: 0.5em; text-align: center; line-height: 100%; }
     th { text-transform: uppercase; font-size:0.6em; }
-    td { font-weight: $light; font-size:2em; }
+    td { font-weight: vars.$light; font-size:2em; }
   }
   
   .button-holder { text-align: center;
     
   }
   
-  .button { color:$blue; background:transparent; padding:0.5em 1.5em; border:1px solid $blue; font-size:22px; font-family: $font; cursor: pointer;
-    &:hover { background:$blue; color:$black; }
+  .button { color:vars.$blue; background:transparent; padding:0.5em 1.5em; border:1px solid vars.$blue; font-size:22px; font-family: vars.$font; cursor: pointer;
+    &:hover { background:vars.$blue; color:vars.$black; }
   }
 }

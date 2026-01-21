@@ -1,3 +1,5 @@
+@use "variables" as vars;
+
 @mixin flex-container($align:stretch, $direction:row, $wrap:wrap) {
   display: flex;
   flex-direction: $direction;
@@ -65,9 +67,9 @@
 
 @mixin respond-to($media) {
   @if $media == desktop {
-    @media only screen and (min-width: $desktop-min) { @content; }
+    @media only screen and (min-width: vars.$desktop-min) { @content; }
   }
   @else if $media == mobile {
-    @media only screen and (max-width: $desktop-min) { @content; }
+    @media only screen and (max-width: vars.$desktop-min) { @content; }
   }
 }

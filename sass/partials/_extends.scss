@@ -1,6 +1,9 @@
-%inner { width: 100%; max-width:$max-width; margin-left:auto; margin-right: auto; }
+@use "variables" as vars;
+@use "mixins" as mix;
 
-%wide-inner { width: 100%; max-width:calc(#{$big-inner} - 4em); padding-left:2em; padding-right:2em; display: block; margin-left:auto; margin-right: auto; }
+%inner { width: 100%; max-width:vars.$max-width; margin-left:auto; margin-right: auto; }
+
+%wide-inner { width: 100%; max-width:calc(#{vars.$big-inner} - 4em); padding-left:2em; padding-right:2em; display: block; margin-left:auto; margin-right: auto; }
 %clearfix {
   &:after { content: ""; display: table;clear: both; }
 }
@@ -10,13 +13,13 @@
   &:after { content: '\201D'; }
 }
 
-%center-child { @include flex-container(center);
+%center-child { @include mix.flex-container(center);
   > .child { flex-basis: 100%; }
 }
 
-%flexy { @include flex-container();
+%flexy { @include mix.flex-container();
   
-  @media (max-width:$mobile-max) {
+  @media (max-width:vars.$mobile-max) {
     .one-quarter { flex-basis:50%; }
     .one-third { flex-basis:100%; }
     .one-half { flex-basis:100%; }
@@ -24,7 +27,7 @@
     .three-quarters { flex-basis:100%; }
     .full-width { flex-basis:100%; }
   }
-  @media (min-width:$desktop-min) {
+  @media (min-width:vars.$desktop-min) {
     .one-quarter { flex-basis:25%; }
     .one-third { flex-basis: 33.333%; }
     .one-half { flex-basis:50%; }
@@ -33,8 +36,8 @@
     .full-width { flex-basis:100%; }
   }
   
-  &.pad-insides { margin-left: -($base-margin / 2); margin-right: -($base-margin / 2);
-    .pad-me { padding-left:$base-margin /2; padding-right: $base-margin / 2; padding-bottom: $base-margin / 2; }
+  &.pad-insides { margin-left: -(vars.$base-margin / 2); margin-right: -(vars.$base-margin / 2);
+    .pad-me { padding-left:vars.$base-margin /2; padding-right: vars.$base-margin / 2; padding-bottom: vars.$base-margin / 2; }
   }
   
 }
@@ -43,7 +46,7 @@
   background-size: cover; background-position: center; background-repeat: no-repeat;
 }
 
-%flexy-stack { @include flex-container(stretch, column);
+%flexy-stack { @include mix.flex-container(stretch, column);
   .one-half { flex-basis: 50%; }
 }
 

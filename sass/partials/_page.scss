@@ -1,12 +1,14 @@
+@use "variables" as vars;
+
 main.page {
-  article { color:$offwhite; font-family: $sans; padding:100px 20px; display:100%; max-width: 720px; margin-left: auto; margin-right: auto; }
-  h1, h2, h3 { font-family: $slab;}
+  article { color:vars.$offwhite; font-family: vars.$sans; padding:100px 20px; display:100%; max-width: 720px; margin-left: auto; margin-right: auto; }
+  h1, h2, h3 { font-family: vars.$slab;}
   h1 { font-size:2.5rem; }
   h2 { font-size: 2rem; margin-top:1rem; }
   ul { padding-left: 2rem;
     li { list-style: disc; margin-bottom: 0.5em; }
   }
-  a { color:$blue;
+  a { color:vars.$blue;
     &:hover, &:focus-visible { text-decoration: none; }
   }
 }

@@ -1,11 +1,14 @@
-.sidebar { @include position(fixed,$header-height,0); background: $offwhite; width: 13rem; padding: 1rem; z-index: $z-sidebar; overflow-x: hidden; overflow-y: auto; max-height: calc(100% - #{$header-height});
+@use "variables" as vars;
+@use "mixins" as mix;
+
+.sidebar { @include mix.position(fixed,vars.$header-height,0); background: vars.$offwhite; width: 13rem; padding: 1rem; z-index: vars.$z-sidebar; overflow-x: hidden; overflow-y: auto; max-height: calc(100% - #{vars.$header-height});
   li { margin-bottom: 0.65em; }
   .label { display: block; }
-  .indent { display: block; padding-left: 0.75em; font-weight: $bold; }
-  a { color:$blue; text-decoration: none; cursor: pointer; 
+  .indent { display: block; padding-left: 0.75em; font-weight: vars.$bold; }
+  a { color:vars.$blue; text-decoration: none; cursor: pointer; 
     &:hover, &:focus { text-decoration: underline; }
   }
-  button {  color:$blue; font-size: 1em; border:none; display: inline; font-family: $font; font-weight: 700; cursor: pointer;
+  button {  color:vars.$blue; font-size: 1em; border:none; display: inline; font-family: vars.$font; font-weight: 700; cursor: pointer;
     &:hover, &:focus { text-decoration: underline; }
   }
   .smaller { font-size:0.8em; }
@@ -13,12 +16,12 @@
   &.visible { transform:translateX(0); }
 }
 
-.share-round-holder { @include position(fixed,0,0,0,0); z-index: $z-sharebox; background:rgba($black,0.73);
+.share-round-holder { @include mix.position(fixed,0,0,0,0); z-index: vars.$z-sharebox; background:rgba(vars.$black,0.73);
   .share-round { @extend %center-child; position: relative; height: 100%; }
-  .child { text-align: center; color:$white; font-size:2rem; }
+  .child { text-align: center; color:vars.$white; font-size:2rem; }
   span { display: block; margin-bottom: 0.5em; }
-  .button { background:transparent; font-size:0.7em; border:2px solid $link; color:$link; font-family:$font; padding:.25em 1em; cursor:pointer;
-    &:hover { background:$link; color:$dark; }
+  .button { background:transparent; font-size:0.7em; border:2px solid vars.$link; color:vars.$link; font-family:vars.$font; padding:.25em 1em; cursor:pointer;
+    &:hover { background:vars.$link; color:vars.$dark; }
   }
 }
 
