@@ -54,8 +54,10 @@ $RECYCLE.BIN/
 # Buld Outputs
 css/
 js/min/
+js/min/*.js
+js/min/*.map
 js/partials/*.js
-js/partials/*.map
+
 js/damn.vue.js
 *.html
 sitemap.xml
