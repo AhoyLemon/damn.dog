@@ -1,0 +1,56 @@
+# Deployment Exclusions
+# =====================
+# These files/folders should NOT be included in production deployment.
+# They are only needed for development and build processes.
+
+# Source files (not needed in production)
+routes/
+scripts/
+pug/
+scss/
+ts/
+_docs/
+
+# Configuration files
+tsconfig.json
+package.json
+package-lock.json
+pug.routes.js
+pug.routes.ts
+
+# Build tools
+node_modules/
+
+# Git/GitHub
+.git/
+.github/
+.gitignore
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Documentation
+README.md
+LICENSE
+
+# Environment
+.env
+.env.local
+
+# Old Prepros files
+prepros-6.config
+prepros.cfg
+prepros.config
+
+# Keep these in deployment:
+# -------------------------
+# - *.html files (your generated pages)
+# - css/ folder (compiled styles)
+# - js/min/ folder (compiled JavaScript)
+# - audio/ folder (audio files)
+# - img/ folder (images)
+# - svg/ folder (SVG assets)
+# - service-worker.js
+# - manifest.json
+# - Any other static assets

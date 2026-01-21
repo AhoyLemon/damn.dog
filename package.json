@@ -1,0 +1,48 @@
+{
+  "name": "damn-dog",
+  "version": "1.0.0",
+  "description": "What is the title of this wikiHow article?",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "setup": "tsx scripts/setup.ts",
+    "build:sass": "sass sass/damn.scss:css/damn.css --no-source-map --style=compressed",
+    "build:pug": "tsx scripts/build-pug.ts",
+    "build:ts": "tsc",
+    "watch:sass": "sass sass/damn.scss:css/damn.css --watch",
+    "watch:pug": "tsx scripts/watch-pug.ts",
+    "watch:ts": "tsc --watch",
+    "serve": "browser-sync start --server --files \"*.html, css/*.css, js/**/*.js\" --no-notify --no-open",
+    "test:sass": "sass sass/damn.scss:css/damn.css --no-source-map --style=compressed",
+    "test:ts": "tsc --noEmit",
+    "clean": "rimraf css/*.css js/**/*.js js/**/*.js.map",
+    "dev": "tsx scripts/dev.ts",
+    "watch": "tsx scripts/dev.ts",
+    "build": "npm run build:sass && npm run build:pug && npm run build:ts",
+    "test": "npm run test:sass && npm run test:ts"
+  },
+  "keywords": [
+    "wikihow",
+    "quiz",
+    "game",
+    "vue"
+  ],
+  "author": "Lemon",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "browser-sync": "^3.0.2",
+    "chalk": "^5.3.0",
+    "chokidar": "^3.5.3",
+    "concurrently": "^8.2.2",
+    "ora": "^8.0.1",
+    "pug": "^3.0.2",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
+}

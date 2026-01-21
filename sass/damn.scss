@@ -1,15 +1,21 @@
-@import "partials/_variables";
-@import "partials/_z-index";
-@import "partials/_mixins";
-@import "partials/_extends";
+// DAMN DOG Stylesheet
+// Modern SCSS using @use syntax
+// https://sass-lang.com/documentation/at-rules/use
 
-@import "partials/_reset";
-@import "partials/_defaults";
+// ABSTRACTS are variables and mixins (they should *never* add lines to the production CSS)
+@use "partials/variables" as vars;
+@use "partials/mixins" as mix;
+@use "partials/extends";
 
-@import "partials/_header";
-@import "partials/_home";
-@import "partials/_sidebar";
-@import "partials/_banner";
-@import "partials/_game-over";
-@import "partials/_offline";
-@import "partials/_page";
+// BASE is for global styles
+@use "partials/reset";
+@use "partials/defaults";
+
+// LAYOUT & COMPONENTS
+@use "partials/header";
+@use "partials/home";
+@use "partials/sidebar";
+@use "partials/banner";
+@use "partials/game-over";
+@use "partials/offline";
+@use "partials/page";

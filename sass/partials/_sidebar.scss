@@ -1,79 +1,88 @@
-.sidebar { @include position(fixed,$header-height,0); background: $offwhite; width: 13rem; padding: 1rem; z-index: $z-sidebar; overflow-x: hidden; overflow-y: auto; max-height: calc(100% - #{$header-height});
-  li { margin-bottom: 0.65em; }
-  .label { display: block; }
-  .indent { display: block; padding-left: 0.75em; font-weight: $bold; }
-  a { color:$blue; text-decoration: none; cursor: pointer; 
-    &:hover, &:focus { text-decoration: underline; }
+@use "variables" as vars;
+@use "mixins" as mix;
+@use "extends";
+
+.sidebar {
+  @include mix.position(fixed, vars.$header-height, 0);
+  background: vars.$offwhite;
+  width: 13rem;
+  padding: 1rem;
+  z-index: vars.$z-sidebar;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc(100% - #{vars.$header-height});
+  li {
+    margin-bottom: 0.65em;
   }
-  button {  color:$blue; font-size: 1em; border:none; display: inline; font-family: $font; font-weight: 700; cursor: pointer;
-    &:hover, &:focus { text-decoration: underline; }
+  .label {
+    display: block;
   }
-  .smaller { font-size:0.8em; }
-  transform: translateX(101%); transition: all 0.3s ease;
-  &.visible { transform:translateX(0); }
+  .indent {
+    display: block;
+    padding-left: 0.75em;
+    font-weight: vars.$bold;
+  }
+  a {
+    color: vars.$blue;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  button {
+    color: vars.$blue;
+    font-size: 1em;
+    border: none;
+    display: inline;
+    font-family: vars.$font;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  .smaller {
+    font-size: 0.8em;
+  }
+  transform: translateX(101%);
+  transition: all 0.3s ease;
+  &.visible {
+    transform: translateX(0);
+  }
 }
 
-.share-round-holder { @include position(fixed,0,0,0,0); z-index: $z-sharebox; background:rgba($black,0.73);
-  .share-round { @extend %center-child; position: relative; height: 100%; }
-  .child { text-align: center; color:$white; font-size:2rem; }
-  span { display: block; margin-bottom: 0.5em; }
-  .button { background:transparent; font-size:0.7em; border:2px solid $link; color:$link; font-family:$font; padding:.25em 1em; cursor:pointer;
-    &:hover { background:$link; color:$dark; }
+.share-round-holder {
+  @include mix.position(fixed, 0, 0, 0, 0);
+  z-index: vars.$z-sharebox;
+  background: rgba(vars.$black, 0.73);
+  .share-round {
+    @extend %center-child;
+    position: relative;
+    height: 100%;
+  }
+  .child {
+    text-align: center;
+    color: vars.$white;
+    font-size: 2rem;
+  }
+  span {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  .button {
+    background: transparent;
+    font-size: 0.7em;
+    border: 2px solid vars.$link;
+    color: vars.$link;
+    font-family: vars.$font;
+    padding: 0.25em 1em;
+    cursor: pointer;
+    &:hover {
+      background: vars.$link;
+      color: vars.$dark;
+    }
   }
 }
-
-// .homescreen-help-holder { background-color:rgba($black,0.9); @include position(fixed,0,0,0,0); z-index:$z-homescreenbox;
-//   .homescreen-help { background:white; color:$black; @include position(fixed,0,0); padding:1em; }
-//   svg { fill:currentColor;
-//     * { fill:currentColor; }
-//   }
-//   .help { text-align: right; line-height: 160%;
-//     span { display: block; }
-//     svg { width:0.8em; height: 0.8em; }
-//   }
-//   &.ios { top:auto; bottom:0; right: 0; left:0; width:100%; max-width: 100%;
-//     .help { text-align: center; }
-//   }
-//   .button-holder { padding-top: 1em; text-align: center;
-//     button { background:transparent; font-size:1em; border:2px solid $link; color:$link; font-weight: $bold; font-family:$font; padding:.25em 1em; cursor:pointer;
-//       &:hover { background:$link; color:$dark; }
-//     }
-//   }
-  /*
-  &.android { @include position(fixed,0,0); max-width: 16em;
-    .ios, .edge, .opera, .desktop-chrome { display: none; }
-    b { display: block; }
-    .tap-that-icon { margin-top: -1.2em; }
-    .bottom-center-icon { display:none; }
-    &.firefox { padding-top:1em; }
-  }
-  &.ios { @include position(fixed,null,0,0,0);
-    .homescreen-help { text-align: center; }
-    .android, .edge, .opera, .desktop-chrome { display: none; }
-    span.arrow { display:block; text-align: center;  }
-    .top-right-icon { display:none; }
-  }
-  &.edge { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android, .opera, .desktop-chrome { display: none; }
-  }
-  &.opera { @include position(fixed,0,0); max-width: 16em;
-    .top-right-icon { padding-right: 2.1em; }
-    .ios, .android, .edge, .desktop-chrome { display: none; }
-  }
-  &.desktop-chrome { @include position(fixed,0,0); max-width: 16em;
-    .ios, .android, .edge, .opera { display: none; }
-  }
-  .homescreen-help { text-align: right; padding:0.5em 0.5em 1em 1em; }  
-  span.arrow {
-    svg { height: 1em; width: 1em; }
-  }
-  .button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; display: inline-block; margin-top:0.5em; margin-bottom:0.5em;
-    &:hover { color:$yellow; background:$black; border-color: $yellow; }
-  }
-  */
-//}
-
-
-// @media all and (display-mode: standalone) {
-//   #AddToHomeScreen { display: none; }
-// }

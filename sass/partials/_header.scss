@@ -1,40 +1,100 @@
-header { background-color:$lessdark; @include position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom:0.25em; height:$header-height; z-index:$z-header;
-  //> .inner { color:$white; @extend %inner; }
-  span { display:inline-block; vertical-align: middle; }
-  //.percent { display: none; }
-  .label { font-size:0.7em; font-family: $sans; line-height: 200%; padding-right: 0.5em; }
-  .number { font-size:1.8em; font-weight: $light; line-height: 50%; color:$green;
-    &.bad { color:$red; }
+@use "variables" as vars;
+@use "mixins" as mix;
+@use "extends";
+
+header {
+  background-color: vars.$lessdark;
+  @include mix.position(fixed, 0, 0, null, 0);
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  height: vars.$header-height;
+  z-index: vars.$z-header;
+  span {
+    display: inline-block;
+    vertical-align: middle;
   }
-  
-  > .inner { color:$white; @extend %inner;  @include flex-container(); padding-top:0.2rem;
-    .box { @include flex-item(50%); text-align: center; }
+  .label {
+    font-size: 0.7em;
+    font-family: vars.$sans;
+    line-height: 200%;
+    padding-right: 0.5em;
   }
-  
-  .hamburger { background:transparent; padding:3px; border:none; cursor: pointer; color:$blue; outline:none; height: $header-height; width: $header-height; @include position(absolute,0,2rem);
-    .fill, .x { opacity: 0; }
-    &:hover { 
-      .fill { opacity: 1; }
-      .question-mark, .x { fill:$dark; }
+  .number {
+    font-size: 1.8em;
+    font-weight: vars.$light;
+    line-height: 50%;
+    color: vars.$green;
+    &.bad {
+      color: vars.$red;
+    }
+  }
+
+  > .inner {
+    color: vars.$white;
+    @extend %inner;
+    @include mix.flex-container();
+    padding-top: 0.2rem;
+    .box {
+      @include mix.flex-item(50%);
+      text-align: center;
+    }
+  }
+
+  .hamburger {
+    background: transparent;
+    padding: 3px;
+    border: none;
+    cursor: pointer;
+    color: vars.$blue;
+    outline: none;
+    height: vars.$header-height;
+    width: vars.$header-height;
+    @include mix.position(absolute, 0, 2rem);
+    .fill,
+    .x {
+      opacity: 0;
+    }
+    &:hover {
+      .fill {
+        opacity: 1;
+      }
+      .question-mark,
+      .x {
+        fill: vars.$dark;
+      }
     }
     &.is-active {
-      .question-mark { opacity: 0; }
-      .x { opacity: 1; }
+      .question-mark {
+        opacity: 0;
+      }
+      .x {
+        opacity: 1;
+      }
     }
   }
 }
 
-@media (max-width:$max-width) {
-  header { 
+@media (max-width: vars.$max-width) {
+  header {
     //.number { font-size:1.5em;}
     > .inner {
-      .box { @include flex-item(33.3333%);
-        &.hamburger-holder { @include flex-item(3rem); }
+      .box {
+        @include mix.flex-item(33.3333%);
+        &.hamburger-holder {
+          @include mix.flex-item(3rem);
+        }
       }
-    } 
-    .hamburger-holder { text-align: right !important;
-      .hamburger { position:relative; top: auto; right:auto; height: 100%;
-        svg { height: 1.6rem; }
+    }
+    .hamburger-holder {
+      text-align: right !important;
+      .hamburger {
+        position: relative;
+        top: auto;
+        right: auto;
+        height: 100%;
+        svg {
+          height: 1.6rem;
+        }
       }
     }
   }
