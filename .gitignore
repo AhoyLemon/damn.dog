@@ -50,3 +50,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Buld Outputs
+css/
+js/min/
+*.html
+!_docs/
