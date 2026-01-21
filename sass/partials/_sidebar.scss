@@ -1,5 +1,6 @@
 @use "variables" as vars;
 @use "mixins" as mix;
+@use "extends";
 
 .sidebar { @include mix.position(fixed,vars.$header-height,0); background: vars.$offwhite; width: 13rem; padding: 1rem; z-index: vars.$z-sidebar; overflow-x: hidden; overflow-y: auto; max-height: calc(100% - #{vars.$header-height});
   li { margin-bottom: 0.65em; }
