@@ -2,8 +2,9 @@
  * Vue application setup for DAMN DOG game
  */
 
-import { wikiHow, type WikiHowArticle } from './_drawings.js';
-import { shuffle, sendEvent } from './_functions.js';
+import { siteURL } from "./_variables.js";
+import { wikiHow, type WikiHowArticle } from "./_drawings.js";
+import { shuffle, sendEvent } from "./_functions.js";
 
 // Import Vue from CDN (loaded in HTML)
 declare const Vue: any;
@@ -15,7 +16,7 @@ interface CurrentRound {
   url: string;
   guess: string;
   choices: Choice[];
-  correct: 'right' | 'wrong' | null;
+  correct: "right" | "wrong" | null;
 }
 
 interface Choice {
@@ -52,26 +53,26 @@ let reroll = 0;
 
 // Global wiki object for compatibility
 const wiki = {
-  gid: 0
+  gid: 0,
 };
 
 const app = new Vue({
-  el: '#app',
+  el: "#app",
   data: (): AppData => ({
     drawings: wikiHow,
     averagePercent: 56,
     roundsThisSession: -1,
-    device: '',
-    browser: '',
+    device: "",
+    browser: "",
     standalone: false,
     current: {
-      slug: '',
-      pic: '',
-      title: '',
-      url: '',
-      guess: '',
+      slug: "",
+      pic: "",
+      title: "",
+      url: "",
+      guess: "",
       choices: [],
-      correct: null
+      correct: null,
     },
     drawerOpen: false,
     bannerVisible: false,
@@ -81,10 +82,10 @@ const app = new Vue({
       rounds: 0,
       score: 0,
       correct: 0,
-      incorrect: 0
+      incorrect: 0,
     },
     roundsPlayed: [],
-    installEvent: null
+    installEvent: null,
   }),
 
   computed: {
@@ -97,7 +98,7 @@ const app = new Vue({
       } else {
         return Math.floor((self.player.correct / self.player.rounds) * 100);
       }
-    }
+    },
   },
 
   methods: {
@@ -117,7 +118,7 @@ const app = new Vue({
       self.roundsThisSession++;
 
       if (self.roundsThisSession === 3) {
-        new Audio('audio/bylemon.mp3').play();
+        new Audio("audio/bylemon.mp3").play();
         setTimeout(() => {
           self.bannerVisible = true;
         }, 800);
@@ -127,18 +128,18 @@ const app = new Vue({
     getPic(p?: number): void {
       const self = this as any;
       let r: number;
-      self.current.guess = '';
+      self.current.guess = "";
 
       if (p) {
         r = p;
         wiki.gid = r;
         if (!wikiHow[r].pic) {
-          self.current.pic = 'img/pics/' + self.drawings[r].slug.toLowerCase() + '.jpg';
+          self.current.pic = "img/pics/" + self.drawings[r].slug.toLowerCase() + ".jpg";
         } else {
           self.current.pic = self.drawings[r].pic;
         }
         self.current.slug = self.drawings[r].slug;
-        self.current.title = 'How To ' + self.drawings[r].slug.replace(/-/g, " ");
+        self.current.title = "How To " + self.drawings[r].slug.replace(/-/g, " ");
         self.current.url = "http://www.wikihow.com/" + self.drawings[r].slug;
       } else {
         r = Math.floor(Math.random() * self.drawings.length);
@@ -154,15 +155,15 @@ const app = new Vue({
           reroll = 0;
           wiki.gid = r;
           if (!wikiHow[r].pic) {
-            self.current.pic = 'img/pics/' + self.drawings[r].slug.toLowerCase() + '.jpg';
+            self.current.pic = "img/pics/" + self.drawings[r].slug.toLowerCase() + ".jpg";
           } else {
             self.current.pic = self.drawings[r].pic;
           }
           self.current.slug = self.drawings[r].slug;
-          self.current.title = 'How To ' + self.drawings[r].slug.replace(/-/g, " ");
+          self.current.title = "How To " + self.drawings[r].slug.replace(/-/g, " ");
           self.current.url = "http://www.wikihow.com/" + self.drawings[r].slug;
           self.roundsPlayed.push(r);
-          history.pushState(null, "", '#' + r);
+          history.pushState(null, "", "#" + r);
         }
       }
     },
@@ -175,15 +176,15 @@ const app = new Vue({
         if (self.drawings[r].slug !== self.current.slug) {
           i++;
           const choice: Choice = {
-            title: 'How To ' + self.drawings[r].slug.replace(/-/g, " "),
-            slug: self.drawings[r].slug
+            title: "How To " + self.drawings[r].slug.replace(/-/g, " "),
+            slug: self.drawings[r].slug,
           };
           self.current.choices.push(choice);
         }
       }
       self.current.choices.push({
         title: self.current.title,
-        slug: self.current.slug
+        slug: self.current.slug,
       });
       self.current.choices = shuffle(self.current.choices);
     },
@@ -222,7 +223,7 @@ const app = new Vue({
     },
 
     wikiClick(u: string, t: string): void {
-      sendEvent('Wikihow Link', u, t);
+      sendEvent("Wikihow Link", u, t);
     },
 
     gameOver(): void {
@@ -235,9 +236,11 @@ const app = new Vue({
       localStorage.removeItem("playerCorrect");
       localStorage.removeItem("playerIncorrect");
 
-      sendEvent("GAME OVER",
-        self.player.correct + ' CORRECT | ' + self.player.incorrect + ' WRONG | ' + self.player.rounds + ' ROUNDS',
-        self.scorePercent + '%');
+      sendEvent(
+        "GAME OVER",
+        self.player.correct + " CORRECT | " + self.player.incorrect + " WRONG | " + self.player.rounds + " ROUNDS",
+        self.scorePercent + "%",
+      );
     },
 
     clearScores(): void {
@@ -255,13 +258,14 @@ const app = new Vue({
     shareThisRound(): void {
       const currentUrl = window.location.href;
       if (navigator.share) {
-        navigator.share({
-          title: 'DAMN DOG',
-          text: 'What is the title of this wikiHow article?',
-          url: currentUrl,
-        })
+        navigator
+          .share({
+            title: "DAMN DOG",
+            text: "What is the title of this wikiHow article?",
+            url: currentUrl,
+          })
           .then(() => {
-            sendEvent('share round', 'shared', currentUrl);
+            sendEvent("share round", "shared", currentUrl);
           })
           .catch(() => {
             // Silently handle share errors
@@ -278,10 +282,10 @@ const app = new Vue({
 
     checkIfStandalone(): void {
       const self = this as any;
-      if (window.matchMedia('(display-mode: standalone)').matches) {
+      if (window.matchMedia("(display-mode: standalone)").matches) {
         self.standalone = true;
       }
-    }
+    },
   },
 
   mounted(): void {
@@ -290,9 +294,12 @@ const app = new Vue({
     // Load data from localStorage
     if (typeof Storage !== "undefined") {
       if (!localStorage.roundsPlayed) {
-        localStorage.setItem('roundsPlayed', '');
+        localStorage.setItem("roundsPlayed", "");
       } else {
-        self.roundsPlayed = localStorage.roundsPlayed.split(',').map((n: string) => parseInt(n)).filter((n: number) => !isNaN(n));
+        self.roundsPlayed = localStorage.roundsPlayed
+          .split(",")
+          .map((n: string) => parseInt(n))
+          .filter((n: number) => !isNaN(n));
 
         if (localStorage.playerRounds) {
           self.player.rounds = parseInt(localStorage.playerRounds);
@@ -308,28 +315,30 @@ const app = new Vue({
         }
 
         console.log(self.roundsPlayed);
-        sendEvent("Returning Player",
-          self.player.correct + ' CORRECT | ' + self.player.incorrect + ' WRONG | ' + self.player.rounds + ' ROUNDS',
-          self.player.rounds + ' ROUNDS PLAYED');
+        sendEvent(
+          "Returning Player",
+          self.player.correct + " CORRECT | " + self.player.incorrect + " WRONG | " + self.player.rounds + " ROUNDS",
+          self.player.rounds + " ROUNDS PLAYED",
+        );
       }
     }
 
     this.checkIfStandalone();
 
     // Listen for PWA install prompt
-    window.addEventListener('beforeinstallprompt', (event: any) => {
+    window.addEventListener("beforeinstallprompt", (event: any) => {
       event.preventDefault();
       self.installEvent = event;
     });
 
     // Start the game
     if (window.location.hash) {
-      const r = parseInt(window.location.hash.replace('#', ''));
+      const r = parseInt(window.location.hash.replace("#", ""));
       self.newRound(r);
     } else {
       self.newRound();
     }
-  }
+  },
 });
 
 export default app;

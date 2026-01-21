@@ -3,6 +3,4 @@
  */
 
 // Import and initialize the Vue app
-import './partials/_vue.js';
-
-console.log('DAMN DOG loaded');
+import "./partials/_vue.js";
