@@ -1,5 +1,11 @@
 @use "mixins" as mix;
 
-main.offline { @include mix.flex-container(center); justify-content: center;
-  .offline-dog { max-height: 80vh; max-width: 80vw; width:100%; }
+main.offline {
+  @include mix.flex-container(center);
+  justify-content: center;
+  .offline-dog {
+    max-height: 80vh;
+    max-width: 80vw;
+    width: 100%;
+  }
 }

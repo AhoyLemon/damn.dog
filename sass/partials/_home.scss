@@ -1,43 +1,125 @@
 @use "variables" as vars;
 @use "mixins" as mix;
 
-main { @include mix.position(fixed,0,0,0,0); overflow-y: auto; }
-.image-holder { @include mix.flex-container(stretch);  position: relative; min-height: 100%; padding-top:(vars.$header-height);
-  .child { text-align: center; width:100%; max-width:vars.$max-width; margin-left: auto; margin-right: auto; }
-  img { max-width: 100%; }
-  h1, h2 { font-weight: vars.$light; font-size:1.5em; margin-top: 0.5em; margin-bottom: 0.5em; color:rgba(vars.$white,0.6);
-    &.nope { color:vars.$red; }
-    &.yup { color:vars.$green; }
+main {
+  @include mix.position(fixed, 0, 0, 0, 0);
+  overflow-y: auto;
+}
+.image-holder {
+  @include mix.flex-container(stretch);
+  position: relative;
+  min-height: 100%;
+  padding-top: (vars.$header-height);
+  .child {
+    text-align: center;
+    width: 100%;
+    max-width: vars.$max-width;
+    margin-left: auto;
+    margin-right: auto;
   }
-  a { color:vars.$link; text-decoration: none; }
-  .input-holder { position: relative;
-    select { font-family:vars.$slab; color:black; font-size:1.3rem; }
-    select { background-color:rgba(vars.$white,0.65); border:none; margin: 0; display:block; width:100%; padding-left:vars.$pad; padding-right:vars.$pad; height: 3em; text-transform: capitalize;
-      &:focus { background: rgba(vars.$white,0.9); }
-      option { padding-left:vars.$pad; font-size:1rem; }
+  img {
+    max-width: 100%;
+  }
+  h1,
+  h2 {
+    font-weight: vars.$light;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: rgba(vars.$white, 0.6);
+    &.nope {
+      color: vars.$red;
     }
-    label { position: absolute; top:vars.$pad; left:vars.$pad; }
+    &.yup {
+      color: vars.$green;
+    }
+  }
+  a {
+    color: vars.$link;
+    text-decoration: none;
+  }
+  .input-holder {
+    position: relative;
+    select {
+      font-family: vars.$slab;
+      color: black;
+      font-size: 1.3rem;
+    }
+    select {
+      background-color: rgba(vars.$white, 0.65);
+      border: none;
+      margin: 0;
+      display: block;
+      width: 100%;
+      padding-left: vars.$pad;
+      padding-right: vars.$pad;
+      height: 3em;
+      text-transform: capitalize;
+      &:focus {
+        background: rgba(vars.$white, 0.9);
+      }
+      option {
+        padding-left: vars.$pad;
+        font-size: 1rem;
+      }
+    }
+    label {
+      position: absolute;
+      top: vars.$pad;
+      left: vars.$pad;
+    }
   }
 
-  
-  .correctis { color:vars.$white; font-weight: vars.$light; font-size:0.8em; text-transform: uppercase; }
-  .correct-title { margin:0; display: block; font-size:1.5em; color:lighten(vars.$blue,20%); font-weight:vars.$light;
-    &:hover { text-decoration: underline; }
+  .correctis {
+    color: vars.$white;
+    font-weight: vars.$light;
+    font-size: 0.8em;
+    text-transform: uppercase;
   }
-  
-  .button-holder { padding-top: 1em; }
-  button { background:transparent; border:2px solid vars.$link; color:vars.$link; font-family:vars.$font; font-size:1.4em; font-weight:vars.$light; padding:.25em 1em; cursor:pointer;
-    &:hover { background:vars.$link; color:vars.$dark; }
+  .correct-title {
+    margin: 0;
+    display: block;
+    font-size: 1.5em;
+    color: lighten(vars.$blue, 20%);
+    font-weight: vars.$light;
+    &:hover {
+      text-decoration: underline;
+    }
   }
-  
-  .result { padding-top: 0.5em;}
+
+  .button-holder {
+    padding-top: 1em;
+  }
+  button {
+    background: transparent;
+    border: 2px solid vars.$link;
+    color: vars.$link;
+    font-family: vars.$font;
+    font-size: 1.4em;
+    font-weight: vars.$light;
+    padding: 0.25em 1em;
+    cursor: pointer;
+    &:hover {
+      background: vars.$link;
+      color: vars.$dark;
+    }
+  }
+
+  .result {
+    padding-top: 0.5em;
+  }
 }
 
-[data-display="wrong"], [data-display="correct"], [data-display="play again"] { display: none; }
+[data-display="wrong"],
+[data-display="correct"],
+[data-display="play again"] {
+  display: none;
+}
 
-
-@media (max-width:vars.$max-width) {
+@media (max-width: vars.$max-width) {
   .image-holder {
-    h1 { font-size:5vw; }
+    h1 {
+      font-size: 5vw;
+    }
   }
 }

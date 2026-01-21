@@ -15,8 +15,6 @@ js/min/
 *.css.map
 
 # IDE
-.vscode/
-.idea/
 *.swp
 *.swo
 *~

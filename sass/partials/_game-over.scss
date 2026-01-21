@@ -2,21 +2,56 @@
 @use "mixins" as mix;
 @use "extends";
 
-.game-over { @include mix.position(fixed,0,0,0,0); z-index: 100; background-color:rgba(vars.$dark,0.8); color:rgba(vars.$white,0.6);
-  .stripes { @extend %center-child; @include mix.position(absolute,0,0,0,0); }
-  h2 { font-size:14vw; text-align: center; }
-  
-  table { margin-left: auto; margin-right: auto; font-size:5vw;
-    th, td { padding-left: 0.5em; padding-right: 0.5em; text-align: center; line-height: 100%; }
-    th { text-transform: uppercase; font-size:0.6em; }
-    td { font-weight: vars.$light; font-size:2em; }
+.game-over {
+  @include mix.position(fixed, 0, 0, 0, 0);
+  z-index: 100;
+  background-color: rgba(vars.$dark, 0.8);
+  color: rgba(vars.$white, 0.6);
+  .stripes {
+    @extend %center-child;
+    @include mix.position(absolute, 0, 0, 0, 0);
   }
-  
-  .button-holder { text-align: center;
-    
+  h2 {
+    font-size: 14vw;
+    text-align: center;
   }
-  
-  .button { color:vars.$blue; background:transparent; padding:0.5em 1.5em; border:1px solid vars.$blue; font-size:22px; font-family: vars.$font; cursor: pointer;
-    &:hover { background:vars.$blue; color:vars.$black; }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 5vw;
+    th,
+    td {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      text-align: center;
+      line-height: 100%;
+    }
+    th {
+      text-transform: uppercase;
+      font-size: 0.6em;
+    }
+    td {
+      font-weight: vars.$light;
+      font-size: 2em;
+    }
+  }
+
+  .button-holder {
+    text-align: center;
+  }
+
+  .button {
+    color: vars.$blue;
+    background: transparent;
+    padding: 0.5em 1.5em;
+    border: 1px solid vars.$blue;
+    font-size: 22px;
+    font-family: vars.$font;
+    cursor: pointer;
+    &:hover {
+      background: vars.$blue;
+      color: vars.$black;
+    }
   }
 }

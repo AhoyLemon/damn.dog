@@ -209,7 +209,11 @@ body {
   background: #222730;
 }
 
-h1, h2, h3, h4, h5 h6 {
+h1,
+h2,
+h3,
+h4,
+h5 h6 {
   font-family: "Roboto Slab", serif;
 }
 
@@ -226,7 +230,7 @@ svg * {
 }
 
 header {
-  background-color: #2A313A;
+  background-color: #2a313a;
   position: fixed;
   top: 0;
   right: 0;
@@ -250,7 +254,7 @@ header .number {
   font-size: 1.8em;
   font-weight: 300;
   line-height: 50%;
-  color: #6CB200;
+  color: #6cb200;
 }
 header .number.bad {
   color: #b22028;
@@ -282,13 +286,15 @@ header .hamburger {
   top: 0;
   right: 2rem;
 }
-header .hamburger .fill, header .hamburger .x {
+header .hamburger .fill,
+header .hamburger .x {
   opacity: 0;
 }
 header .hamburger:hover .fill {
   opacity: 1;
 }
-header .hamburger:hover .question-mark, header .hamburger:hover .x {
+header .hamburger:hover .question-mark,
+header .hamburger:hover .x {
   fill: #222730;
 }
 header .hamburger.is-active .question-mark {
@@ -351,18 +357,21 @@ main {
 .image-holder img {
   max-width: 100%;
 }
-.image-holder h1, .image-holder h2 {
+.image-holder h1,
+.image-holder h2 {
   font-weight: 300;
   font-size: 1.5em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   color: rgba(255, 255, 255, 0.6);
 }
-.image-holder h1.nope, .image-holder h2.nope {
+.image-holder h1.nope,
+.image-holder h2.nope {
   color: #b22028;
 }
-.image-holder h1.yup, .image-holder h2.yup {
-  color: #6CB200;
+.image-holder h1.yup,
+.image-holder h2.yup {
+  color: #6cb200;
 }
 .image-holder a {
   color: #3e98f2;
@@ -436,7 +445,9 @@ main {
   padding-top: 0.5em;
 }
 
-[data-display=wrong], [data-display=correct], [data-display="play again"] {
+[data-display=wrong],
+[data-display=correct],
+[data-display="play again"] {
   display: none;
 }
 
@@ -535,38 +546,6 @@ main {
   color: #222730;
 }
 
-/*
-&.android { @include position(fixed,0,0); max-width: 16em;
-  .ios, .edge, .opera, .desktop-chrome { display: none; }
-  b { display: block; }
-  .tap-that-icon { margin-top: -1.2em; }
-  .bottom-center-icon { display:none; }
-  &.firefox { padding-top:1em; }
-}
-&.ios { @include position(fixed,null,0,0,0);
-  .homescreen-help { text-align: center; }
-  .android, .edge, .opera, .desktop-chrome { display: none; }
-  span.arrow { display:block; text-align: center;  }
-  .top-right-icon { display:none; }
-}
-&.edge { @include position(fixed,0,0); max-width: 16em;
-  .ios, .android, .opera, .desktop-chrome { display: none; }
-}
-&.opera { @include position(fixed,0,0); max-width: 16em;
-  .top-right-icon { padding-right: 2.1em; }
-  .ios, .android, .edge, .desktop-chrome { display: none; }
-}
-&.desktop-chrome { @include position(fixed,0,0); max-width: 16em;
-  .ios, .android, .edge, .opera { display: none; }
-}
-.homescreen-help { text-align: right; padding:0.5em 0.5em 1em 1em; }  
-span.arrow {
-  svg { height: 1em; width: 1em; }
-}
-.button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; display: inline-block; margin-top:0.5em; margin-bottom:0.5em;
-  &:hover { color:$yellow; background:$black; border-color: $yellow; }
-}
-*/
 .banner {
   background-color: yellow;
   width: 305px;
@@ -677,7 +656,8 @@ span.arrow {
   margin-right: auto;
   font-size: 5vw;
 }
-.game-over table th, .game-over table td {
+.game-over table th,
+.game-over table td {
   padding-left: 0.5em;
   padding-right: 0.5em;
   text-align: center;
@@ -730,7 +710,9 @@ main.page article {
   margin-left: auto;
   margin-right: auto;
 }
-main.page h1, main.page h2, main.page h3 {
+main.page h1,
+main.page h2,
+main.page h3 {
   font-family: "Roboto Slab", serif;
 }
 main.page h1 {

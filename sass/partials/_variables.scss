@@ -1,59 +1,56 @@
 // FONTS
-$font-size:16px;
-$superlight:100;
-$light:300;
-$medium:400;
-$bold:700;
-$slab:'Roboto Slab', serif;
-$sans:'Roboto', sans-serif;
-$headline:$slab;
-$font:$slab;
-
-
+$font-size: 16px;
+$superlight: 100;
+$light: 300;
+$medium: 400;
+$bold: 700;
+$slab: "Roboto Slab", serif;
+$sans: "Roboto", sans-serif;
+$headline: $slab;
+$font: $slab;
 
 // COLORS
-$white:#fff;
-$offwhite:#f0f1f2;
-$black:#333;
-$grey:#f0ebe1;
-$red:#b22028;
-$blue:#3e98f2;
+$white: #fff;
+$offwhite: #f0f1f2;
+$black: #333;
+$grey: #f0ebe1;
+$red: #b22028;
+$blue: #3e98f2;
 
-$dark:#222730; 
-$lessdark:#2A313A;
-$green:#6CB200;
+$dark: #222730;
+$lessdark: #2a313a;
+$green: #6cb200;
 
-  // BRAND COLORS
-  $facebook-color: #3b5998;
-  $twitter-color: #4099FF;
-  $googleplus-color: #dd4b39;
-  $youtube-color: #bb0000;
-  $linkedin-color: #007bb5;
-  $pinterest-color: #cb2027;
-  $tripadvisor-color: #689b42;
-  
+// BRAND COLORS
+$facebook-color: #3b5998;
+$twitter-color: #4099ff;
+$googleplus-color: #dd4b39;
+$youtube-color: #bb0000;
+$linkedin-color: #007bb5;
+$pinterest-color: #cb2027;
+$tripadvisor-color: #689b42;
 
-$link:$blue;
-$correct:$green;
-$wrong:$red;
+$link: $blue;
+$correct: $green;
+$wrong: $red;
 
-// MEASUREMENTS 
+// MEASUREMENTS
 $pad: 2rem;
-$header-height:2.5rem;
-$footer-height:3rem;
-$max-splash:480px;
-$max-width:700px;
-$mobile-max:780px;
-$desktop-min:781px;
-$base-margin:2rem;
+$header-height: 2.5rem;
+$footer-height: 3rem;
+$max-splash: 480px;
+$max-width: 700px;
+$mobile-max: 780px;
+$desktop-min: 781px;
+$base-margin: 2rem;
 $base-margin-mobile: 1rem;
 $double-margin: $base-margin * 2;
-$small-inner:880px;
-$big-inner:1200px;
+$small-inner: 880px;
+$big-inner: 1200px;
 
 // Z-INDEX
-$z-footer:2;
-$z-sidebar:3;
-$z-header:4;
-$z-sharebox:5;
-$z-homescreenbox:6;
+$z-footer: 2;
+$z-sidebar: 3;
+$z-header: 4;
+$z-sharebox: 5;
+$z-homescreenbox: 6;

@@ -1,7 +1,23 @@
 @use "variables" as vars;
 
-body { font-family: vars.$font; font-size:vars.$font-size; background:vars.$dark; }
-h1, h2, h3, h4, h5 h6 { font-family: vars.$headline; }
-p { padding-bottom: 1em; }
-svg * { fill:currentColor; }
-[v-cloak] { display: none !important; }
+body {
+  font-family: vars.$font;
+  font-size: vars.$font-size;
+  background: vars.$dark;
+}
+h1,
+h2,
+h3,
+h4,
+h5 h6 {
+  font-family: vars.$headline;
+}
+p {
+  padding-bottom: 1em;
+}
+svg * {
+  fill: currentColor;
+}
+[v-cloak] {
+  display: none !important;
+}
