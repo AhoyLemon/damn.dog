@@ -1,5 +1,6 @@
 @use "variables" as vars;
 @use "mixins" as mix;
+@use "extends";
 
 header { background-color:vars.$lessdark; @include mix.position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom:0.25em; height:vars.$header-height; z-index:vars.$z-header;
   //> .inner { color:$white; @extend %inner; }
