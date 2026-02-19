@@ -5,14 +5,14 @@
 <!-- Badges -->
 
 [![Last Deploy](https://img.shields.io/github/last-commit/AhoyLemon/damn.dog?label=Last%20Deploy&style=for-the-badge)](https://github.com/AhoyLemon/damn.dog/actions)
-[![Contributors](https://img.shields.io/github/contributors/AhoyLemon/damn.dog?style=for-the-badge)](https://github.com/AhoyLemon/damn.dog/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/AhoyLemon/damn.dog?style=for-the-badge&color=111)](https://github.com/AhoyLemon/damn.dog/graphs/contributors)
 [![Stars](https://img.shields.io/github/stars/AhoyLemon/damn.dog?style=for-the-badge)](https://github.com/AhoyLemon/damn.dog/stargazers)
 [![Forks](https://img.shields.io/github/forks/AhoyLemon/damn.dog?style=for-the-badge)](https://github.com/AhoyLemon/damn.dog/network/members)
 
-[![Open Issues](https://img.shields.io/github/issues/AhoyLemon/damn.dog?label=OPEN%20ISSUES&style=for-the-badge&color=orange)](https://github.com/AhoyLemon/damn.dog/issues)
+[![Open Issues](https://img.shields.io/github/issues/AhoyLemon/damn.dog?label=Issues&style=for-the-badge&color=orange)](https://github.com/AhoyLemon/damn.dog/issues)
 [![Closed Issues](https://img.shields.io/github/issues-closed/AhoyLemon/damn.dog?label=&style=for-the-badge&color=555)](https://github.com/AhoyLemon/damn.dog/issues?q=is%3Aissue+is%3Aclosed)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![Open PRs](https://img.shields.io/github/issues-pr/AhoyLemon/xyz?label=OPEN%20PRS&style=for-the-badge&color=orange)](https://github.com/AhoyLemon/xyz/pulls)
+[![Open PRs](https://img.shields.io/github/issues-pr/AhoyLemon/xyz?label=Pull%20Requests&style=for-the-badge&color=orange)](https://github.com/AhoyLemon/xyz/pulls)
 [![Closed PRs](https://img.shields.io/github/issues-pr-closed/AhoyLemon/xyz?label=&style=for-the-badge&color=555)](https://github.com/AhoyLemon/xyz/pulls?q=is%3Apr+is%3Aclosed)
 
 ## What is this?
@@ -54,6 +54,8 @@ npm install
 # start local server w/ BrowserSync and watch for changes
 npm run dev
 ```
+
+_You can also use `bun` or `yarn` if you prefer_
 
 ### What's this written in?
 
