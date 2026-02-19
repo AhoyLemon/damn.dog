@@ -7,26 +7,6 @@ else
   script.
     const testing = false;
 
-//- ServiceWorker
-//-script(type="text/javascript").
-  if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('/service-worker.js')
-  }
-
-  Notification.requestPermission(result => {
-    if (result === 'granted') {
-      //permission granted.
-      navigator.serviceWorker.ready.then(registration => {
-        registration.showNotification('Damn Dog has been updated', {
-          icon: '/android-chrome-96x96.png',
-          vibrate: [500, 100, 500],
-          body: '7 new rounds have been added to damn.dog, bringing the total up to 358.',
-          tag: 'vibration-sample'
-        });
-      });
-    }
-  });
-
 // Global site tag (gtag.js) - Google Analytics
 script(async src='https://www.googletagmanager.com/gtag/js?id=UA-15129990-16')
 script.
@@ -38,9 +18,9 @@ script.
 script(type="module" src="js/min/ts/damn.vue.js?v="+lastUpdated)
 
 //- trackJS
-//- script(src="https://cdn.trackjs.com/agent/v3/latest/t.js" crossorigin)
-//- script.
-//-   window.TrackJS && TrackJS.install({
-//-     token: "9947e081831c42b8aeb3a5fb81a152c4",
-//-     application: "damndog"
-//-   });
+script(src="https://cdn.trackjs.com/agent/v3/latest/t.js" crossorigin)
+script.
+  window.TrackJS && TrackJS.install({
+    token: "9947e081831c42b8aeb3a5fb81a152c4",
+    application: "damndog"
+  });

@@ -59,8 +59,8 @@ _You can also use `bun` or `yarn` if you prefer_
 
 ### What's this written in?
 
-[![Vue](https://img.shields.io/badge/-Vue-313131?style=flat&logo=vue.js&logoColor=fff&labelColor=42b883)](https://vuejs.org/)
-[![Pug](https://img.shields.io/badge/-Pug-313131?style=flat&logo=pug&logoColor=fff&labelColor=a86454)](https://pugjs.org/)
-[![Sass](https://img.shields.io/badge/-Sass-313131?style=flat&logo=sass&logoColor=fff&labelColor=cc6699)](https://sass-lang.com/)
-[![TypeScript](https://img.shields.io/badge/-TypeScript-313131?style=flat&logo=typescript&logoColor=fff&labelColor=3178C6)](https://www.typescriptlang.org)
-[![GitHub Pages](https://img.shields.io/badge/-GitHub%20Pages-313131?style=flat&logo=github&logoColor=fff&labelColor=2088ff)](https://pages.github.com/)
+[![Vue](https://img.shields.io/badge/Vue-000?style=flat-square&labelColor=212121&logo=vue.js&logoColor=42b883&color=fff)](https://vuejs.org/)
+[![Pug](https://img.shields.io/badge/Pug-000?style=flat-square&labelColor=212121&logo=pug&logoColor=a86454&color=fff)](https://pugjs.org/)
+[![Sass](https://img.shields.io/badge/Sass-000?style=flat-square&labelColor=212121&logo=sass&logoColor=cc6699&color=fff)](https://sass-lang.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-000?style=flat-square&labelColor=212121&logo=typescript&logoColor=3178c6&color=fff)](https://www.typescriptlang.org/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-000?style=flat-square&labelColor=212121&logo=github&logoColor=fff&color=fff)](https://pages.github.com/)
